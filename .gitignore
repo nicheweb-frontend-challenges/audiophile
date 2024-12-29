@@ -12,6 +12,7 @@
 /build
 
 # misc
+.prettierignore
 .DS_Store
 .env.local
 .env.development.local
@@ -21,3 +22,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Avoid accidental upload of the Sketch and Figma design files
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+*.xd
