@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as *;
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/subset-Manrope-Bold.woff2") format("woff2"),
+    url("../fonts/subset-Manrope-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/subset-Manrope-Medium.woff2") format("woff2"),
+    url("../fonts/subset-Manrope-Medium.woff2") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/subset-Manrope-Regular.woff2") format("woff2"),
+    url("../fonts/subset-Manrope-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: optional;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: $color-black;
+}
+
+@mixin heading($size, $height, $spacing, $weight: bold) {
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  font-weight: $weight;
+  text-transform: uppercase;
+}
+
+h1 {
+  @include heading(5.6rem, 1.04, 0.2em);
+}
+h2 {
+  @include heading(4rem, 1.1, 0.15em);
+}
+h3 {
+  @include heading(3.2rem, 1.125, 0.115em);
+}
+h4 {
+  @include heading(2.8rem, 1.36, 0.2em);
+}
+h5 {
+  @include heading(2.4rem, 1.375, 0.17em);
+}
+h6 {
+  @include heading(1.8rem, 1.33, 0.13em);
+}
+
+.overline {
+  @include heading(1.4rem, 1.36, 1em, $weight: normal);
+  color: $color-brown;
+}
+.subtitle {
+  @include heading(1.3rem, 1.92, 0.1em);
+  color: $color-brown;
+}

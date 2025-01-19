@@ -1,0 +1,70 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+*.bundle.js
+*.bundle.js.map
+
+# Cache directories
+.cache/
+webpack-cache/
+.vscode/
+
+# TypeScript
+*.tsbuildinfo
+
+# SASS/SCSS
+*.css.map
+*.css
+
+# Jest coverage and snapshots
+coverage/
+*.lcov
+*.lcov.info
+.nyc_output/
+jest-html-reporters-*.html
+
+# React Testing Library
+*.test-results.json
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+*.lock
+
+# Package lock files (optional, depending on your team’s policy)
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
+
+# Avoid accidental upload of the Sketch and Figma design files
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+*.xd
+
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore
