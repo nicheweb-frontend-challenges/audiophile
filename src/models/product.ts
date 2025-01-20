@@ -6,14 +6,15 @@ import Category from "./category";
 
 // Main Product model
 class Product {
-  id?: 1 | 2 | 3 | 4 | 5 | 6;
+  id?: 1 | 2 | 3 | 4 | 5 | 6 | number;
   slug?:
     | "yx1-earphones"
     | "xx59-headphones"
     | "xx99-mark-one-headphones"
     | "xx99-mark-two-headphones"
     | "zx7-speaker"
-    | "zx9-speaker";
+    | "zx9-speaker"
+    | string;
   name?:
     | "YX1 Wireless Earphones"
     | "XX59 Headphones"
@@ -21,6 +22,14 @@ class Product {
     | "XX99 Mark II Headphones"
     | "ZX7 Speaker"
     | "ZX9 Speaker"
+    | string;
+  cartName?:
+    | "YX1"
+    | "XX59"
+    | "XX99 MK I"
+    | "XX99 MK II"
+    | "ZX7"
+    | "ZX9"
     | string;
   image?: Image;
   category?: Category["name"];
@@ -37,6 +46,7 @@ class Product {
     id: Product["id"],
     slug: Product["slug"],
     name: Product["name"],
+    cartName: Product["cartName"],
     image: Image,
     category: Category["name"],
     categoryImage: Image,

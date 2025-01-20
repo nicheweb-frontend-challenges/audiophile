@@ -1,16 +1,15 @@
+import Product from "./product";
 class CartItem {
-  id: number;
+  id: Product["id"];
   quantity: number;
+  name: Product["cartName"];
+  imageUrl: string;
 
-  constructor(id: number, quantity: number) {
-    this.id = id;
+  constructor(quantity: number, product: Product) {
+    this.id = product.id;
     this.quantity = quantity;
-  }
-  increment() {
-    this.quantity++;
-  }
-  decrement() {
-    this.quantity--;
+    this.name = product.cartName;
+    this.imageUrl = `/assets/images/cart/${product.slug}`;
   }
 }
 

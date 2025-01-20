@@ -4,7 +4,7 @@ import routes from "./routes/router";
 import { RouterProvider } from "react-router";
 
 const App: React.FC = () => {
-  return <RouterProvider router={routes} />;
+  return <RouterProvider router={routes}></RouterProvider>;
 };
 
 export default App;

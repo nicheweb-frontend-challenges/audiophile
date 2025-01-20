@@ -1,13 +1,12 @@
-import Logo from "../assets/logo.svg";
+import AppLogo from "../components/AppLogo";
 import Nav from "../components/Nav";
 import Social from "../components/Social";
 
 const Footer = () => {
   return (
     <footer style={{ backgroundColor: "black", color: "white" }}>
-      <Logo />
+      <AppLogo />
       <Nav />
-      <p></p>
       <Social />
       <p>
         Audiophile is an all in one stop to fulfill your audio needs. We're a
