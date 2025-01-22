@@ -3,6 +3,7 @@ import Product from "../models/product";
 import useStore from "../store/store";
 import ProductRow from "../components/ProductRow";
 import { sortProducts } from "../utils/productsOp";
+import Categories from "../components/Categories";
 
 const CategoryPage = () => {
   const { categoryName } = useParams();
@@ -20,9 +21,14 @@ const CategoryPage = () => {
     sortProducts(categoryProducts);
   }
 
-  return categoryProducts.map((product) => (
-    <ProductRow product={product} level="secondary" theme="dark" />
-  ));
+  return (
+    <>
+      {categoryProducts.map((product) => (
+        <ProductRow product={product} level="secondary" theme="dark" />
+      ))}
+      <Categories />
+    </>
+  );
 };
 
 export default CategoryPage;
