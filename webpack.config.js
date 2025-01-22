@@ -7,7 +7,7 @@ module.exports = {
   entry: "./src/index.tsx", // Entry file
   output: {
     // Output file
-    publicPath: "/", // Base path
+    // publicPath: "./", // Base path
     path: path.resolve(__dirname, "dist"), // Output directory
     filename: "bundle.js",
     clean: true, // Clean the output directory before build

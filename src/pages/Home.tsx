@@ -1,15 +1,8 @@
 import HomeHeroSection from "../layout/HomeHeroSection";
-import Menu from "../components/menu/Menu";
-import { CATEGORIES } from "../utils/data";
-import Category from "../models/category";
 import ProductRow from "../components/ProductRow";
 import Product from "../models/product";
 import Image from "../models/image";
-
-const categories: Category["name"][] = Array.from(
-  CATEGORIES.map((category) => category.name as Category["name"])
-);
-console.log(categories);
+import Categories from "../components/Categories";
 
 const HomePage = () => {
   const product1: Product = {
@@ -45,11 +38,7 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-      <Menu>
-        {categories.map((category, index) => (
-          <Menu.CategoryCard key={index} category={category} />
-        ))}
-      </Menu>
+      <Categories />
       <ProductRow product={product1} level="primary" theme="light" />
       <ProductRow product={product2} level="secondary" theme="dark" />
       <ProductRow product={product3} level="secondary" theme="dark" />

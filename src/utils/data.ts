@@ -626,39 +626,3 @@ export const PRODUCTS = [
     ],
   },
 ];
-
-export const CATEGORIES = [
-  {
-    name: "earphones",
-    image: {
-      mobile:
-        "/assets/images/shared/mobile/image-category-thumbnail-earphones.png",
-      tablet:
-        "/assets/images/shared/tablet/image-category-thumbnail-earphones.png",
-      desktop:
-        "/assets/images/shared/desktop/image-category-thumbnail-earphones.png",
-    },
-  },
-  {
-    name: "headphones",
-    image: {
-      mobile:
-        "/assets/images/shared/mobile/image-category-thumbnail-headphones.png",
-      tablet:
-        "/assets/images/shared/tablet/image-category-thumbnail-headphones.png",
-      desktop:
-        "/assets/images/shared/desktop/image-category-thumbnail-headphones.png",
-    },
-  },
-  {
-    name: "speakers",
-    image: {
-      mobile:
-        "/assets/images/shared/mobile/image-category-thumbnail-speakers.png",
-      tablet:
-        "/assets/images/shared/tablet/image-category-thumbnail-speakers.png",
-      desktop:
-        "/assets/images/shared/desktop/image-category-thumbnail-speakers.png",
-    },
-  },
-];

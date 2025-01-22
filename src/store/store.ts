@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Action, Actions, Listener } from "../models/store-types";
+import { Actions, Listener, GlobalState } from "../models/store-types";
 
-let globalState: {} = {};
+let globalState: GlobalState = {};
 let listeners: Listener[] = [];
 let actions: Actions = {};
 
-const useStore = (shouldListen: boolean) => {
+const useStore = (
+  shouldListen: boolean
+): [GlobalState, (identifier: string, payload: any | undefined) => void] => {
   const setState = useState(globalState)[1];
 
   useEffect(() => {

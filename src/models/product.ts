@@ -2,7 +2,6 @@ import Image from "./image";
 import IncludedItem from "./included-item";
 import Gallery from "./gallery";
 import OtherProduct from "./other";
-import Category from "./category";
 
 // Main Product model
 class Product {
@@ -32,7 +31,7 @@ class Product {
     | "ZX9"
     | string;
   image?: Image;
-  category?: Category["name"];
+  category?: "earphones" | "headphones" | "speakers";
   categoryImage?: Image;
   new?: boolean;
   price?: number;
@@ -48,7 +47,7 @@ class Product {
     name: Product["name"],
     cartName: Product["cartName"],
     image: Image,
-    category: Category["name"],
+    category: Product["category"],
     categoryImage: Image,
     isNew: boolean,
     price: number,
