@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/Root";
 import HomePage from "../pages/Home";
 import CategoryPage from "../pages/Category";
+import CategoryLayout from "../layout/CategoryRoot";
 import ProductPage from "../pages/Product";
 import CheckoutPage from "../pages/Checkout";
 
@@ -11,8 +12,14 @@ const routes = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "category/:categoryName", element: <CategoryPage /> },
-      { path: "product/:productSlug", element: <ProductPage /> },
+      {
+        path: "category/",
+        element: <CategoryLayout />,
+        children: [
+          { path: ":categoryName", element: <CategoryPage /> },
+          { path: ":categoryName/:productSlug", element: <ProductPage /> },
+        ],
+      },
       { path: "checkout", element: <CheckoutPage /> },
     ],
   },

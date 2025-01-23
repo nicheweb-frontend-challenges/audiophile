@@ -4,24 +4,38 @@ import Product from "models/product";
 
 type ProductRowProps = {
   product: Product;
-  level: ProductBoxProps["headingLevel"];
-  theme: ProductBoxProps["theme"];
+  level: ProductBoxProps["level"];
+  theme: ProductBoxProps["boxTheme"];
+  customImage?: Product["image"];
+  customName?: Product["name"];
+  customDescription?: string;
   imgClasses?: string;
   invert?: boolean;
+  productDesc?: boolean;
 };
 
-const ProductRow = ({ product, level, theme, imgClasses }: ProductRowProps) => {
+const ProductRow = ({
+  product,
+  level,
+  theme,
+  imgClasses,
+  productDesc,
+  customDescription,
+  customImage,
+  customName,
+}: ProductRowProps) => {
   return (
     <div>
       <ProductBox
-        isNew={product.new}
-        headingLevel={level}
-        title={product.name}
-        description={product.description}
-        theme={theme}
+        boxProduct={product}
+        level={level}
+        boxTheme={theme}
+        hasBoxDescription={productDesc}
+        boxDescription={customDescription}
+        boxName={customName}
       />
       <ResponsiveImg
-        image={product.image}
+        image={customImage || product.image}
         classes={imgClasses}
         alt={product.name}
       />

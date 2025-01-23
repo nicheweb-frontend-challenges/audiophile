@@ -3,10 +3,13 @@ import Product from "../models/product";
 import useStore from "../store/store";
 import ProductRow from "../components/ProductRow";
 import { sortProducts } from "../utils/productsOp";
-import Categories from "../components/Categories";
+import CategoryHeading from "../layout/CategoryHeading";
 
 const CategoryPage = () => {
-  const { categoryName } = useParams();
+  interface Params extends Record<string, string | undefined> {
+    categoryName: Product["category"];
+  }
+  const { categoryName } = useParams<Params>();
   const { products } = useStore(false)[0];
 
   const categoryProducts: Product[] | undefined = products?.filter(
@@ -14,7 +17,7 @@ const CategoryPage = () => {
   );
 
   if (!categoryProducts) {
-    throw Error(`This category: ${categoryName?.toUpperCase} doesn't exist`);
+    throw Error(`This category: ${categoryName?.toUpperCase()} doesn't exist`);
   }
 
   if (categoryProducts.length > 1) {
@@ -23,10 +26,15 @@ const CategoryPage = () => {
 
   return (
     <>
+      <CategoryHeading category={categoryName} />
       {categoryProducts.map((product) => (
-        <ProductRow product={product} level="secondary" theme="dark" />
+        <ProductRow
+          product={product}
+          level="secondary"
+          theme="dark"
+          productDesc
+        />
       ))}
-      <Categories />
     </>
   );
 };

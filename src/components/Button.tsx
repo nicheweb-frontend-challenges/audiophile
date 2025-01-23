@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
+import { LinkOrButtonProps } from "models/button";
 
-type ButtonProps = {
-  children: string;
-  linkTo: string;
-};
-const Button = ({ children, linkTo }: ButtonProps) => {
+const Button = ({ children, linkTo, ...otherProps }: LinkOrButtonProps) => {
   if (linkTo) {
     return <Link to={linkTo}>{children}</Link>;
   }
-  return <button> {children}</button>;
+  return <button {...otherProps}>{children}</button>;
 };
 
 export default Button;

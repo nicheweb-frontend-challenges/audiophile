@@ -1,5 +1,5 @@
 import Product from "models/product";
-import Category from "./Category";
+import Category from "../components/CategoryCard";
 
 const categories: Product["category"][] = [
   "headphones",

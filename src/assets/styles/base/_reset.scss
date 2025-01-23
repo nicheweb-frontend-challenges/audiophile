@@ -10,6 +10,7 @@ html {
   width: 100vw;
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -33,6 +34,14 @@ select {
   font: inherit;
   border: none;
   outline: none;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 a {

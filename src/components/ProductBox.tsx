@@ -1,41 +1,37 @@
-import React from "react";
 import Button from "./Button";
+import Product from "../models/product";
+import ProductInfo from "./ProductInfo";
 
 export type ProductBoxProps = {
-  isNew?: boolean;
-  headingLevel: "primary" | "secondary" | "tertiary";
-  title?: string;
-  description?: string;
-  theme: "dark" | "light";
+  boxProduct: Product;
+  level: "primary" | "secondary" | "tertiary";
+  boxTheme: "dark" | "light";
+  hasBoxDescription?: boolean;
+  boxDescription?: string;
+  boxName?: string;
 };
 
 const ProductBox = ({
-  isNew,
-  headingLevel,
-  title,
-  description,
-  theme,
+  boxProduct,
+  level,
+  boxTheme,
+  hasBoxDescription,
+  boxDescription,
+  boxName,
 }: ProductBoxProps) => {
-  let headingTag: string;
-
-  switch (headingLevel) {
-    case "primary":
-      headingTag = "h1";
-      break;
-    case "secondary":
-      headingTag = "h2";
-      break;
-    case "tertiary":
-      headingTag = "h3";
-      break;
-  }
-
   return (
     <div>
-      {isNew && <p>New product</p>}
-      {React.createElement(headingTag, null, title)}
-      {description && <p>{description}</p>}
-      <Button linkTo="">See product</Button>
+      <ProductInfo
+        product={boxProduct}
+        headingLevel={level}
+        theme={boxTheme}
+        hasDescription={hasBoxDescription}
+        description={boxDescription}
+        newName={boxName}
+      />
+      <Button linkTo={`/category/${boxProduct.category}/${boxProduct.slug}`}>
+        See product
+      </Button>
     </div>
   );
 };
