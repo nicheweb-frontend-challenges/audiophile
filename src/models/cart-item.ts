@@ -5,11 +5,11 @@ class CartItem {
   name: Product["cartName"];
   imageUrl: string;
 
-  constructor(quantity: number, product: Product) {
-    this.id = product.id;
+  constructor(quantity: number, item: Product) {
+    this.id = item.id;
     this.quantity = quantity;
-    this.name = product.cartName;
-    this.imageUrl = `/assets/images/cart/${product.slug}`;
+    this.name = item.cartName;
+    this.imageUrl = `/assets/images/cart/${item.slug}`;
   }
 }
 
