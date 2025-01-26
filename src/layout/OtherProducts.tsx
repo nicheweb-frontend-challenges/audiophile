@@ -10,8 +10,8 @@ const OtherProducts = ({ otherProducts }: OtherProductsProps) => {
     <div>
       <h3>you may also like</h3>
       <ul>
-        {otherProducts.map((otherProduct) => (
-          <OtherProductCard otherProduct={otherProduct} />
+        {otherProducts.map((otherProduct, index) => (
+          <OtherProductCard otherProduct={otherProduct} key={index} />
         ))}
       </ul>
     </div>

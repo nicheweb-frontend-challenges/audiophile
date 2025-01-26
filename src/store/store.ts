@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
-import { Actions, Listener, GlobalState } from "../models/store-types";
+import {
+  Actions,
+  Listener,
+  GlobalState,
+  DispatchFunc,
+  UseStore,
+} from "../models/store-types";
 
 let globalState: GlobalState = {};
 let listeners: Listener[] = [];
 let actions: Actions = {};
 
-const useStore = (
-  shouldListen: boolean
-): [GlobalState, (identifier: string, payload: any | undefined) => void] => {
+const useStore: UseStore = (shouldListen) => {
   const setState = useState(globalState)[1];
 
   useEffect(() => {
@@ -18,7 +22,7 @@ const useStore = (
     };
   }, [setState, shouldListen]);
 
-  const dispatch = (identifier: string, payload: any | undefined) => {
+  const dispatch: DispatchFunc = (identifier, payload) => {
     const newState = actions[identifier]
       ? actions[identifier](globalState, payload)
       : {};

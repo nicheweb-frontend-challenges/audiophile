@@ -13,7 +13,7 @@ const CategoryCard = ({ category }: CategoryProps) => {
         alt={`${category} tumbnail image`}
       />
       <h6>{category}</h6>
-      <Button linkTo={`/category/${category}`}>shop &gt;</Button>
+      <Button linkTo={`/${category}`}>shop &gt;</Button>
     </li>
   );
 };

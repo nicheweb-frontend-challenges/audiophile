@@ -10,8 +10,8 @@ const ProductGallery = ({ gallery }: ProductGalleryProps) => {
 
   return (
     <div>
-      {imagesKeys.map((imageKey) => (
-        <ResponsiveImg image={gallery[imageKey]} />
+      {imagesKeys.map((imageKey, index) => (
+        <ResponsiveImg image={gallery[imageKey]} key={index} />
       ))}
     </div>
   );

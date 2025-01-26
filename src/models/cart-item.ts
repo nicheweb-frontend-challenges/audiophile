@@ -4,12 +4,14 @@ class CartItem {
   quantity: number;
   name: Product["cartName"];
   imageUrl: string;
+  price: Product["price"];
 
-  constructor(quantity: number, item: Product) {
-    this.id = item.id;
+  constructor(quantity: number, product: Product) {
+    this.id = product.id;
     this.quantity = quantity;
-    this.name = item.cartName;
-    this.imageUrl = `/assets/images/cart/${item.slug}`;
+    this.name = product.cartName;
+    this.imageUrl = `/assets/images/cart/image-${product.slug}.jpg`;
+    this.price = product.price;
   }
 }
 

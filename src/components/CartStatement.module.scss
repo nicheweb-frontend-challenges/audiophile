@@ -1,0 +1,14 @@
+.cartStatement {
+  tr {
+    display: none;
+  }
+  tbody tr:first-child {
+    display: table-row;
+  }
+}
+
+.summaryStatement {
+  tr {
+    display: table-row;
+  }
+}

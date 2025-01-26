@@ -3,9 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import configureProductsStore from "./store/products-store";
 import configureCartStore from "./store/cart-store";
+import configureModalStore from "./store/modal-store";
 
 configureProductsStore();
 configureCartStore();
+configureModalStore();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

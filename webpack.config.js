@@ -34,12 +34,12 @@ module.exports = {
           },
           {
             loader: "css-loader",
-            options: {
-              importLoaders: 1,
-              modules: {
-                mode: "icss",
-              },
-            },
+            // options: {
+            //   importLoaders: 1,
+            //   modules: {
+            //     mode: "icss",
+            //   },
+            // },
           },
           {
             loader: "sass-loader",
@@ -51,16 +51,13 @@ module.exports = {
         test: /\.module\.scss$/i,
         use: [
           {
-            loader: "style-loader",
+            loader: isProd ? MiniCssExtractPlugin.loader : "style-loader",
           },
           {
             loader: "css-loader",
             options: {
-              importLoaders: 1,
-              modules: {
-                mode: "local",
-                localIdentName: "[name]__[local]--[hash:base64:5]",
-              },
+              // importLoaders: 1,
+              modules: true,
             },
           },
           {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LinkOrButtonProps } from "models/button";
+import { LinkOrButtonProps } from "../models/button";
 
 const Button = ({ children, linkTo, ...otherProps }: LinkOrButtonProps) => {
   if (linkTo) {

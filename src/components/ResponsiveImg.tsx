@@ -10,10 +10,6 @@ const ResponsiveImg = ({ image, classes, alt }: ImageProps) => {
   const tabletSrc = image?.tablet;
   const desktopSrc = image?.desktop;
 
-  console.log("mobile:", mobileSrc);
-  console.log("tablet:", tabletSrc);
-  console.log("desktop:", desktopSrc);
-
   return (
     <picture className={classes}>
       <source media="(min-width: 1024px)" srcSet={desktopSrc} />

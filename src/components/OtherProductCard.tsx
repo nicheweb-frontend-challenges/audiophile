@@ -16,9 +16,7 @@ const OtherProductCard = ({ otherProduct }: OtherProductCardProps) => {
     <li>
       <ResponsiveImg image={otherProduct.image} />
       <h5>{otherProduct.name}</h5>
-      <Button linkTo={`/category/${category}/${otherProduct.slug}`}>
-        see product
-      </Button>
+      <Button linkTo={`/${category}/${otherProduct.slug}`}>see product</Button>
     </li>
   );
 };

@@ -10,8 +10,8 @@ const IncludedItems = ({ includedItems }: IncludedItemsProps) => {
     <div>
       <h3>in the box</h3>
       <ul>
-        {includedItems.map((includedItem) => (
-          <IncludedItem includedItem={includedItem} />
+        {includedItems.map((includedItem, index) => (
+          <IncludedItem includedItem={includedItem} key={index} />
         ))}
       </ul>
     </div>

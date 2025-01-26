@@ -2,6 +2,8 @@ import QuantitySelector from "./QuantitySelector";
 import Button from "./Button";
 import useQuantitySelector from "../hooks/useQuantitySelector";
 import Product from "../models/product";
+import useStore from "../store/store";
+import CartItem from "../models/cart-item";
 
 type ProductPurchaseProps = {
   product: Product;
@@ -16,9 +18,12 @@ const ProductPurchase = ({ product }: ProductPurchaseProps) => {
     handleIncrement,
   } = useQuantitySelector(1);
 
+  const dispatch = useStore(false)[1];
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(quantity);
+    dispatch("CART_ADD_ITEM", new CartItem(quantity, product));
+
     setQuantity(1);
   };
 

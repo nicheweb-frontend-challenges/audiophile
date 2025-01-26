@@ -29,7 +29,7 @@ const ProductBox = ({
         description={boxDescription}
         newName={boxName}
       />
-      <Button linkTo={`/category/${boxProduct.category}/${boxProduct.slug}`}>
+      <Button linkTo={`/${boxProduct.category}/${boxProduct.slug}`}>
         See product
       </Button>
     </div>

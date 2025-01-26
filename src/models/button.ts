@@ -1,14 +1,12 @@
-import { LinkProps } from "react-router-dom";
-
+import { ReactNode } from "react";
 interface LinkElementProps {
-  children: string;
+  children: ReactNode;
   linkTo?: string;
   className?: string;
 }
-
 interface ButtonElementProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string;
+  children: ReactNode;
 }
 
 type LinkOrButtonProps = LinkElementProps & ButtonElementProps;
