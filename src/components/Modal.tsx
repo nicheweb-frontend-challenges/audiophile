@@ -24,8 +24,14 @@ const Modal = ({ modal }: ModalProps) => {
     dispatch("CLOSE_MODAL");
   };
 
+  const handleModalClick = (e: React.MouseEvent<HTMLDialogElement>) => {
+    if (e.target === dialog.current) {
+      dispatch("CLOSE_MODAL"); // Add your logic here
+    }
+  };
+
   return createPortal(
-    <dialog ref={dialog} onClose={handleModalClose}>
+    <dialog ref={dialog} onClose={handleModalClose} onClick={handleModalClick}>
       {modal === "cart" && <Cart />}
     </dialog>,
     document.getElementById("modal") as HTMLElement

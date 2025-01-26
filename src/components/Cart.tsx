@@ -18,7 +18,7 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div onClick={(e) => e.stopPropagation()}>
       <header>
         <h6>{`cart(${cart?.length})`}</h6>
         <Button disabled={!cart?.length} onClick={handleRemoveAllItems}>

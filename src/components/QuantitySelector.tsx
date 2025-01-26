@@ -20,7 +20,7 @@ const QuantitySelector = ({
       <Button
         type="button"
         onClick={onDecrement}
-        disabled={quantity <= 1}
+        disabled={quantity <= minQuantity}
         style={{ margin: 10 }}
       >
         -

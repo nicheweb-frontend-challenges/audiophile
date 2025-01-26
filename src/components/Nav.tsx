@@ -5,9 +5,9 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <Link to="">Home</Link>
-      <Link to="category/headphones">headphones</Link>
-      <Link to="category/speakers">speakers</Link>
-      <Link to="category/earphones">earphones</Link>
+      <Link to="/headphones">headphones</Link>
+      <Link to="/speakers">speakers</Link>
+      <Link to="/earphones">earphones</Link>
     </nav>
   );
 };

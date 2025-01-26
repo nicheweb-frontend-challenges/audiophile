@@ -8,7 +8,7 @@ type ItemProps = {
 
 const Item = ({ cartItem }: ItemProps) => {
   const { quantity, handleChange, handleDecrement, handleIncrement } =
-    useQuantitySelector(cartItem.quantity);
+    useQuantitySelector(cartItem.quantity, true, cartItem);
 
   return (
     <li key={cartItem.id}>
