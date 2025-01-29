@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import Product from "../models/product";
 import useStore from "../store/store";
-import ProductRow from "../components/ProductRow";
+import ProductRow from "../components/product/ProductRow";
 import { sortProducts } from "../utils/productsOp";
-import CategoryHeading from "../layout/CategoryHeading";
+import CategoryHeading from "../layout/category/CategoryHeading";
 
 const CategoryPage = () => {
   interface Params extends Record<string, string | undefined> {

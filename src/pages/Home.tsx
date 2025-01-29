@@ -1,7 +1,7 @@
 import HomeHeroSection from "../layout/HomeHeroSection";
-import ProductRow from "../components/ProductRow";
+import ProductRow from "../components/product/ProductRow";
 import Image from "../models/image";
-import Categories from "../layout/Categories";
+import Categories from "../layout/category/Categories";
 import useStore from "../store/store";
 
 const HomePage = () => {

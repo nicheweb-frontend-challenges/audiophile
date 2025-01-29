@@ -1,5 +1,5 @@
-import Gallery from "../models/gallery";
-import ResponsiveImg from "../components/ResponsiveImg";
+import Gallery from "../../models/gallery";
+import ResponsiveImg from "../../components/ResponsiveImg";
 
 type ProductGalleryProps = {
   gallery: Gallery;

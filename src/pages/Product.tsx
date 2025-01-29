@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import useStore from "../store/store";
-import ProductDetail from "../layout/ProductDetail";
-import ProductGallery from "../layout/ProductGallery";
-import OtherProducts from "../layout/OtherProducts";
+import ProductDetail from "../layout/product/ProductDetail";
+import ProductGallery from "../layout/product/ProductGallery";
+import OtherProducts from "../layout/product/OtherProducts";
 import Product from "../models/product";
 import GoBackButton from "../components/GoBackButton";
 

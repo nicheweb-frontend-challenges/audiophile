@@ -1,7 +1,7 @@
-import OtherProduct from "../models/other";
-import ResponsiveImg from "../components/ResponsiveImg";
-import Button from "../components/Button";
-import useStore from "../store/store";
+import OtherProduct from "../../models/other";
+import ResponsiveImg from "../ResponsiveImg";
+import Button from "../Button";
+import useStore from "../../store/store";
 
 type OtherProductCardProps = { otherProduct: OtherProduct };
 

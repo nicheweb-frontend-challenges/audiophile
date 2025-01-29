@@ -1,15 +1,16 @@
 import { createPortal } from "react-dom";
 import { useEffect, useRef } from "react";
-import Cart from "./cart";
+import Cart from "./cart/Cart";
 import useStore from "../store/store";
 import { ModalType } from "../models/store-types";
+import EndOrder from "../layout/order/EndOrder";
 
 type ModalProps = {
   modal: ModalType;
 };
 
 const Modal = ({ modal }: ModalProps) => {
-  const dispatch = useStore(true)[1];
+  const dispatch = useStore()[1];
   const dialog = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ const Modal = ({ modal }: ModalProps) => {
   return createPortal(
     <dialog ref={dialog} onClose={handleModalClose} onClick={handleModalClick}>
       {modal === "cart" && <Cart />}
+      {modal === "order" && <EndOrder />}
     </dialog>,
     document.getElementById("modal") as HTMLElement
   );

@@ -1,4 +1,4 @@
-import ProductBox from "../components/ProductBox";
+import ProductBox from "../components/product/ProductBox";
 import ResponsiveImg from "../components/ResponsiveImg";
 import Image from "../models/image";
 import Product from "../models/product";

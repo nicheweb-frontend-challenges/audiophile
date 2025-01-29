@@ -1,5 +1,5 @@
-import OtherProduct from "../models/other";
-import OtherProductCard from "../components/OtherProductCard";
+import OtherProduct from "../../models/other";
+import OtherProductCard from "../../components/product/OtherProductCard";
 
 type OtherProductsProps = {
   otherProducts: OtherProduct[];

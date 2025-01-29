@@ -1,9 +1,9 @@
-import QuantitySelector from "./QuantitySelector";
-import Button from "./Button";
-import useQuantitySelector from "../hooks/useQuantitySelector";
-import Product from "../models/product";
-import useStore from "../store/store";
-import CartItem from "../models/cart-item";
+import QuantitySelector from "../QuantitySelector";
+import Button from "../Button";
+import useQuantitySelector from "../../hooks/useQuantitySelector";
+import Product from "../../models/product";
+import useStore from "../../store/store";
+import CartItem from "../../models/cart-item";
 
 type ProductPurchaseProps = {
   product: Product;

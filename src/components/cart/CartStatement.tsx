@@ -1,19 +1,16 @@
-import CartItem from "../models/cart-item";
+import CartItem from "../../models/cart-item";
 import * as styles from "./CartStatement.module.scss";
+import { total, vat, grandTotal, SHIPPING } from "../../utils/cart-methods";
 
 type CartStatementProps = {
   cart: CartItem[];
   showAll?: boolean;
 };
 
-const SHIPPING = 50;
-
 const CartStatement = ({ cart, showAll }: CartStatementProps) => {
-  const total: number = cart.reduce((acc: number, cartItem: CartItem) => {
-    return acc + (cartItem.price ?? 0) * cartItem.quantity;
-  }, 0);
-  const vat: number = total * 0.2;
-  const grandTotal = total + vat + SHIPPING;
+  const cartTotal: number = total(cart);
+  const cartVat: number = vat(cart);
+  const cartGrandTotal = grandTotal(cart);
   console.log(styles);
 
   return (
@@ -21,7 +18,7 @@ const CartStatement = ({ cart, showAll }: CartStatementProps) => {
       <tbody>
         <tr>
           <th>total</th>
-          <td>{total}</td>
+          <td>{cartTotal}</td>
         </tr>
         <tr>
           <th>shipping</th>
@@ -29,13 +26,13 @@ const CartStatement = ({ cart, showAll }: CartStatementProps) => {
         </tr>
         <tr>
           <th>vat(included)</th>
-          <td>{vat}</td>
+          <td>{cartVat}</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <th>grand total</th>
-          <td>{grandTotal}</td>
+          <td>{cartGrandTotal}</td>
         </tr>
       </tfoot>
     </table>

@@ -1,7 +1,7 @@
-import Button from "./Button";
-import CartStatement from "./cartStatement";
-import useStore from "../store/store";
-import Item from "./item";
+import Button from "../Button";
+import CartStatement from "./CartStatement";
+import useStore from "../../store/store";
+import Item from "./Item";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
@@ -18,7 +18,7 @@ const Cart = () => {
   };
 
   return (
-    <div onClick={(e) => e.stopPropagation()}>
+    <div>
       <header>
         <h6>{`cart(${cart?.length})`}</h6>
         <Button disabled={!cart?.length} onClick={handleRemoveAllItems}>
@@ -28,7 +28,7 @@ const Cart = () => {
       {cart?.length ? (
         <ul>
           {cart?.map((item) => (
-            <Item cartItem={item} key={item.id} />
+            <Item cartItem={item} key={item.id} itemForCart />
           ))}
         </ul>
       ) : (

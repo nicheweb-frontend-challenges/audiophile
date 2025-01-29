@@ -1,5 +1,5 @@
-import Button from "./Button";
-import Product from "../models/product";
+import Button from "../Button";
+import Product from "../../models/product";
 import ProductInfo from "./ProductInfo";
 
 export type ProductBoxProps = {

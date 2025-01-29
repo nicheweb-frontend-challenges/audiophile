@@ -1,5 +1,5 @@
 import ProductBox, { ProductBoxProps } from "./ProductBox";
-import ResponsiveImg from "./ResponsiveImg";
+import ResponsiveImg from "../ResponsiveImg";
 import Product from "models/product";
 
 type ProductRowProps = {

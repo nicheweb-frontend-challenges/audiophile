@@ -1,9 +1,9 @@
-import ResponsiveImg from "../components/ResponsiveImg";
-import ProductInfo from "../components/ProductInfo";
-import ProductPurchase from "../components/ProductPurchase";
-import Product from "../models/product";
-import Features from "../components/Features";
-import IncludedItems from "../components/IncludedItems";
+import ResponsiveImg from "../../components/ResponsiveImg";
+import ProductInfo from "../../components/product/ProductInfo";
+import ProductPurchase from "../../components/product/ProductPurchase";
+import Product from "../../models/product";
+import Features from "../../components/product/Features";
+import IncludedItems from "../../components/IncludedItems";
 
 type ProductDetailProps = {
   product: Product;
