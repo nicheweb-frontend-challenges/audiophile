@@ -38,37 +38,36 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-      <Categories classes={styles.home__categories} />
-      {firstProduct && (
-        <ProductRow
-          product={firstProduct}
-          level="primary"
-          theme="dark"
-          customImage={firstImage}
-          productDesc
-          customDescription={firstDescription}
-          classes={styles.home__first}
-        />
-      )}
-      {secondProduct && (
-        <ProductRow
-          product={secondProduct}
-          level="secondary"
-          theme="dark"
-          customImage={secondImage}
-          classes={styles.home__second}
-        />
-      )}
-      {thirdProduct && (
-        <ProductRow
-          product={thirdProduct}
-          level="secondary"
-          theme="dark"
-          customImage={thirdImage}
-          customName="YX1 Earphones"
-          classes={styles.home__third}
-        />
-      )}
+      <main className={styles.home__main}>
+        <Categories />
+        {firstProduct && (
+          <ProductRow
+            product={firstProduct}
+            level="primary"
+            theme="dark"
+            customImage={firstImage}
+            productDesc
+            customDescription={firstDescription}
+          />
+        )}
+        {secondProduct && (
+          <ProductRow
+            product={secondProduct}
+            level="secondary"
+            theme="dark"
+            customImage={secondImage}
+          />
+        )}
+        {thirdProduct && (
+          <ProductRow
+            product={thirdProduct}
+            level="secondary"
+            theme="dark"
+            customImage={thirdImage}
+            customName="YX1 Earphones"
+          />
+        )}
+      </main>
     </>
   );
 };

@@ -2,8 +2,14 @@ import * as styles from "./Button.module.scss";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   btnStyle: "brown" | "black" | "transparent" | "text" | "cart";
+  classes?: string;
 }
-const Button = ({ children, btnStyle, ...otherProps }: ButtonProps) => {
+const Button = ({
+  children,
+  btnStyle,
+  classes,
+  ...otherProps
+}: ButtonProps) => {
   console.log(styles);
   let _class = styles.btn__brown;
   if (btnStyle === "black") {
@@ -17,7 +23,7 @@ const Button = ({ children, btnStyle, ...otherProps }: ButtonProps) => {
   }
 
   return (
-    <button className={_class} {...otherProps}>
+    <button className={`${_class} ${classes}`} {...otherProps}>
       {children}
     </button>
   );

@@ -15,9 +15,10 @@ const CategoryCard = ({ category, classes }: CategoryProps) => {
           src={`/assets/images/shared/desktop/image-category-thumbnail-${category}.png`}
           alt={`${category} tumbnail image`}
         />
-
         <h6>{category}</h6>
-        <Link to={`/${category}`}>shop &gt;</Link>
+        <Link to={`/${category}`}>
+          shop <span>&gt;</span>
+        </Link>
       </div>
       <div className={styles.categoryCard__background}>&nbsp;</div>
     </li>

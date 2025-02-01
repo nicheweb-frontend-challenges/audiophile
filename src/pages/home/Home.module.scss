@@ -1,18 +1,9 @@
 .home {
-  &__first {
+  &__main {
     grid-column: mid;
     grid-row: 4 / 5;
-  }
-  &__second {
-    grid-column: mid;
-    grid-row: 5 / 6;
-  }
-  &__third {
-    grid-column: mid;
-    grid-row: 6 / 7;
-  }
-  &__categories {
-    grid-column: mid;
-    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 12rem 0 20rem;
   }
 }

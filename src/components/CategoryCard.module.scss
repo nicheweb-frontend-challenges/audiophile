@@ -1,4 +1,5 @@
 @use "../assets/styles/abstracts/variables" as *;
+@use "../assets/styles/abstracts/mixins" as m;
 
 .categoryCard {
   & {
@@ -20,6 +21,9 @@
     h6 {
       margin-top: -3rem;
       margin-bottom: 1.5rem;
+    }
+    a {
+      @include m.link__text;
     }
   }
   &__background {

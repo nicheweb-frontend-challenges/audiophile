@@ -1,9 +1,10 @@
 import CartIcon from "../assets/icons/icon-cart.svg";
 import * as styles from "./MainHeader.module.scss";
-import MainNav from "../components/MainNav";
 import Button from "../components/Button";
 import useStore from "../store/store";
 import Modal from "../components/Modal";
+import Nav from "../components/Nav";
+import AppLogo from "../components/AppLogo";
 
 const MainHeader = () => {
   const [{ modal }, dispatch] = useStore(true);
@@ -17,8 +18,13 @@ const MainHeader = () => {
   return (
     <header id="start" className={styles.mainHeader}>
       {modal && <Modal modal={modal} />}
-      <MainNav />
-      <Button onClick={handleOpenCart} btnStyle="cart">
+      <AppLogo />
+      <Nav />
+      <Button
+        onClick={handleOpenCart}
+        btnStyle="cart"
+        classes={styles.mainHeader__cart}
+      >
         <CartIcon />
       </Button>
     </header>
