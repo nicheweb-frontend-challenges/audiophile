@@ -1,7 +1,6 @@
 import CartIcon from "../assets/icons/icon-cart.svg";
-import Nav from "../components/Nav";
 import * as styles from "./MainHeader.module.scss";
-import AppLogo from "../components/AppLogo";
+import MainNav from "../components/MainNav";
 import Button from "../components/Button";
 import useStore from "../store/store";
 import Modal from "../components/Modal";
@@ -18,9 +17,8 @@ const MainHeader = () => {
   return (
     <header id="start" className={styles.mainHeader}>
       {modal && <Modal modal={modal} />}
-      <AppLogo />
-      <Nav />
-      <Button onClick={handleOpenCart}>
+      <MainNav />
+      <Button onClick={handleOpenCart} btnStyle="cart">
         <CartIcon />
       </Button>
     </header>

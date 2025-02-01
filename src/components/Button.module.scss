@@ -1,0 +1,43 @@
+@use "../assets/styles/abstracts/mixins" as m;
+@use "../assets//styles/abstracts/variables" as *;
+
+.btn {
+  &__brown {
+    @include m.btn__solid($color-brown);
+    &:hover {
+      @include m.btn__solid($color-light-brown);
+    }
+  }
+
+  &__black {
+    @include m.btn__solid($color-black);
+    &:hover {
+      @include m.btn__solid($color-dark-grey);
+    }
+  }
+
+  &__transparent {
+    @include m.btn__outline;
+    &:hover {
+      border-color: $color-black;
+      @include m.btn__solid($color-black);
+    }
+  }
+
+  &__text {
+    @include m.btn__shoptext;
+    span {
+      color: $color-brown;
+    }
+    &:hover {
+      color: $color-brown;
+    }
+  }
+
+  &__cart {
+    color: $color-white;
+    &:hover {
+      color: $color-brown;
+    }
+  }
+}

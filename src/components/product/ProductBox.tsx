@@ -1,6 +1,7 @@
-import Button from "../Button";
+import { Link } from "react-router-dom";
 import Product from "../../models/product";
 import ProductInfo from "./ProductInfo";
+import * as styles from "./ProductBox.module.scss";
 
 export type ProductBoxProps = {
   boxProduct: Product;
@@ -9,18 +10,20 @@ export type ProductBoxProps = {
   hasBoxDescription?: boolean;
   boxDescription?: string;
   boxName?: string;
+  classes?: string;
 };
 
 const ProductBox = ({
   boxProduct,
   level,
-  boxTheme,
+  boxTheme = "dark",
   hasBoxDescription,
   boxDescription,
   boxName,
+  classes,
 }: ProductBoxProps) => {
   return (
-    <div>
+    <div className={styles.productBox + " " + classes}>
       <ProductInfo
         product={boxProduct}
         headingLevel={level}
@@ -29,9 +32,7 @@ const ProductBox = ({
         description={boxDescription}
         newName={boxName}
       />
-      <Button linkTo={`/${boxProduct.category}/${boxProduct.slug}`}>
-        See product
-      </Button>
+      <Link to={`/${boxProduct.category}/${boxProduct.slug}`}>See product</Link>
     </div>
   );
 };

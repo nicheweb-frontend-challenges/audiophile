@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as *;
+
+@mixin btn__typo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@mixin btn__solid($color) {
+  @include btn__typo;
+  padding: 1.5rem 6rem;
+  color: white;
+  background-color: $color;
+}
+
+@mixin btn__outline {
+  @include btn__typo;
+  border: 1px solid $color-dark-grey;
+}
+
+@mixin btn__shoptext {
+  @include btn__typo;
+  opacity: 0.5;
+}
+
+@mixin link__solid($color1, $color2) {
+  &:link,
+  &:visited {
+    @include btn__solid($color1);
+  }
+  &:hover,
+  &:active {
+    @include btn__solid($color2);
+  }
+}
+
+@mixin link__outline {
+  &:link,
+  &:visited {
+    @include btn__outline;
+  }
+  &:hover,
+  &:active {
+    @include btn__solid($color-black);
+    border-color: $color-black;
+  }
+}
+
+@mixin link__text {
+  &:link,
+  &:visited {
+    @include btn__shoptext;
+    span {
+      color: $color-brown;
+    }
+  }
+  &:hover,
+  &:active {
+    color: $color-brown;
+  }
+}

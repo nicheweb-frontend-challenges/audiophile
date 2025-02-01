@@ -1,6 +1,6 @@
 import OtherProduct from "../../models/other";
 import ResponsiveImg from "../ResponsiveImg";
-import Button from "../Button";
+import { Link } from "react-router-dom";
 import useStore from "../../store/store";
 
 type OtherProductCardProps = { otherProduct: OtherProduct };
@@ -16,7 +16,7 @@ const OtherProductCard = ({ otherProduct }: OtherProductCardProps) => {
     <li>
       <ResponsiveImg image={otherProduct.image} />
       <h5>{otherProduct.name}</h5>
-      <Button linkTo={`/${category}/${otherProduct.slug}`}>see product</Button>
+      <Link to={`/${category}/${otherProduct.slug}`}>see product</Link>
     </li>
   );
 };

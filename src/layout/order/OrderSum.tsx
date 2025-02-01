@@ -1,5 +1,5 @@
 import useStore from "../../store/store";
-import OrderCart from "../../components/order/orderCart";
+import OrderCart from "../../components/order/OrderCart";
 import { grandTotal } from "../../utils/cart-methods";
 
 const OrderSum = () => {

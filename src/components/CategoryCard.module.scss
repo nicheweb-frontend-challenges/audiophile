@@ -1,0 +1,33 @@
+@use "../assets/styles/abstracts/variables" as *;
+
+.categoryCard {
+  & {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(10, 1fr);
+    justify-items: center;
+  }
+  &__content {
+    grid-row: 1 / 11;
+    grid-column: 1 / 2;
+    align-self: flex-end;
+    text-align: center;
+    padding-bottom: 3rem;
+    img {
+      width: 75%;
+      display: inline-block;
+    }
+    h6 {
+      margin-top: -3rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__background {
+    grid-row: 4 / 11;
+    grid-column: 1 / 2;
+    width: 100%;
+    border-radius: 8px;
+    background-color: $color-light-grey;
+    z-index: -100;
+  }
+}

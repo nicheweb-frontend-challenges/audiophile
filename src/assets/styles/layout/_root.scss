@@ -1,0 +1,8 @@
+#root {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [mid-start]
+    minmax(32.7rem, 111rem)
+    [mid-end] minmax(4rem, 1fr) [full-end];
+  grid-template-rows: 9.6rem auto;
+}

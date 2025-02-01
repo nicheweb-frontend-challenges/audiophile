@@ -1,10 +1,11 @@
 import AppLogo from "../components/AppLogo";
 import Nav from "../components/Nav";
 import Social from "../components/Social";
+import * as styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "black", color: "white" }}>
+    <footer className={styles.footer}>
       <AppLogo />
       <Nav />
       <Social />

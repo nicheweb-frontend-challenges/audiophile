@@ -1,5 +1,6 @@
 import ResponsiveImg from "../components/ResponsiveImg";
 import Image from "../models/image";
+import * as styles from "./BestGearSection.module.scss";
 
 const BestGearSection = () => {
   const image = new Image(
@@ -9,7 +10,7 @@ const BestGearSection = () => {
   );
 
   return (
-    <section>
+    <section className={styles.bestGear}>
       <div>
         <h2> Bringing you the best audio gear</h2>
         <p>

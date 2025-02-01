@@ -12,6 +12,7 @@ type ProductRowProps = {
   imgClasses?: string;
   invert?: boolean;
   productDesc?: boolean;
+  classes?: string;
 };
 
 const ProductRow = ({
@@ -23,9 +24,10 @@ const ProductRow = ({
   customDescription,
   customImage,
   customName,
+  classes,
 }: ProductRowProps) => {
   return (
-    <div>
+    <div className={classes}>
       <ProductBox
         boxProduct={product}
         level={level}

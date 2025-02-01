@@ -1,8 +1,9 @@
-import HomeHeroSection from "../layout/HomeHeroSection";
-import ProductRow from "../components/product/ProductRow";
-import Image from "../models/image";
-import Categories from "../layout/category/Categories";
-import useStore from "../store/store";
+import HomeHeroSection from "./HomeHeroSection";
+import ProductRow from "../../components/product/ProductRow";
+import Image from "../../models/image";
+import Categories from "../../layout/category/Categories";
+import useStore from "../../store/store";
+import * as styles from "./Home.module.scss";
 
 const HomePage = () => {
   const { products } = useStore(false)[0];
@@ -37,15 +38,16 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-      <Categories />
+      <Categories classes={styles.home__categories} />
       {firstProduct && (
         <ProductRow
           product={firstProduct}
           level="primary"
-          theme="light"
+          theme="dark"
           customImage={firstImage}
           productDesc
           customDescription={firstDescription}
+          classes={styles.home__first}
         />
       )}
       {secondProduct && (
@@ -54,6 +56,7 @@ const HomePage = () => {
           level="secondary"
           theme="dark"
           customImage={secondImage}
+          classes={styles.home__second}
         />
       )}
       {thirdProduct && (
@@ -63,6 +66,7 @@ const HomePage = () => {
           theme="dark"
           customImage={thirdImage}
           customName="YX1 Earphones"
+          classes={styles.home__third}
         />
       )}
     </>
