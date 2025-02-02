@@ -62,6 +62,17 @@
   }
 }
 
+@mixin link__social {
+  &:link,
+  &:visited {
+    color: $color-white;
+  }
+  &:hover,
+  &:active {
+    color: $color-brown;
+  }
+}
+
 @mixin round {
   border-radius: 8px;
   overflow: hidden;
