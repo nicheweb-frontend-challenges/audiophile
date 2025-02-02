@@ -1,9 +1,99 @@
+@use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets/styles/abstracts/mixins" as m;
+
 .home {
   &__main {
     grid-column: mid;
-    grid-row: 4 / 5;
+    grid-row: main;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto 56rem auto auto;
     padding: 12rem 0 20rem;
+  }
+  &__categories {
+    grid-row: 1 / 2;
+  }
+  &__firstProduct {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $color-brown;
+    overflow: hidden;
+    margin-bottom: 4.8rem;
+    &_box {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      color: $color-white;
+      width: 60%;
+      align-self: center;
+      justify-self: center;
+      div p:last-child {
+        overflow-wrap: anywhere;
+        hyphens: none;
+        margin-top: 2.4rem;
+      }
+      div {
+        margin-bottom: 4rem;
+      }
+      a {
+        @include m.link__solid($color-black, $color-dark-grey);
+      }
+    }
+    &_img {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 65%;
+      margin-top: 9.6rem;
+      margin-left: 11.75rem;
+    }
+  }
+  &__secondProduct {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4.8rem;
+    &_box {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-self: center;
+      padding-left: 9.65rem;
+      h2 {
+        margin-bottom: 3.2rem;
+      }
+      a {
+        @include m.link__outline;
+      }
+    }
+    &_img {
+      grid-column: 1 / 3;
+      z-index: -100;
+      grid-row: 1 / 2;
+    }
+  }
+  &__thirdProduct {
+    grid-row: 4 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    &_box {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      align-self: stretch;
+      padding-left: 9.65rem;
+      background-color: $color-light-grey;
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      align-items: flex-start;
+      justify-content: center;
+      @include m.round;
+      a {
+        @include m.link__outline;
+      }
+    }
+    &_img {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
   }
 }

@@ -1,9 +1,12 @@
 import HomeHeroSection from "./HomeHeroSection";
+import HomeProductBox from "./HomeProductBox";
+import ResponsiveImg from "../../components/ResponsiveImg";
 import ProductRow from "../../components/product/ProductRow";
 import Image from "../../models/image";
 import Categories from "../../layout/category/Categories";
 import useStore from "../../store/store";
 import * as styles from "./Home.module.scss";
+import Card from "../../components/UI/Card";
 
 const HomePage = () => {
   const { products } = useStore(false)[0];
@@ -39,33 +42,44 @@ const HomePage = () => {
     <>
       <HomeHeroSection />
       <main className={styles.home__main}>
-        <Categories />
+        <Categories classes={styles.home__categories} />
         {firstProduct && (
-          <ProductRow
-            product={firstProduct}
-            level="primary"
-            theme="dark"
-            customImage={firstImage}
-            productDesc
-            customDescription={firstDescription}
-          />
+          <Card className={styles.home__firstProduct}>
+            <HomeProductBox
+              product={firstProduct}
+              description="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
+              classes={styles.home__firstProduct_box}
+              isFirstLevel
+            />
+            <ResponsiveImg
+              image={firstImage}
+              classes={styles.home__firstProduct_img}
+            />
+          </Card>
         )}
         {secondProduct && (
-          <ProductRow
-            product={secondProduct}
-            level="secondary"
-            theme="dark"
-            customImage={secondImage}
-          />
+          <Card className={styles.home__secondProduct}>
+            <HomeProductBox
+              product={secondProduct}
+              classes={styles.home__secondProduct_box}
+            />
+            <ResponsiveImg
+              image={secondImage}
+              classes={styles.home__secondProduct_img}
+            />
+          </Card>
         )}
         {thirdProduct && (
-          <ProductRow
-            product={thirdProduct}
-            level="secondary"
-            theme="dark"
-            customImage={thirdImage}
-            customName="YX1 Earphones"
-          />
+          <div className={styles.home__thirdProduct}>
+            <HomeProductBox
+              product={thirdProduct}
+              classes={styles.home__thirdProduct_box}
+            />
+            <ResponsiveImg
+              image={thirdImage}
+              classes={styles.home__thirdProduct_img}
+            />
+          </div>
         )}
       </main>
     </>

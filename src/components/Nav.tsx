@@ -1,9 +1,13 @@
 import * as styles from "./Nav.module.scss";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+type NavProps = {
+  classes?: string;
+};
+
+const Nav = ({ classes }: NavProps) => {
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${classes ? classes : ""}`}>
       <Link to="">Home</Link>
       <Link to="/headphones">headphones</Link>
       <Link to="/speakers">speakers</Link>

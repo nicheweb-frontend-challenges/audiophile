@@ -1,6 +1,30 @@
+@use "../assets/styles/abstracts/variables" as *;
+
 .footer {
+  grid-row: footer;
   grid-column: mid;
-  grid-row: 9 / 10;
-  background-color: "black";
-  color: "white";
+  color: $color-white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  column-gap: 3rem;
+  row-gap: 3.6rem;
+  padding-top: 7.5rem;
+  p {
+    color: $color-grey;
+  }
+  &__background {
+    grid-row: footer;
+    grid-column: full;
+    background-color: black;
+    z-index: -100;
+  }
+  &__nav {
+    justify-self: self-end;
+  }
+  &__copyright {
+    align-self: end;
+    margin-top: 2rem;
+    color: $color-grey;
+  }
 }

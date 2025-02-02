@@ -1,10 +1,8 @@
 import HomeProductBox from "./HomeProductBox";
 import ResponsiveImg from "../../components/ResponsiveImg";
 import Image from "../../models/image";
-import Product from "../../models/product";
 import useStore from "../../store/store";
 import * as styles from "./HomeHeroSection.module.scss";
-import Button from "../../components/Button";
 
 const HomeHeroSection = () => {
   const { products } = useStore(false)[0];
@@ -30,6 +28,8 @@ const HomeHeroSection = () => {
           product={product}
           description="Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast."
           classes={styles.homeHeroProduct__box}
+          isNew
+          isFirstLevel
         />
       )}
     </>

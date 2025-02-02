@@ -4,14 +4,18 @@
 .homeHeroProduct {
   &__picture {
     grid-column: full;
-    grid-row: 1 / 3;
+    grid-row: nav-start / back-end;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
   }
   &__box {
     grid-column: mid;
-    grid-row: 2 / 3;
+    grid-row: back;
     max-width: 40rem;
     align-self: center;
     color: $color-white;
+    // padding-bottom: 1rem;
     p:first-child {
       color: $color-grey;
     }

@@ -1,11 +1,10 @@
-import React from "react";
 import MainHeader from "./MainHeader";
 import { Outlet, useLocation } from "react-router-dom";
 import BestGearSection from "./BestGearSection";
 import Footer from "./Footer";
 import ScrollToTop from "../components/ScrollToTop";
 
-const RootLayout: React.FC = () => {
+const RootLayout = () => {
   const { pathname } = useLocation();
 
   return (
@@ -18,5 +17,4 @@ const RootLayout: React.FC = () => {
     </>
   );
 };
-
 export default RootLayout;

@@ -6,7 +6,11 @@ import Modal from "../components/Modal";
 import Nav from "../components/Nav";
 import AppLogo from "../components/AppLogo";
 
-const MainHeader = () => {
+type MainHeaderProps = {
+  classes?: string;
+};
+
+const MainHeader = ({ classes }: MainHeaderProps) => {
   const [{ modal }, dispatch] = useStore(true);
 
   const handleOpenCart = () => {
@@ -16,7 +20,10 @@ const MainHeader = () => {
   };
 
   return (
-    <header id="start" className={styles.mainHeader}>
+    <header
+      id="start"
+      className={`${styles.mainHeader} ${classes ? classes : ""}`}
+    >
       {modal && <Modal modal={modal} />}
       <AppLogo />
       <Nav />

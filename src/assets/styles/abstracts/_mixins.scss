@@ -15,7 +15,8 @@
 
 @mixin btn__outline {
   @include btn__typo;
-  border: 1px solid $color-dark-grey;
+  padding: 1.5rem 6rem;
+  border: 2px solid $color-dark-grey;
 }
 
 @mixin btn__shoptext {
@@ -59,4 +60,9 @@
   &:active {
     color: $color-brown;
   }
+}
+
+@mixin round {
+  border-radius: 8px;
+  overflow: hidden;
 }

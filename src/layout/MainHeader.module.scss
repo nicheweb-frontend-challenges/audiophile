@@ -2,13 +2,14 @@
 
 .mainHeader {
   grid-column: mid;
-  grid-row: 1 / 2;
+  grid-row: nav;
   z-index: 100;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid $color-grey;
+
   &__cart {
     justify-self: end;
   }

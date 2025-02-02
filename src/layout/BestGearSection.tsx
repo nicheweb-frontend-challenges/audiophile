@@ -2,7 +2,11 @@ import ResponsiveImg from "../components/ResponsiveImg";
 import Image from "../models/image";
 import * as styles from "./BestGearSection.module.scss";
 
-const BestGearSection = () => {
+type BestGearProps = {
+  classes?: string;
+};
+
+const BestGearSection = ({ classes }: BestGearProps) => {
   const image = new Image(
     "/assets/images/shared/mobile/image-best-gear.jpg",
     "/assets/images/shared/tablet/image-best-gear.jpg",
@@ -10,9 +14,11 @@ const BestGearSection = () => {
   );
 
   return (
-    <section className={styles.bestGear}>
+    <section className={`${styles.bestGear} ${classes ? classes : ""}`}>
       <div>
-        <h2> Bringing you the best audio gear</h2>
+        <h2>
+          Bringing you the <span>best</span> audio gear
+        </h2>
         <p>
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.

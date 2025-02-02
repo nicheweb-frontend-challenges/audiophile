@@ -1,10 +1,11 @@
 import FacebookIcon from "../assets/icons/icon-facebook.svg";
 import InstagramIcon from "../assets/icons/icon-instagram.svg";
 import TwitterIcon from "../assets/icons/icon-twitter.svg";
+import * as styles from "./Social.module.scss";
 
 const Social = () => {
   return (
-    <ul>
+    <ul className={styles.social}>
       <li>
         <a href="https://www.facebook.com/" target="_blank">
           <FacebookIcon />

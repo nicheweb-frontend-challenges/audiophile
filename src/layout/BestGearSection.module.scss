@@ -1,4 +1,25 @@
+@use "../assets/styles/abstracts/variables" as *;
+
 .bestGear {
   grid-column: mid;
-  grid-row: 7 / 8;
+  grid-row: bestgear;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12.5rem;
+  margin-bottom: 20rem;
+  div {
+    align-self: center;
+    h2 {
+      margin-bottom: 3.2rem;
+      span {
+        color: $color-brown;
+      }
+    }
+    p {
+      overflow-wrap: anywhere;
+      hyphens: none;
+      width: 91%;
+      color: $color-grey;
+    }
+  }
 }
