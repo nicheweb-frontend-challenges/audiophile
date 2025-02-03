@@ -50,10 +50,13 @@
 @mixin link__text {
   &:link,
   &:visited {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1.33rem;
     @include btn__shoptext;
     span {
-      color: $color-brown;
-      font-size: 2rem;
+      line-height: 1;
     }
   }
   &:hover,

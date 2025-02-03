@@ -1,7 +1,7 @@
 import HomeHeroSection from "./HomeHeroSection";
 import HomeProductBox from "./HomeProductBox";
 import ResponsiveImg from "../../components/ResponsiveImg";
-import ProductRow from "../../components/product/ProductRow";
+import ProductRow from "../../components/product/CategoryProductRow";
 import Image from "../../models/image";
 import Categories from "../../layout/category/Categories";
 import useStore from "../../store/store";
@@ -42,45 +42,49 @@ const HomePage = () => {
     <>
       <HomeHeroSection />
       <main className={styles.home__main}>
-        <Categories classes={styles.home__categories} />
-        {firstProduct && (
-          <Card className={styles.home__firstProduct}>
-            <HomeProductBox
-              product={firstProduct}
-              description="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
-              classes={styles.home__firstProduct_box}
-              isFirstLevel
-            />
-            <ResponsiveImg
-              image={firstImage}
-              classes={styles.home__firstProduct_img}
-            />
-          </Card>
-        )}
-        {secondProduct && (
-          <Card className={styles.home__secondProduct}>
-            <HomeProductBox
-              product={secondProduct}
-              classes={styles.home__secondProduct_box}
-            />
-            <ResponsiveImg
-              image={secondImage}
-              classes={styles.home__secondProduct_img}
-            />
-          </Card>
-        )}
-        {thirdProduct && (
-          <div className={styles.home__thirdProduct}>
-            <HomeProductBox
-              product={thirdProduct}
-              classes={styles.home__thirdProduct_box}
-            />
-            <ResponsiveImg
-              image={thirdImage}
-              classes={styles.home__thirdProduct_img}
-            />
-          </div>
-        )}
+        <section className={styles.home__categories}>
+          <Categories />
+        </section>
+        <section className={styles.home__products}>
+          {firstProduct && (
+            <Card className={styles.home__firstProduct}>
+              <HomeProductBox
+                product={firstProduct}
+                description="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
+                classes={styles.home__firstProduct_box}
+                isFirstLevel
+              />
+              <ResponsiveImg
+                image={firstImage}
+                classes={styles.home__firstProduct_img}
+              />
+            </Card>
+          )}
+          {secondProduct && (
+            <Card className={styles.home__secondProduct}>
+              <HomeProductBox
+                product={secondProduct}
+                classes={styles.home__secondProduct_box}
+              />
+              <ResponsiveImg
+                image={secondImage}
+                classes={styles.home__secondProduct_img}
+              />
+            </Card>
+          )}
+          {thirdProduct && (
+            <div className={styles.home__thirdProduct}>
+              <HomeProductBox
+                product={thirdProduct}
+                classes={styles.home__thirdProduct_box}
+              />
+              <ResponsiveImg
+                image={thirdImage}
+                classes={styles.home__thirdProduct_img}
+              />
+            </div>
+          )}
+        </section>
       </main>
     </>
   );

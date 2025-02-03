@@ -13,15 +13,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   return (
     <div>
       <ResponsiveImg image={product?.categoryImage} />
-      {product && (
-        <ProductInfo
-          product={product}
-          headingLevel="secondary"
-          theme="dark"
-          hasDescription
-          showPrice
-        />
-      )}
+      {product && <ProductInfo product={product} />}
       {product && <ProductPurchase product={product} />}
       <Features features={product.features} />
       {product.includes && <IncludedItems includedItems={product.includes} />}

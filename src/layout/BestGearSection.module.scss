@@ -4,10 +4,14 @@
   grid-column: mid;
   grid-row: bestgear;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 12.5rem;
+  grid-template-columns: repeat(auto-fit, [box-start] 54rem [box-end]);
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.5rem;
   margin-bottom: 20rem;
-  div {
+  & > div {
+    width: 45rem;
     align-self: center;
     h2 {
       margin-bottom: 3.2rem;
@@ -16,9 +20,6 @@
       }
     }
     p {
-      overflow-wrap: anywhere;
-      hyphens: none;
-      width: 91%;
       color: $color-grey;
     }
   }

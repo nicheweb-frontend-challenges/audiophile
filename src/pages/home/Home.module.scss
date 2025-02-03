@@ -7,14 +7,20 @@
     grid-row: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 56rem auto auto;
+    grid-template-rows: [categories-start] auto [categories-end products-start] auto [products-end];
     padding: 12rem 0 20rem;
   }
   &__categories {
-    grid-row: 1 / 2;
+    grid-row: categories;
+  }
+  &__products {
+    grid-row: products;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [first-start] 56rem [first-end second-start] auto [second-end third-start] auto [third-end];
   }
   &__firstProduct {
-    grid-row: 2 / 3;
+    grid-row: first;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: $color-brown;
@@ -48,7 +54,7 @@
     }
   }
   &__secondProduct {
-    grid-row: 3 / 4;
+    grid-row: second;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 4.8rem;
@@ -71,7 +77,7 @@
     }
   }
   &__thirdProduct {
-    grid-row: 4 / 5;
+    grid-row: third;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;

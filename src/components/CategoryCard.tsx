@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Product from "models/product";
 import * as styles from "./CategoryCard.module.scss";
+import RightArrow from "../assets/icons/icon-arrow-right.svg";
 
 type CategoryProps = {
   category: Product["category"];
@@ -17,7 +18,10 @@ const CategoryCard = ({ category, classes }: CategoryProps) => {
         />
         <h6>{category}</h6>
         <Link to={`/${category}`}>
-          shop <span>&gt;</span>
+          <span>shop</span>{" "}
+          <span>
+            <RightArrow />
+          </span>
         </Link>
       </div>
       <div className={styles.categoryCard__background}>&nbsp;</div>

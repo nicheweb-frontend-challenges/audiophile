@@ -1,0 +1,11 @@
+@use "../../assets/styles/abstracts/variables" as *;
+
+.categoryHeading {
+  color: $color-white;
+  height: 33.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 9.7rem;
+  background-color: $color-black;
+}

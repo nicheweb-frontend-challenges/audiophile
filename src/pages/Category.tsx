@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
-import Product from "../models/product";
+import * as styles from "./Category.module.scss";
 import useStore from "../store/store";
-import ProductRow from "../components/product/ProductRow";
 import { sortProducts } from "../utils/productsOp";
+import Product from "../models/product";
+import CategoryProductRow from "../components/product/CategoryProductRow";
 import CategoryHeading from "../layout/category/CategoryHeading";
+import Categories from "../layout/category/Categories";
 
 const CategoryPage = () => {
   interface Params extends Record<string, string | undefined> {
@@ -26,15 +28,25 @@ const CategoryPage = () => {
 
   return (
     <>
-      <CategoryHeading category={categoryName} />
-      {categoryProducts.map((product) => (
-        <ProductRow
-          product={product}
-          level="secondary"
-          theme="dark"
-          productDesc
-        />
-      ))}
+      <CategoryHeading
+        category={categoryName}
+        classes={styles.category__heading}
+      />
+      <main className={styles.category__main}>
+        <section className={`${styles.category__products} zpattern`}>
+          {categoryProducts.map((product, index) => {
+            if (index % 2 !== 0) {
+              return <CategoryProductRow product={product} classes="row" />;
+            }
+            return (
+              <CategoryProductRow product={product} invert classes="row" />
+            );
+          })}
+        </section>
+        <section className={styles.category__categories}>
+          <Categories />
+        </section>
+      </main>
     </>
   );
 };

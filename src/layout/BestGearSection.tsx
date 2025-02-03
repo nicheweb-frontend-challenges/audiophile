@@ -1,12 +1,14 @@
 import ResponsiveImg from "../components/ResponsiveImg";
 import Image from "../models/image";
 import * as styles from "./BestGearSection.module.scss";
+import { useLocation } from "react-router-dom";
 
 type BestGearProps = {
   classes?: string;
 };
 
 const BestGearSection = ({ classes }: BestGearProps) => {
+  const location = useLocation();
   const image = new Image(
     "/assets/images/shared/mobile/image-best-gear.jpg",
     "/assets/images/shared/tablet/image-best-gear.jpg",
@@ -14,7 +16,10 @@ const BestGearSection = ({ classes }: BestGearProps) => {
   );
 
   return (
-    <section className={`${styles.bestGear} ${classes ? classes : ""}`}>
+    <section
+      style={location.pathname !== "/" ? { marginBottom: "160px" } : {}}
+      className={`${styles.bestGear} ${classes ? classes : ""}`}
+    >
       <div>
         <h2>
           Bringing you the <span>best</span> audio gear

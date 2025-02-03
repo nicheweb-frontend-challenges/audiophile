@@ -1,0 +1,9 @@
+@use "../../assets/styles/abstracts/mixins" as m;
+@use "../../assets/styles/abstracts/variables" as *;
+
+.productBox {
+  width: 44.5rem;
+  a {
+    @include m.link__solid($color-brown, $color-light-brown);
+  }
+}
