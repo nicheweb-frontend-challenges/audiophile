@@ -1,0 +1,8 @@
+@use "../assets/styles/abstracts/variables" as *;
+
+.includedItem {
+  &__bullet {
+    margin-right: 2.4rem;
+    color: $color-brown;
+  }
+}

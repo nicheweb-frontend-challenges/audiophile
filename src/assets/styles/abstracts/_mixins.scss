@@ -8,20 +8,29 @@
 
 @mixin btn__solid($color) {
   @include btn__typo;
-  padding: 1.5rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   background-color: $color;
+  width: 16rem;
+  height: 4.8rem;
 }
 
 @mixin btn__outline {
   @include btn__typo;
-  padding: 1.5rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid $color-dark-grey;
+  width: 16rem;
+  height: 4.8rem;
+  color: $color-black;
 }
 
 @mixin btn__shoptext {
   @include btn__typo;
-  opacity: 0.5;
+  color: $color-grey;
 }
 
 @mixin link__solid($color1, $color2) {

@@ -1,5 +1,6 @@
 import OtherProduct from "../../models/other";
 import OtherProductCard from "../../components/product/OtherProductCard";
+import * as styles from "./OtherProducts.module.scss";
 
 type OtherProductsProps = {
   otherProducts: OtherProduct[];
@@ -7,14 +8,14 @@ type OtherProductsProps = {
 
 const OtherProducts = ({ otherProducts }: OtherProductsProps) => {
   return (
-    <div>
-      <h3>you may also like</h3>
-      <ul>
+    <section>
+      <h3 className={styles.otherProducts__heading}>you may also like</h3>
+      <ul className={styles.otherProducts__list}>
         {otherProducts.map((otherProduct, index) => (
           <OtherProductCard otherProduct={otherProduct} key={index} />
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

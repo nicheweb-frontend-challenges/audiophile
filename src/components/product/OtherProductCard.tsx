@@ -2,6 +2,7 @@ import OtherProduct from "../../models/other";
 import ResponsiveImg from "../ResponsiveImg";
 import { Link } from "react-router-dom";
 import useStore from "../../store/store";
+import * as styles from "./OtherProductCard.module.scss";
 
 type OtherProductCardProps = { otherProduct: OtherProduct };
 
@@ -13,9 +14,9 @@ const OtherProductCard = ({ otherProduct }: OtherProductCardProps) => {
   const category = product?.category;
 
   return (
-    <li>
+    <li className={styles.otherProduct}>
       <ResponsiveImg image={otherProduct.image} />
-      <h5>{otherProduct.name}</h5>
+      <h5 className={styles.otherProduct__name}>{otherProduct.name}</h5>
       <Link to={`/${category}/${otherProduct.slug}`}>see product</Link>
     </li>
   );

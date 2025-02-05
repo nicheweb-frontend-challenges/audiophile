@@ -1,0 +1,22 @@
+.prodDetail {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: min-content min-content;
+  grid-template-areas:
+    "product product"
+    "features list";
+  row-gap: 16rem;
+  // margin-bottom: 16rem;
+  &__desc {
+    width: 44.5rem;
+  }
+  &__prodMain {
+    grid-area: product;
+  }
+  &__features {
+    grid-area: features;
+  }
+  &__list {
+    grid-area: list;
+  }
+}

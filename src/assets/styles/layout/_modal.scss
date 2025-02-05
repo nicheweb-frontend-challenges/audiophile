@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+
+#modal {
+  dialog {
+    border: none;
+    inset-inline-start: unset;
+    border-radius: 8px;
+    padding: 3.2rem;
+    background: $color-white;
+    top: 12.8rem;
+    right: 16.5rem;
+    &::backdrop {
+      background: rgba($color-black, 40%);
+    }
+  }
+}

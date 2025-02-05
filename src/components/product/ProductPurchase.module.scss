@@ -1,0 +1,11 @@
+.prodPurchase {
+  display: flex;
+  gap: 1.6rem;
+
+  &__addCart,
+  &__addCart:hover {
+    width: 16rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

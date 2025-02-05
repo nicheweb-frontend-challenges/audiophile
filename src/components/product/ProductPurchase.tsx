@@ -4,6 +4,7 @@ import useQuantitySelector from "../../hooks/useQuantitySelector";
 import Product from "../../models/product";
 import useStore from "../../store/store";
 import CartItem from "../../models/cart-item";
+import * as styles from "./ProductPurchase.module.scss";
 
 type ProductPurchaseProps = {
   product: Product;
@@ -28,7 +29,7 @@ const ProductPurchase = ({ product }: ProductPurchaseProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.prodPurchase}>
       <QuantitySelector
         quantity={quantity}
         onDecrement={handleDecrement}
@@ -36,7 +37,9 @@ const ProductPurchase = ({ product }: ProductPurchaseProps) => {
         onInputChange={handleChange}
         minQuantity={1}
       />
-      <Button>Add to cart</Button>
+      <Button btnStyle="brown" classes={styles.prodPurchase__addCart}>
+        Add to cart
+      </Button>
     </form>
   );
 };

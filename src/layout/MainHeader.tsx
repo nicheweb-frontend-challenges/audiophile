@@ -5,13 +5,20 @@ import useStore from "../store/store";
 import Modal from "../components/Modal";
 import Nav from "../components/Nav";
 import AppLogo from "../components/AppLogo";
+import { useParams, useLocation } from "react-router";
 
 type MainHeaderProps = {
   classes?: string;
 };
 
 const MainHeader = ({ classes }: MainHeaderProps) => {
+  const params = useParams();
+  const { pathname } = useLocation();
+
   const [{ modal }, dispatch] = useStore(true);
+
+  let isHomePage = pathname === "/";
+  let isCategoryPage = Object.keys(params).length === 1;
 
   const handleOpenCart = () => {
     console.log("HANDLE OPEN CART", modal);
@@ -23,6 +30,7 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
     <header
       id="start"
       className={`${styles.mainHeader} ${classes ? classes : ""}`}
+      style={!(isHomePage || isCategoryPage) ? { border: "none" } : {}}
     >
       {modal && <Modal modal={modal} />}
       <AppLogo />

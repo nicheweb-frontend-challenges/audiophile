@@ -1,0 +1,22 @@
+@use "../assets/styles/abstracts/variables" as *;
+@use "../assets/styles/abstracts/mixins" as m;
+
+.product {
+  &__headerBackground {
+    background-color: $color-black;
+    grid-row: nav / back;
+    grid-column: full;
+  }
+  &__main {
+    grid-row: main;
+    grid-column: mid;
+    & > *:not(:first-child) {
+      margin-bottom: 16rem;
+    }
+  }
+  &__gobackbutton {
+    text-transform: capitalize;
+    margin-bottom: 5.6rem;
+    margin-top: 8rem;
+  }
+}

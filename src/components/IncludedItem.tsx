@@ -1,4 +1,5 @@
 import IncludedIt from "../models/included-item";
+import * as styles from "./IncludedItem.module.scss";
 
 type IncludedItemProps = {
   includedItem: IncludedIt;
@@ -7,7 +8,9 @@ type IncludedItemProps = {
 const IncludedItem = ({ includedItem }: IncludedItemProps) => {
   return (
     <li>
-      <span style={{ marginRight: 10 }}>{`${includedItem.quantity}x`}</span>
+      <span
+        className={styles.includedItem__bullet}
+      >{`${includedItem.quantity}x`}</span>
       <span>{includedItem.item}</span>
     </li>
   );

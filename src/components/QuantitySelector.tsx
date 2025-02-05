@@ -1,4 +1,5 @@
 import Button from "./Button";
+import * as styles from "./QuantitySelector.module.scss";
 
 type QuantitySelectorProps = {
   onDecrement: () => void;
@@ -16,23 +17,23 @@ const QuantitySelector = ({
   onInputChange,
 }: QuantitySelectorProps) => {
   return (
-    <div>
+    <div className={styles.quantitySelector}>
       <Button
         type="button"
         onClick={onDecrement}
         disabled={quantity <= minQuantity}
-        style={{ margin: 10 }}
+        btnStyle="text"
       >
         -
       </Button>
       <input
         type="number"
         step="1"
-        min={minQuantity}
+        min={minQuantity.toString()}
         value={quantity.toString()}
         onChange={onInputChange}
       />
-      <Button type="button" onClick={onIncrement}>
+      <Button type="button" onClick={onIncrement} btnStyle="text">
         +
       </Button>
     </div>

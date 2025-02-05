@@ -1,0 +1,10 @@
+.includedItems {
+  &__heading {
+    margin-bottom: 3.2rem;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

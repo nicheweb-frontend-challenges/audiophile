@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: [products-start] auto [products-end categories-start] auto [categories-end];
     row-gap: 16rem;
-    margin-top: 16rem;
+    margin: 16rem 0;
   }
   &__heading {
     grid-row: nav / back;

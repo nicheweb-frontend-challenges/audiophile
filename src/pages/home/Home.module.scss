@@ -12,6 +12,7 @@
   }
   &__categories {
     grid-row: categories;
+    margin-bottom: 16.8rem;
   }
   &__products {
     grid-row: products;
@@ -33,6 +34,7 @@
       width: 60%;
       align-self: center;
       justify-self: center;
+
       div p:last-child {
         overflow-wrap: anywhere;
         hyphens: none;

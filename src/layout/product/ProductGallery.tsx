@@ -1,19 +1,28 @@
 import Gallery from "../../models/gallery";
 import ResponsiveImg from "../../components/ResponsiveImg";
+import * as styles from "./ProductGallery.module.scss";
 
 type ProductGalleryProps = {
   gallery: Gallery;
+  classes?: string;
 };
 
-const ProductGallery = ({ gallery }: ProductGalleryProps) => {
-  const imagesKeys = Object.keys(gallery) as ("first" | "second" | "third")[];
-
+const ProductGallery = ({ gallery, classes }: ProductGalleryProps) => {
   return (
-    <div>
-      {imagesKeys.map((imageKey, index) => (
-        <ResponsiveImg image={gallery[imageKey]} key={index} />
-      ))}
-    </div>
+    <section className={`${styles.productGallery} ${classes ? classes : ""}`}>
+      <ResponsiveImg
+        image={gallery.first}
+        classes={styles.productGallery__img1}
+      />
+      <ResponsiveImg
+        image={gallery.second}
+        classes={styles.productGallery__img2}
+      />
+      <ResponsiveImg
+        image={gallery.third}
+        classes={styles.productGallery__img3}
+      />
+    </section>
   );
 };
 

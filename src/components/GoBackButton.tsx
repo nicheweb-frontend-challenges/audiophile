@@ -1,7 +1,11 @@
 import Button from "./Button";
 import { replace, useNavigate } from "react-router-dom";
 
-const GoBackButton = () => {
+type GoBackProps = {
+  classes?: string;
+};
+
+const GoBackButton = ({ classes }: GoBackProps) => {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -13,7 +17,7 @@ const GoBackButton = () => {
   };
 
   return (
-    <Button type="button" onClick={goBack}>
+    <Button type="button" onClick={goBack} btnStyle="text" classes={classes}>
       go back
     </Button>
   );

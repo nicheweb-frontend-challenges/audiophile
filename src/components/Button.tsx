@@ -23,7 +23,7 @@ const Button = ({
   }
 
   return (
-    <button className={`${_class} ${classes}`} {...otherProps}>
+    <button className={`${_class} ${classes ? classes : ""}`} {...otherProps}>
       {children}
     </button>
   );
