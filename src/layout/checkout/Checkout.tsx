@@ -6,9 +6,10 @@ import useStore from "../../store/store";
 
 type CheckoutProps = {
   ref: ForwardedRef<Object>;
+  classes?: string;
 };
 
-const Checkout = ({ ref }: CheckoutProps) => {
+const Checkout = ({ ref, classes }: CheckoutProps) => {
   const form = useRef<HTMLFormElement>(null);
   const dispatch = useStore(false)[1];
 
@@ -25,7 +26,7 @@ const Checkout = ({ ref }: CheckoutProps) => {
     }
   };
   return (
-    <section>
+    <section className={`${classes ? classes : ""}`}>
       <h3>checkout</h3>
       <form ref={form} id="checkout-form" onSubmit={handleSubmit} noValidate>
         <BillingDetails />

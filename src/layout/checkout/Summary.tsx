@@ -5,26 +5,27 @@ import useStore from "../../store/store";
 
 type SummaryProps = {
   onTriggerSubmit: () => void;
+  classes?: string;
 };
 
-const Summary = ({ onTriggerSubmit }: SummaryProps) => {
+const Summary = ({ onTriggerSubmit, classes }: SummaryProps) => {
   const { cart } = useStore(false)[0];
 
   return (
-    <section>
+    <section className={`${classes ? classes : ""}`}>
       <header>
         <h6>summary</h6>
       </header>
-
-      <ul>
-        {cart?.map((item) => (
-          <Item cartItem={item} key={item.id} />
-        ))}
-      </ul>
-
+      <section>
+        <ul>
+          {cart?.map((item) => (
+            <Item cartItem={item} key={item.id} />
+          ))}
+        </ul>
+      </section>
       <footer>
         {<CartStatement cart={cart ?? []} showAll />}
-        <Button type="button" onClick={onTriggerSubmit}>
+        <Button btnStyle="brown" type="button" onClick={onTriggerSubmit}>
           continue
         </Button>
       </footer>

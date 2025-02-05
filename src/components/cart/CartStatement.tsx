@@ -1,6 +1,7 @@
 import CartItem from "../../models/cart-item";
 import * as styles from "./CartStatement.module.scss";
 import { total, vat, grandTotal, SHIPPING } from "../../utils/cart-methods";
+import { formatDollar } from "../../utils/formatter";
 
 type CartStatementProps = {
   cart: CartItem[];
@@ -8,13 +9,17 @@ type CartStatementProps = {
 };
 
 const CartStatement = ({ cart, showAll }: CartStatementProps) => {
-  const cartTotal: number = total(cart);
-  const cartVat: number = vat(cart);
-  const cartGrandTotal = grandTotal(cart);
-  console.log(styles);
+  const cartTotal: string = formatDollar(total(cart));
+  const cartVat: string = formatDollar(vat(cart));
+  const cartGrandTotal: string = formatDollar(grandTotal(cart));
+  const shipping: string = formatDollar(SHIPPING);
 
   return (
-    <table className={showAll ? styles.summaryStatement : styles.cartStatement}>
+    <table
+      className={`${styles.statement} ${
+        showAll ? styles.statement__summary : styles.statement__cart
+      }`}
+    >
       <tbody>
         <tr>
           <th>total</th>
@@ -22,7 +27,7 @@ const CartStatement = ({ cart, showAll }: CartStatementProps) => {
         </tr>
         <tr>
           <th>shipping</th>
-          <td>${SHIPPING}</td>
+          <td>{shipping}</td>
         </tr>
         <tr>
           <th>vat(included)</th>

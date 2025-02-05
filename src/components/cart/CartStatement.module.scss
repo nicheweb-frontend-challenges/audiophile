@@ -1,14 +1,38 @@
-.cartStatement {
-  tr {
-    display: none;
-  }
-  tbody tr:first-child {
-    display: table-row;
-  }
-}
+@use "../../assets/styles/abstracts/variables" as *;
 
-.summaryStatement {
-  tr {
-    display: table-row;
+.statement {
+  border-collapse: collapse;
+  th {
+    text-align: left;
+    color: $color-grey;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  td {
+    text-align: right;
+  }
+  tfoot {
+    tr {
+      height: 5rem;
+      vertical-align: bottom;
+    }
+    td {
+      color: $color-brown;
+    }
+  }
+
+  &__cart {
+    tr {
+      display: none;
+    }
+    tbody tr:first-child {
+      display: table-row;
+    }
+  }
+
+  &__summary {
+    tr {
+      display: table-row;
+    }
   }
 }

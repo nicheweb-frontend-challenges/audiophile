@@ -1,0 +1,43 @@
+@use "../../assets/styles/abstracts/variables" as *;
+
+.customInput {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content;
+  grid-template-areas:
+    "label error"
+    "input input";
+  &__label {
+    grid-area: label;
+    color: $color-black;
+  }
+  &__error {
+    grid-area: error;
+    color: $color-alert;
+    text-align: right;
+  }
+  &__input {
+    //Remove autofill in chrome
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      transition: background-color 9999s ease-in-out 0s;
+    }
+    &,
+    &:valid {
+      grid-area: input;
+      border: 1px solid $color-grey;
+      border-radius: 8px;
+      height: 5.6rem;
+    }
+    &:focus {
+      border-color: $color-brown;
+    }
+    &:invalid {
+      border-color: $color-alert;
+      border-width: 2px;
+    }
+  }
+}

@@ -21,31 +21,35 @@ const Cart = () => {
 
   return (
     <div className={styles.cart}>
-      <header>
+      <header className={styles.cart__header}>
         <h6>{`cart(${cart?.length})`}</h6>
         <Button
-          btnStyle="text"
+          btnStyle="cart"
           disabled={!cart?.length}
           onClick={handleRemoveAllItems}
+          classes={styles.cart__header_button}
         >
-          remove all
+          Remove all
         </Button>
       </header>
-      {cart?.length ? (
-        <ul>
-          {cart?.map((item) => (
-            <Item cartItem={item} key={item.id} itemForCart />
-          ))}
-        </ul>
-      ) : (
-        <p>No items in the cart</p>
-      )}
-      <footer>
+      <section className={styles.cart__items}>
+        {cart?.length ? (
+          <ul className={styles.cart__items_list}>
+            {cart?.map((item) => (
+              <Item cartItem={item} key={item.id} itemForCart />
+            ))}
+          </ul>
+        ) : (
+          <p className={styles.cart__items__fallback}>No items in the cart</p>
+        )}
+      </section>
+      <footer className={styles.cart__footer}>
         {cart?.length ? <CartStatement cart={cart} /> : undefined}
         <Button
           btnStyle="brown"
           disabled={!cart?.length}
           onClick={handleCheckout}
+          classes={styles.cart__footer_button}
         >
           checkout
         </Button>

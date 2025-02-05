@@ -1,3 +1,5 @@
+import * as styles from "./Fieldset.module.scss";
+
 type FieldsetProps = {
   title?:
     | "billing details"
@@ -5,13 +7,14 @@ type FieldsetProps = {
     | "payment details"
     | "payment method";
   children: React.ReactNode;
+  classes?: string;
 };
 
-const Fieldset = ({ title, children }: FieldsetProps) => {
+const Fieldset = ({ title, children, classes }: FieldsetProps) => {
   return (
-    <fieldset style={{ border: "none" }}>
-      <legend>{title}</legend>
-      {children}
+    <fieldset className={`${styles.customFieldset} ${classes ? classes : ""}`}>
+      <legend className={styles.customFieldset__legend}>{title}</legend>
+      <div className={styles.customFieldset__children}>{children}</div>
     </fieldset>
   );
 };

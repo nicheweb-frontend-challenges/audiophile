@@ -7,6 +7,7 @@ type QuantitySelectorProps = {
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   quantity: number;
   minQuantity: number;
+  classes?: string;
 };
 
 const QuantitySelector = ({
@@ -15,9 +16,10 @@ const QuantitySelector = ({
   onDecrement,
   onIncrement,
   onInputChange,
+  classes,
 }: QuantitySelectorProps) => {
   return (
-    <div className={styles.quantitySelector}>
+    <div className={`${styles.quantitySelector} ${classes ? classes : ""}`}>
       <Button
         type="button"
         onClick={onDecrement}

@@ -1,6 +1,6 @@
 import Product from "../../models/product";
 import * as styles from "./PurchaseInfo.module.scss";
-import { USDollar, formatDollar } from "../../utils/formatter";
+import { formatDollar } from "../../utils/formatter";
 
 type PurchaseInfoProps = {
   product: Product;

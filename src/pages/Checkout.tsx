@@ -1,6 +1,8 @@
 import Checkout from "../layout/checkout/Checkout";
 import Summary from "../layout/checkout/Summary";
 import { ForwardedRef, useRef } from "react";
+import * as styles from "./Checkout.module.scss";
+import GoBackButton from "../components/GoBackButton";
 
 const CheckoutPage = () => {
   const checkout = useRef<{ triggerSubmit: () => void } | null>(null);
@@ -10,10 +12,18 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div>
-      <Checkout ref={checkout} />
-      <Summary onTriggerSubmit={handleTriggerSubmit} />
-    </div>
+    <>
+      <div className={styles.checkoutPage__headerBackground}>&nbsp;</div>
+
+      <GoBackButton classes={styles.checkoutPage__goBackbutton} />
+      <main className={styles.checkoutPage__main}>
+        <Checkout ref={checkout} classes={styles.checkoutPage__main_checkout} />
+        <Summary
+          onTriggerSubmit={handleTriggerSubmit}
+          classes={styles.checkoutPage__main_summary}
+        />
+      </main>
+    </>
   );
 };
 export default CheckoutPage;

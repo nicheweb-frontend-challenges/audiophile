@@ -37,7 +37,7 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
       <Nav />
       <Button
         onClick={handleOpenCart}
-        btnStyle="cart"
+        btnStyle="icon"
         classes={styles.mainHeader__cart}
       >
         <CartIcon />

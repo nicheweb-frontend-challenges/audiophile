@@ -1,0 +1,32 @@
+@use "../assets/styles/abstracts/variables" as *;
+
+.checkoutPage {
+  &__headerBackground {
+    grid-column: full;
+    grid-row: nav;
+    background-color: $color-black;
+  }
+  &__goBackbutton {
+    justify-self: flex-start;
+    grid-column: mid;
+    grid-row: back;
+  }
+
+  &__main {
+    grid-column: mid;
+    grid-row: main;
+    background: none;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 3rem;
+    &_checkout {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    &_summary {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+}

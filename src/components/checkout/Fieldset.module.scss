@@ -1,0 +1,16 @@
+@use "../../assets/styles/abstracts/variables" as *;
+
+.customFieldset {
+  border: none;
+  &__children {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: min-content;
+    column-gap: 1.6rem;
+    row-gap: 2.4;
+  }
+  &__legend {
+    color: $color-brown;
+  }
+}

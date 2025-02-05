@@ -35,6 +35,13 @@
   }
 
   &__cart {
+    color: $color-grey;
+    text-transform: initial;
+    &:hover {
+      color: $color-brown;
+    }
+  }
+  &__icon {
     color: $color-white;
     &:hover {
       color: $color-brown;

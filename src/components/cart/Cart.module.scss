@@ -1,7 +1,50 @@
+@use "../../assets/styles/abstracts/variables" as *;
+
 .cart {
-  width: 37.7rem;
-  height: auto;
-  border: none;
-  top: 50px;
-  right: 50px;
+  display: grid;
+  grid-template-columns: 31.3rem;
+  grid-template-rows:
+    [header-start] min-content [header-end items-start] min-content
+    [items-end footer-start] min-content [footer-end];
+  row-gap: 3.2rem;
+  &__header {
+    grid-column: 1 / 2;
+    grid-row: header;
+    display: flex;
+    justify-content: space-between;
+    &_button:disabled {
+      color: $color-light-grey;
+      cursor: auto;
+    }
+  }
+  &__items {
+    width: 100%;
+    height: auto;
+    position: relative;
+    &_list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    &__fallback {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.4rem;
+    &_button,
+    &_button:hover {
+      width: 100%;
+      &:disabled {
+        background-color: $color-grey;
+        cursor: auto;
+      }
+    }
+  }
 }

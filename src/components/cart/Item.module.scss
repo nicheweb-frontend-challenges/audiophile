@@ -1,0 +1,36 @@
+@use "../../assets/styles/abstracts/variables" as *;
+
+.cartItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 0.76rem;
+    &_img {
+      width: 6.4rem;
+      height: 6.4rem;
+      border-radius: 8px;
+    }
+    &_name {
+      font-weight: bold;
+    }
+    &_price {
+      color: $color-grey;
+      font-size: 1.4rem;
+      letter-spacing: 0px;
+      font-weight: bold;
+    }
+  }
+  &__quantitySelector {
+    grid-template-columns: 2.4rem 4.8rem 2.4rem;
+    grid-template-rows: 3.2rem;
+    input {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+  }
+}
