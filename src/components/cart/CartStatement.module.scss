@@ -9,7 +9,10 @@
     font-weight: 500;
   }
   td {
+    color: $color-black;
     text-align: right;
+    font-size: 1.8rem;
+    font-weight: bold;
   }
   tfoot {
     tr {
@@ -34,5 +37,8 @@
     tr {
       display: table-row;
     }
+  }
+  &__fallback {
+    margin: 0 auto;
   }
 }

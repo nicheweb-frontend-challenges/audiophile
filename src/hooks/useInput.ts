@@ -7,7 +7,7 @@ const useInput = () => {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const isValid: boolean = errorMessage !== "";
+  const isValid: boolean = errorMessage === "";
 
   const handleChange: React.ChangeEventHandler = (
     event: React.ChangeEvent<HTMLInputElement>

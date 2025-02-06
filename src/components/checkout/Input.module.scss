@@ -8,25 +8,38 @@
   grid-template-areas:
     "label error"
     "input input";
+  row-gap: 10px;
+
+  color: $color-black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: -0.21px;
+  line-height: normal;
   &__label {
+    text-transform: capitalize;
     grid-area: label;
-    color: $color-black;
   }
   &__error {
     grid-area: error;
     color: $color-alert;
     text-align: right;
+    font-weight: 500;
   }
   &__input {
-    //Remove autofill in chrome
+    padding: 0 2.4rem;
+    font-size: 1.4rem;
+    letter-spacing: -0.25px;
+    //Remove autofill background in chrome
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
       transition: background-color 9999s ease-in-out 0s;
     }
-    &,
-    &:valid {
+    &:disabled {
+      color: $color-light-grey;
+    }
+    & {
       grid-area: input;
       border: 1px solid $color-grey;
       border-radius: 8px;
@@ -35,9 +48,15 @@
     &:focus {
       border-color: $color-brown;
     }
-    &:invalid {
+    &_invalid_input {
       border-color: $color-alert;
       border-width: 2px;
+    }
+    &_invalid_label {
+      color: $color-alert;
+    }
+    &::placeholder {
+      color: $color-grey;
     }
   }
 }

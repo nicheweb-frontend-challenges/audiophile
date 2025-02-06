@@ -14,7 +14,6 @@ const CheckoutPage = () => {
   return (
     <>
       <div className={styles.checkoutPage__headerBackground}>&nbsp;</div>
-
       <GoBackButton classes={styles.checkoutPage__goBackbutton} />
       <main className={styles.checkoutPage__main}>
         <Checkout ref={checkout} classes={styles.checkoutPage__main_checkout} />
@@ -23,6 +22,7 @@ const CheckoutPage = () => {
           classes={styles.checkoutPage__main_summary}
         />
       </main>
+      <div className={styles.checkoutPage__background}>&nbsp;</div>
     </>
   );
 };

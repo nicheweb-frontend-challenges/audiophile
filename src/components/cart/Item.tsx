@@ -38,7 +38,7 @@ const Item = ({ cartItem, itemForCart }: ItemProps) => {
           classes={styles.cartItem__quantitySelector}
         />
       ) : (
-        `x${quantity}`
+        <span className={styles.cartItem__quantity}>x{cartItem.quantity}</span>
       )}
     </li>
   );

@@ -1,0 +1,13 @@
+.moneyData {
+  span:first-child::first-letter {
+    text-transform: lowercase;
+  }
+  &__number {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  &__pin {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+}

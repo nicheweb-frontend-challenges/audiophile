@@ -5,12 +5,18 @@
   &__children {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    // grid-template-rows: auto;
     grid-auto-rows: min-content;
     column-gap: 1.6rem;
-    row-gap: 2.4;
+    row-gap: 2.4rem;
   }
   &__legend {
     color: $color-brown;
+    margin-bottom: 1.6rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.93px;
+    line-height: 2;
+    text-transform: uppercase;
   }
 }

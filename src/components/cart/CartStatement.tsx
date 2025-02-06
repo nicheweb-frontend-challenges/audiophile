@@ -14,7 +14,7 @@ const CartStatement = ({ cart, showAll }: CartStatementProps) => {
   const cartGrandTotal: string = formatDollar(grandTotal(cart));
   const shipping: string = formatDollar(SHIPPING);
 
-  return (
+  return cart.length ? (
     <table
       className={`${styles.statement} ${
         showAll ? styles.statement__summary : styles.statement__cart
@@ -41,6 +41,8 @@ const CartStatement = ({ cart, showAll }: CartStatementProps) => {
         </tr>
       </tfoot>
     </table>
+  ) : (
+    <p className={styles.statement__fallback}>No items in the cart</p>
   );
 };
 

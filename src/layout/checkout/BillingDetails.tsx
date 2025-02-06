@@ -7,6 +7,7 @@ const BillingDetails = () => {
     inputRef: nameInputRef,
     value: nameValue,
     errorMessage: nameErrorMessage,
+    isValid: nameIsValid,
     handleChange: handleNameChange,
     handleBlur: handleNameBlur,
     handleValidation: handleNameValidation,
@@ -15,6 +16,7 @@ const BillingDetails = () => {
     inputRef: emailInputRef,
     value: emailValue,
     errorMessage: emailErrorMessage,
+    isValid: emailIsValid,
     handleChange: handleEmailChange,
     handleBlur: handleEmailBlur,
     handleValidation: handleEmailValidation,
@@ -23,6 +25,7 @@ const BillingDetails = () => {
     inputRef: phoneInputRef,
     value: phoneValue,
     errorMessage: phoneErrorMessage,
+    isValid: phoneIsValid,
     handleChange: handlePhoneChange,
     handleBlur: handlePhoneBlur,
     handleValidation: handlePhoneValidation,
@@ -33,11 +36,13 @@ const BillingDetails = () => {
       <Input
         label="name"
         errorMessage={nameErrorMessage}
+        isValid={nameIsValid}
         value={nameValue}
         ref={nameInputRef}
         onChange={handleNameChange}
         onBlur={handleNameBlur}
         onInvalid={handleNameValidation}
+        placeholder="Alexei Ward"
         required
         pattern="^[a-zA-Z]+(?:\s+[a-zA-Z]+)*$"
       />
@@ -45,22 +50,26 @@ const BillingDetails = () => {
         label="email address"
         type="email"
         errorMessage={emailErrorMessage}
+        isValid={emailIsValid}
         value={emailValue}
         ref={emailInputRef}
         onChange={handleEmailChange}
         onBlur={handleEmailBlur}
         onInvalid={handleEmailValidation}
+        placeholder="alexei@mail.com"
         required
       />
       <Input
         label="phone number"
         type="tel"
         errorMessage={phoneErrorMessage}
+        isValid={phoneIsValid}
         value={phoneValue}
         ref={phoneInputRef}
         onChange={handlePhoneChange}
         onBlur={handlePhoneBlur}
         onInvalid={handlePhoneValidation}
+        placeholder="+1 202-555-0136"
         required
         pattern="^\+?[0-9\s\-]{7,15}$"
         title="Phone number must be 7-15 digits, optionally starting with a +"

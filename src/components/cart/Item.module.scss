@@ -15,6 +15,7 @@
       border-radius: 8px;
     }
     &_name {
+      color: $color-black;
       font-weight: bold;
     }
     &_price {
@@ -32,5 +33,9 @@
       letter-spacing: 1px;
       font-weight: bold;
     }
+  }
+  &__quantity {
+    align-self: auto;
+    transform: translateY(-50%);
   }
 }
