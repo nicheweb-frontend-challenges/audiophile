@@ -1,0 +1,33 @@
+@use "../../assets/styles/abstracts/variables" as *;
+
+.orderSumm {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 24.6rem 1fr;
+  &__grandTotal {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: $color-black;
+    padding: 3.2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &_heading {
+      color: $color-grey;
+      text-transform: uppercase;
+    }
+    &_quantity {
+      color: $color-white;
+      font-size: 1.8rem;
+      line-height: normal;
+      font-weight: bold;
+    }
+    &__unfolded {
+      justify-content: end;
+    }
+  }
+  &__ordeCart {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}

@@ -23,7 +23,7 @@ const PaymentDetails = () => {
           name="method"
           type="radio"
           value="money"
-          classes={styles.paymentDetails__paymentMethod_emoney}
+          classes={`${styles.paymentDetails__paymentMethod_emoney} ${styles.radioInput}`}
           onChange={handleChange}
           checked={method === "money"}
         />
@@ -33,7 +33,7 @@ const PaymentDetails = () => {
           name="method"
           type="radio"
           value="cash"
-          classes={styles.paymentDetails__paymentMethod_cash}
+          classes={`${styles.paymentDetails__paymentMethod_cash} ${styles.radioInput}`}
           onChange={handleChange}
           checked={method === "cash"}
         />

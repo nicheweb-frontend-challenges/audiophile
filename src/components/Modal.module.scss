@@ -1,0 +1,23 @@
+@use "../assets/styles/abstracts/variables" as *;
+
+.dialog {
+  border: none;
+  inset-inline-start: unset;
+  border-radius: 8px;
+  padding: 3.2rem;
+  background: $color-white;
+  overflow-y: visible;
+
+  &::backdrop {
+    background: rgba($color-black, 40%);
+  }
+  &__position_cart {
+    top: 12.8rem;
+    right: 16.5rem;
+  }
+  &__position_order {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}

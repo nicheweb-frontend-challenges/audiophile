@@ -1,0 +1,22 @@
+@use "../../assets/styles/abstracts/variables" as *;
+
+.orderCart {
+  background-color: $color-light-grey;
+  padding: 2.4rem;
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  hr {
+    height: 1px;
+    background-color: $color-grey;
+    width: 100%;
+    margin: 1.2rem 0;
+    // opacity: 8%;
+  }
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+}

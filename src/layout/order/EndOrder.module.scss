@@ -1,0 +1,18 @@
+.endOrder {
+  width: 54rem;
+  padding: 4.8rem;
+  &__header {
+    h3 {
+      margin: 3.3rem 0 2.4rem;
+      white-space: pre-wrap;
+    }
+  }
+  &__body {
+    margin: 3.3rem 0 4.6rem;
+  }
+
+  &__button,
+  &__button:hover {
+    width: 100%;
+  }
+}
