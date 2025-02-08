@@ -12,5 +12,22 @@
 
   &__cart {
     justify-self: end;
+    position: relative;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: $color-brown;
+      color: $color-white;
+      line-height: 1;
+      font-weight: bold;
+      font-size: 1.3rem;
+      position: absolute;
+      top: -1.5rem;
+      right: -1.5rem;
+    }
   }
 }

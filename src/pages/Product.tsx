@@ -13,7 +13,6 @@ const ProductPage = () => {
     producSlug: Product["slug"];
   }
 
-  console.log(useParams());
   const { productSlug } = useParams<productParams>();
 
   const { products } = useStore(false)[0];

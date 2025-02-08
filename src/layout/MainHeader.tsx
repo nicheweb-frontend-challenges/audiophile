@@ -15,7 +15,7 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
   const params = useParams();
   const { pathname } = useLocation();
 
-  const [{ modal }, dispatch] = useStore(true);
+  const [{ modal, cart }, dispatch] = useStore(true);
 
   let isHomePage = pathname === "/";
   let isCategoryPage = Object.keys(params).length === 1;
@@ -40,6 +40,7 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
         btnStyle="icon"
         classes={styles.mainHeader__cart}
       >
+        {cart?.length ? <span>{cart?.length}</span> : null}
         <CartIcon />
       </Button>
     </header>

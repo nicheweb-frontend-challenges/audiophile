@@ -101,8 +101,9 @@ module.exports = {
       filename: isProd ? "[name].[contenthash].css" : "[name].css",
     }),
   ],
-  devtool: "source-map", // Optional for easier debugging
+  // devtool: "source-map", // Optional for easier debugging
   devServer: {
+    // historyApiFallback: true, // Redirects all 404s to index.html
     // Development server configuration
     static: path.resolve(__dirname, "public"), // Serve content from the public directory
     port: 3000, // Port for the server

@@ -10,7 +10,6 @@ const Button = ({
   classes,
   ...otherProps
 }: ButtonProps) => {
-  console.log(styles);
   let _class = styles.btn__brown;
   if (btnStyle === "black") {
     _class = styles.btn__black;

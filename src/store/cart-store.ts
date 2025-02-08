@@ -9,6 +9,8 @@ type ItemToUpdate = {
 };
 
 const configureStore = () => {
+  console.log("CONFIGURE CART");
+
   const actions: Actions = {
     CART_ADD_ITEM: (state: GlobalState, newItem: CartItem) => {
       const newCart = state.cart ? [...state.cart] : [];
@@ -21,6 +23,7 @@ const configureStore = () => {
         const prevQuantity = newCart[cartItemIndex].quantity;
         newCart[cartItemIndex].quantity = prevQuantity + newItem.quantity;
       }
+      localStorage.setItem("cart", JSON.stringify(newCart));
       return { ...state, cart: newCart };
     },
     CART_DECREMENT_ITEM: (state: GlobalState, itemToDec: CartItem) => {
@@ -34,6 +37,7 @@ const configureStore = () => {
         const prevQuantity = newCart[cartItemIndex].quantity;
         newCart[cartItemIndex].quantity = prevQuantity - 1;
       }
+      localStorage.setItem("cart", JSON.stringify(newCart));
       return { ...state, cart: newCart };
     },
     CART_INCREMENT_ITEM: (state: GlobalState, itemToInc: CartItem) => {
@@ -43,6 +47,7 @@ const configureStore = () => {
       );
       const prevQuantity = newCart[cartItemIndex].quantity;
       newCart[cartItemIndex].quantity = prevQuantity + 1;
+      localStorage.setItem("cart", JSON.stringify(newCart));
       return { ...state, cart: newCart };
     },
     CART_UPDATE_QUANTITY_ITEM: (
@@ -54,14 +59,25 @@ const configureStore = () => {
         (item: CartItem) => item.id === itemToUpdate.id
       );
       newCart[cartItemIndex].quantity = newQuantity;
+      localStorage.setItem("cart", JSON.stringify(newCart));
       return { ...state, cart: newCart };
     },
 
     CART_REMOVE_ALL_ITEMS: (state) => {
+      localStorage.setItem("cart", JSON.stringify(null));
       return { ...state, cart: [] };
     },
   };
-  initStore(actions, { cart: [] });
+
+  const initialCartValue = (function () {
+    const savedCart = localStorage.getItem("cart");
+    const cartState = savedCart
+      ? { cart: JSON.parse(savedCart) }
+      : { cart: [] };
+    return cartState;
+  })();
+
+  initStore(actions, initialCartValue);
 };
 
 export default configureStore;
