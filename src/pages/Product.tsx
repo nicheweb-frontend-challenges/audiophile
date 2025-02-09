@@ -10,12 +10,21 @@ import * as styles from "./Product.module.scss";
 
 const ProductPage = () => {
   interface productParams extends Record<string, string | undefined> {
-    producSlug: Product["slug"];
+    productSlug: Product["slug"];
   }
 
-  const { productSlug } = useParams<productParams>();
+  const { productSlug, categoryName } = useParams<productParams>();
 
   const { products } = useStore(false)[0];
+
+  //Validating product routes
+  const productSlugs = new Set(products.map((product) => product.slug));
+  const categories = new Set(products.map((product) => product.category));
+
+  if (!productSlugs.has(productSlug) || !categories.has(categoryName)) {
+    throw new Response("Not Found", { status: 404 });
+  }
+
   const product: Product =
     products?.find((product) => product.slug === productSlug) || {};
 

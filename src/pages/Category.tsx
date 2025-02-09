@@ -14,6 +14,12 @@ const CategoryPage = () => {
   const { categoryName } = useParams<Params>();
   const { products } = useStore(false)[0];
 
+  //Validating categories routes
+  const categories = new Set(products?.map((product) => product.category));
+  if (!categories.has(categoryName)) {
+    throw new Response("Not Found", { status: 404 });
+  }
+
   const categoryProducts: Product[] | undefined = products?.filter(
     (product: Product) => product.category === categoryName
   );

@@ -7,7 +7,7 @@ module.exports = {
   entry: "./src/index.tsx", // Entry file
   output: {
     // Output file
-    // publicPath: "./", // Base path
+    publicPath: "/", // Base path
     path: path.resolve(__dirname, "dist"), // Output directory
     filename: "bundle.js",
     clean: true, // Clean the output directory before build
@@ -103,7 +103,7 @@ module.exports = {
   ],
   // devtool: "source-map", // Optional for easier debugging
   devServer: {
-    // historyApiFallback: true, // Redirects all 404s to index.html
+    historyApiFallback: true, // Redirects all 404s to index.html
     // Development server configuration
     static: path.resolve(__dirname, "public"), // Serve content from the public directory
     port: 3000, // Port for the server
