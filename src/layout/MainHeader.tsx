@@ -1,4 +1,5 @@
 import CartIcon from "../assets/icons/icon-cart.svg";
+import Hamburger from "../assets/icons/icon-hamburger.svg";
 import * as styles from "./MainHeader.module.scss";
 import Button from "../components/Button";
 import useStore from "../store/store";
@@ -22,8 +23,11 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
 
   const handleOpenCart = () => {
     console.log("HANDLE OPEN CART", modal);
-
     dispatch("OPEN_MODAL", "cart");
+  };
+
+  const toggleMenu = () => {
+    dispatch("TOGGLE_MENU");
   };
 
   return (
@@ -33,8 +37,15 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
       style={!(isHomePage || isCategoryPage) ? { border: "none" } : {}}
     >
       {modal && <Modal modal={modal} />}
-      <AppLogo />
-      <Nav />
+      <Button
+        classes={styles.mainHeader__hamburger_hidden}
+        btnStyle="icon"
+        onClick={toggleMenu}
+      >
+        <Hamburger />
+      </Button>
+      <AppLogo classes={styles.mainHeader__logo} />
+      <Nav classes={styles.mainHeader__nav} />
       <Button
         onClick={handleOpenCart}
         btnStyle="icon"

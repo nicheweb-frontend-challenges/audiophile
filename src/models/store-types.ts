@@ -8,12 +8,15 @@ export type Actions = {
 };
 export type ModalType = "cart" | "order" | null;
 
+export type OpenMenuType = boolean;
+
 export type Listener = React.Dispatch<React.SetStateAction<any>>;
 
 export type GlobalState = {
   products?: Product[];
   cart?: CartItem[];
   modal?: ModalType;
+  openMenu?: OpenMenuType;
 };
 
 export type DispatchFunc = (identifier: string, payload?: any) => void;

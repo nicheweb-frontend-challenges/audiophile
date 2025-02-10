@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Product from "../../models/product";
-import * as styles from "./CategoryProductBox.module.scss";
 import ProductInfo from "./ProductInfo";
+import * as styles from "./CategoryProductBox.module.scss";
 
 export type ProductBoxProps = {
   product: Product;
@@ -11,7 +11,7 @@ export type ProductBoxProps = {
 const CategoryProductBox = ({ product, classes }: ProductBoxProps) => {
   return (
     <div className={`${styles.productBox} ${classes ? classes : ""}`}>
-      <ProductInfo product={product} />
+      <ProductInfo product={product} classes={styles.productBox__info} />
       <Link to={`/${product.category}/${product.slug}`}>See product</Link>
     </div>
   );

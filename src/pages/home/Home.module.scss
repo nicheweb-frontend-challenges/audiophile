@@ -18,26 +18,24 @@
     grid-row: products;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: [first-start] 56rem [first-end second-start] auto [second-end third-start] auto [third-end];
+    grid-template-rows: [first-start] auto [first-end second-start] auto [second-end third-start] auto [third-end];
+    row-gap: 4.8rem;
   }
   &__firstProduct {
     grid-row: first;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 56rem;
     background-color: $color-brown;
     overflow: hidden;
-    margin-bottom: 4.8rem;
+
     &_box {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
       color: $color-white;
-      width: 60%;
+      width: 34.9rem;
       align-self: center;
       justify-self: center;
 
       div p:last-child {
-        overflow-wrap: anywhere;
-        hyphens: none;
         margin-top: 2.4rem;
       }
       div {
@@ -48,18 +46,18 @@
       }
     }
     &_img {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      width: 65%;
-      margin-top: 9.6rem;
-      margin-left: 11.75rem;
+      width: 38rem;
+      align-self: end;
+      justify-self: end;
+      margin-right: 4rem;
+      margin-bottom: -1.5rem;
     }
   }
   &__secondProduct {
     grid-row: second;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 4.8rem;
+    // margin-bottom: 4.8rem;
     &_box {
       grid-column: 1 / 2;
       grid-row: 1 / 2;

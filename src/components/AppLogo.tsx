@@ -1,9 +1,13 @@
 import Logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
-const AppLogo = () => {
+type AppLogoProps = {
+  classes?: string;
+};
+
+const AppLogo = ({ classes }: AppLogoProps) => {
   return (
-    <Link to="">
+    <Link to="/" className={classes ? classes : ""}>
       <Logo />
     </Link>
   );

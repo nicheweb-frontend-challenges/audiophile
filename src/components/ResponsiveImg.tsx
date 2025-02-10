@@ -14,9 +14,9 @@ const ResponsiveImg = ({ image, classes, alt }: ImageProps) => {
   return (
     <picture className={classes}>
       <Card>
-        <source media="(min-width: 1024px)" srcSet={desktopSrc} />
+        <source media="(min-width: 1001px)" srcSet={desktopSrc} />
         <source
-          media="(min-width: 650px) and (max-width: 1023px)"
+          media="(min-width: 650px) and (max-width: 1000px)"
           srcSet={tabletSrc}
         />
         <source media="(max-width: 649px)" srcSet={mobileSrc} />

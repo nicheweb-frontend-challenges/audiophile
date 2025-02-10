@@ -1,4 +1,5 @@
 @use "../assets/styles/abstracts/variables" as *;
+@use "../assets/styles/abstracts/mixins" as *;
 
 .mainHeader {
   grid-column: mid;
@@ -9,7 +10,29 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid $color-grey;
-
+  @include respond(tab-landscape) {
+    grid-template-columns: 5.8rem 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  &__logo {
+    @include respond(tab-landscape) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+  &__hamburger_hidden {
+    display: none;
+    @include respond(tab-landscape) {
+      display: initial;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+  &__nav > * {
+    @include respond(tab-landscape) {
+      display: none;
+    }
+  }
   &__cart {
     justify-self: end;
     position: relative;
@@ -28,6 +51,10 @@
       position: absolute;
       top: -1.5rem;
       right: -1.5rem;
+    }
+    @include respond(tab-landscape) {
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
     }
   }
 }

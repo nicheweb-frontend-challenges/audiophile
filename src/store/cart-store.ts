@@ -9,8 +9,6 @@ type ItemToUpdate = {
 };
 
 const configureStore = () => {
-  console.log("CONFIGURE CART");
-
   const actions: Actions = {
     CART_ADD_ITEM: (state: GlobalState, newItem: CartItem) => {
       const newCart = state.cart ? [...state.cart] : [];

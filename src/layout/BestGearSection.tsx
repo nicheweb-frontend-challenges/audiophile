@@ -20,11 +20,11 @@ const BestGearSection = ({ classes }: BestGearProps) => {
       style={location.pathname !== "/" ? { marginBottom: "160px" } : {}}
       className={`${styles.bestGear} ${classes ? classes : ""}`}
     >
-      <div>
-        <h2>
+      <div className={styles.bestGear__textBox}>
+        <h2 className={styles.bestGear__textBox_heading}>
           Bringing you the <span>best</span> audio gear
         </h2>
-        <p>
+        <p className={styles.bestGear__textBox_text}>
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
@@ -33,7 +33,7 @@ const BestGearSection = ({ classes }: BestGearProps) => {
           best place to buy your portable audio equipment.
         </p>
       </div>
-      <ResponsiveImg image={image} classes="" alt="Best Gear Image" />
+      <ResponsiveImg image={image} alt="Best Gear Image" />
     </section>
   );
 };

@@ -34,7 +34,7 @@ const Summary = ({ onTriggerSubmit, classes }: SummaryProps) => {
           onClick={onTriggerSubmit}
           disabled={!cart?.length}
         >
-          continue
+          continue & pay
         </Button>
       </footer>
     </Card>

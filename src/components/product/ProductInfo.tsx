@@ -4,7 +4,6 @@ import * as styles from "./ProductInfo.module.scss";
 type ProductInfoProps = {
   product: Product;
   classes?: string;
-  hasPrice?: boolean;
 };
 
 const ProductInfo = ({ product, classes }: ProductInfoProps) => {

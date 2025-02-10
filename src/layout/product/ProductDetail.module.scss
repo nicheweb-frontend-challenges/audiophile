@@ -6,12 +6,26 @@
     "product product"
     "features list";
   row-gap: 16rem;
-  // margin-bottom: 16rem;
-  &__desc {
-    width: 44.5rem;
-  }
+  column-gap: 2.5rem;
+
   &__prodMain {
     grid-area: product;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    max-height: 56rem;
+    &_image {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-self: left;
+    }
+    &_desc {
+      width: 44.5rem;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: right;
+      align-self: center;
+    }
   }
   &__features {
     grid-area: features;

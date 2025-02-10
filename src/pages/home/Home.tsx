@@ -48,15 +48,15 @@ const HomePage = () => {
         <section className={styles.home__products}>
           {firstProduct && (
             <Card className={styles.home__firstProduct}>
+              <ResponsiveImg
+                image={firstImage}
+                classes={styles.home__firstProduct_img}
+              />
               <HomeProductBox
                 product={firstProduct}
                 description="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
                 classes={styles.home__firstProduct_box}
                 isFirstLevel
-              />
-              <ResponsiveImg
-                image={firstImage}
-                classes={styles.home__firstProduct_img}
               />
             </Card>
           )}

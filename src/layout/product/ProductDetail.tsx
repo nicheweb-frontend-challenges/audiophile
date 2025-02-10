@@ -14,8 +14,11 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   return (
     <section className={styles.prodDetail}>
       <div className={`${styles.prodDetail__prodMain} row`}>
-        <ResponsiveImg image={product?.categoryImage} classes="box1" />
-        <div className={`${styles.prodDetail__desc} box2`}>
+        <ResponsiveImg
+          image={product?.categoryImage}
+          classes={styles.prodDetail__prodMain_image}
+        />
+        <div className={styles.prodDetail__prodMain_desc}>
           {product && <PurchaseInfo product={product} />}
           {product && <ProductPurchase product={product} />}
         </div>

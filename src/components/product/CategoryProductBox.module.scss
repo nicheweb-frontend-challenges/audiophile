@@ -3,7 +3,11 @@
 
 .productBox {
   width: 44.5rem;
+  align-self: center;
   a {
     @include m.link__solid($color-brown, $color-light-brown);
+  }
+  &__info {
+    margin-bottom: 4rem;
   }
 }

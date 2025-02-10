@@ -39,14 +39,12 @@ const CategoryPage = () => {
         classes={styles.category__heading}
       />
       <main className={styles.category__main}>
-        <section className={`${styles.category__products} zpattern`}>
+        <section className={styles.category__products}>
           {categoryProducts.map((product, index) => {
             if (index % 2 !== 0) {
-              return (
-                <CategoryProductRow product={product} classes="row" invert />
-              );
+              return <CategoryProductRow product={product} invert />;
             }
-            return <CategoryProductRow product={product} classes="row" />;
+            return <CategoryProductRow product={product} />;
           })}
         </section>
         <section className={styles.category__categories}>

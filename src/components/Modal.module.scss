@@ -1,4 +1,5 @@
 @use "../assets/styles/abstracts/variables" as *;
+@use "../assets/styles/abstracts/mixins" as *;
 
 .dialog {
   border: none;
@@ -14,6 +15,9 @@
   &__position_cart {
     top: 12.8rem;
     right: 16.5rem;
+    @include respond(tab-landscape) {
+      right: 4rem;
+    }
   }
   &__position_order {
     top: 50%;

@@ -1,6 +1,7 @@
 import CategoryProductBox from "./CategoryProductBox";
 import ResponsiveImg from "../ResponsiveImg";
 import Product from "models/product";
+import * as styles from "./CategoryProductRow.module.scss";
 
 type ProductRowProps = {
   product: Product;
@@ -10,15 +11,15 @@ type ProductRowProps = {
 
 const CategoryProductRow = ({ product, invert, classes }: ProductRowProps) => {
   return (
-    <div className={classes}>
+    <div className={`${styles.productRow} ${classes ? classes : ""}`}>
       <ResponsiveImg
         image={product.image}
         alt={product.name}
-        classes={invert ? "box2" : "box1"}
+        classes={invert ? styles.productRow__box2 : styles.productRow__box1}
       />
       <CategoryProductBox
         product={product}
-        classes={invert ? "box1" : "box2"}
+        classes={invert ? styles.productRow__box1 : styles.productRow__box2}
       />
     </div>
   );

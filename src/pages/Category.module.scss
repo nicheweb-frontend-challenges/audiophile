@@ -14,6 +14,9 @@
   }
   &__products {
     grid-row: products;
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
   }
   &__categories {
     grid-row: categories;

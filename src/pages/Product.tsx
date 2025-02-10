@@ -11,6 +11,7 @@ import * as styles from "./Product.module.scss";
 const ProductPage = () => {
   interface productParams extends Record<string, string | undefined> {
     productSlug: Product["slug"];
+    categoryName: Product["category"];
   }
 
   const { productSlug, categoryName } = useParams<productParams>();
@@ -18,8 +19,8 @@ const ProductPage = () => {
   const { products } = useStore(false)[0];
 
   //Validating product routes
-  const productSlugs = new Set(products.map((product) => product.slug));
-  const categories = new Set(products.map((product) => product.category));
+  const productSlugs = new Set(products?.map((product) => product.slug));
+  const categories = new Set(products?.map((product) => product.category));
 
   if (!productSlugs.has(productSlug) || !categories.has(categoryName)) {
     throw new Response("Not Found", { status: 404 });
