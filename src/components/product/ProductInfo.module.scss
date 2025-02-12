@@ -1,7 +1,11 @@
 @use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets/styles/abstracts/mixins" as *;
 
 .productInfo {
   text-align: left;
+  @include respond(tab-landscape) {
+    text-align: center;
+  }
   p:first-child {
     margin-bottom: 1.6rem;
   }

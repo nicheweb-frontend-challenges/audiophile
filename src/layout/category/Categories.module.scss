@@ -1,8 +1,12 @@
+@use "../../assets/styles/abstracts/mixins" as m;
+
 .categories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   align-items: stretch;
   justify-items: center;
-  // margin-bottom: 16.8rem;
+  @include m.respond(tab-landscape) {
+    gap: 1rem;
+  }
 }

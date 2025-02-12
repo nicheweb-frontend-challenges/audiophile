@@ -2,10 +2,16 @@
 @use "../../assets/styles/abstracts/variables" as *;
 
 .productBox {
-  width: 44.5rem;
+  max-width: 44.5rem;
   align-self: center;
+  @include m.respond(tab-landscape) {
+    margin-top: 5.2rem;
+  }
   a {
     @include m.link__solid($color-brown, $color-light-brown);
+    @include m.respond(tab-landscape) {
+      margin: 0 auto;
+    }
   }
   &__info {
     margin-bottom: 4rem;

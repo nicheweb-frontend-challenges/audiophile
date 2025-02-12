@@ -4,9 +4,10 @@ import * as styles from "./OtherProducts.module.scss";
 
 type OtherProductsProps = {
   otherProducts: OtherProduct[];
+  classes?: string;
 };
 
-const OtherProducts = ({ otherProducts }: OtherProductsProps) => {
+const OtherProducts = ({ otherProducts, classes }: OtherProductsProps) => {
   return (
     <section>
       <h3 className={styles.otherProducts__heading}>you may also like</h3>

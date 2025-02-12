@@ -21,6 +21,9 @@
     h6 {
       margin-top: -3rem;
       margin-bottom: 1.5rem;
+      @include m.respond(tab-landscape) {
+        font-size: 1.5rem;
+      }
     }
     a {
       @include m.link__text;

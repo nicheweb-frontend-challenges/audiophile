@@ -8,20 +8,16 @@ import * as styles from "./ProductDetail.module.scss";
 
 type ProductDetailProps = {
   product: Product;
+  classes?: string;
 };
 
-const ProductDetail = ({ product }: ProductDetailProps) => {
+const ProductDetail = ({ product, classes }: ProductDetailProps) => {
   return (
     <section className={styles.prodDetail}>
-      <div className={`${styles.prodDetail__prodMain} row`}>
-        <ResponsiveImg
-          image={product?.categoryImage}
-          classes={styles.prodDetail__prodMain_image}
-        />
-        <div className={styles.prodDetail__prodMain_desc}>
-          {product && <PurchaseInfo product={product} />}
-          {product && <ProductPurchase product={product} />}
-        </div>
+      <ResponsiveImg image={product?.image} classes={styles.prodDetail_image} />
+      <div className={styles.prodDetail_desc}>
+        {product && <PurchaseInfo product={product} />}
+        {product && <ProductPurchase product={product} />}
       </div>
       <Features
         features={product.features}

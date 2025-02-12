@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 @font-face {
   font-family: "Manrope";
@@ -67,6 +68,9 @@ h6 {
 .overline {
   @include heading(1.4rem, 1.36, 10px, $weight: normal);
   color: $color-brown;
+  @include respond(tab-landscape) {
+    font-size: 1.2rem;
+  }
 }
 .subtitle {
   @include heading(1.3rem, 1.92, 1px);

@@ -1,7 +1,12 @@
+@use "../../assets/styles/abstracts/mixins" as *;
+
 .features {
   width: 63.5rem;
   p {
     white-space: pre-wrap;
     margin-top: 3.2rem;
+  }
+  @include respond(tab-landscape) {
+    width: 100%;
   }
 }

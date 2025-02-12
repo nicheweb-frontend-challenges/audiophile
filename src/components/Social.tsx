@@ -3,9 +3,13 @@ import InstagramIcon from "../assets/icons/icon-instagram.svg";
 import TwitterIcon from "../assets/icons/icon-twitter.svg";
 import * as styles from "./Social.module.scss";
 
-const Social = () => {
+type SocialProps = {
+  classes?: string;
+};
+
+const Social = ({ classes }: SocialProps) => {
   return (
-    <ul className={styles.social}>
+    <ul className={`${styles.social} ${classes ? classes : ""}`}>
       <li>
         <a href="https://www.facebook.com/" target="_blank">
           <FacebookIcon />

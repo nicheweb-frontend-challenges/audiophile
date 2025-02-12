@@ -1,31 +1,36 @@
+@use "../../assets/styles/abstracts/mixins" as *;
+
 .prodDetail {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: min-content min-content;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(48rem, 56rem) min-content;
   grid-template-areas:
-    "product product"
-    "features list";
+    "image image image product product product"
+    "features features features features list list";
   row-gap: 16rem;
-  column-gap: 2.5rem;
+  column-gap: 6.95rem;
+  @include respond(tab-landscape) {
+    grid-template-rows: minmax(48rem, 56rem) min-content min-content;
+    grid-template-areas:
+      "image image image product product product"
+      "features features features features features features"
+      "list list list list list list";
+    row-gap: 12rem;
+  }
 
-  &__prodMain {
+  &_image {
+    grid-area: image;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &_desc {
+    max-width: 44.5rem;
     grid-area: product;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2.5rem;
-    max-height: 56rem;
-    &_image {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      justify-self: left;
-    }
-    &_desc {
-      width: 44.5rem;
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      justify-self: right;
-      align-self: center;
-    }
+    justify-self: right;
+    align-self: center;
   }
   &__features {
     grid-area: features;

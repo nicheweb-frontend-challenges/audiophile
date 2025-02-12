@@ -33,7 +33,11 @@ const BestGearSection = ({ classes }: BestGearProps) => {
           best place to buy your portable audio equipment.
         </p>
       </div>
-      <ResponsiveImg image={image} alt="Best Gear Image" />
+      <ResponsiveImg
+        image={image}
+        alt="Best Gear Image"
+        classes={styles.bestGear__img}
+      />
     </section>
   );
 };

@@ -9,7 +9,7 @@ type IncludedItemsProps = {
 
 const IncludedItems = ({ includedItems, classes }: IncludedItemsProps) => {
   return (
-    <div className={`${classes ? classes : ""}`}>
+    <div className={`${styles.includedItems} ${classes ? classes : ""}`}>
       <h3 className={styles.includedItems__heading}>in the box</h3>
       <ul className={styles.includedItems__list}>
         {includedItems.map((includedItem, index) => (

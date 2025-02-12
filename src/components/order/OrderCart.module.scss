@@ -9,11 +9,11 @@
     gap: 2.4rem;
   }
   hr {
-    height: 1px;
+    height: 2px;
     background-color: $color-grey;
     width: 100%;
     margin: 1.2rem 0;
-    // opacity: 8%;
+    opacity: 8%;
   }
   &__button {
     display: block;

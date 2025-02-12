@@ -11,7 +11,7 @@ const Footer = ({ classes }: FooterProps) => {
   return (
     <>
       <footer className={`${styles.footer} ${classes ? classes : ""}`}>
-        <AppLogo />
+        <AppLogo classes={styles.footer__logo} />
         <Nav classes={styles.footer__nav} />
         <p>
           Audiophile is an all in one stop to fulfill your audio needs. We're a

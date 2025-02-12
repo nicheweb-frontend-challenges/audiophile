@@ -13,13 +13,17 @@ const CategoryProductRow = ({ product, invert, classes }: ProductRowProps) => {
   return (
     <div className={`${styles.productRow} ${classes ? classes : ""}`}>
       <ResponsiveImg
-        image={product.image}
+        image={product.categoryImage}
         alt={product.name}
-        classes={invert ? styles.productRow__box2 : styles.productRow__box1}
+        classes={`${
+          invert ? styles.productRow__box2 : styles.productRow__box1
+        }`}
       />
       <CategoryProductBox
         product={product}
-        classes={invert ? styles.productRow__box1 : styles.productRow__box2}
+        classes={`${
+          invert ? styles.productRow__box1 : styles.productRow__box2
+        }`}
       />
     </div>
   );

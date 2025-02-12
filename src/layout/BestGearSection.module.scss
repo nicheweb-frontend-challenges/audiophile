@@ -1,4 +1,5 @@
 @use "../assets/styles/abstracts/variables" as *;
+@use "../assets/styles/abstracts/mixins" as *;
 
 .bestGear {
   grid-column: mid;
@@ -8,10 +9,24 @@
   grid-template-rows: auto;
   column-gap: 2.5rem;
   margin-bottom: 20rem;
+  @include respond(tab-landscape) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 6.3rem;
+    margin-bottom: 9.6rem;
+    &__img {
+      grid-row: 1 / 2;
+    }
+  }
   &__textBox {
-    width: 44.5rem;
+    max-width: 44.5rem;
     align-self: center;
     justify-self: left;
+    @include respond(tab-landscape) {
+      text-align: center;
+      max-width: 57.3rem;
+      margin: 0 auto;
+    }
     &_heading {
       margin-bottom: 3.2rem;
       span {

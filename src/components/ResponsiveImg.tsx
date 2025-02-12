@@ -1,5 +1,6 @@
 import Image from "../models/image";
 import Card from "./UI/Card";
+import * as styles from "./ResponsiveImg.module.scss";
 
 type ImageProps = {
   image: Image | undefined;
@@ -12,16 +13,14 @@ const ResponsiveImg = ({ image, classes, alt }: ImageProps) => {
   const desktopSrc = image?.desktop;
 
   return (
-    <picture className={classes}>
-      <Card>
-        <source media="(min-width: 1001px)" srcSet={desktopSrc} />
-        <source
-          media="(min-width: 650px) and (max-width: 1000px)"
-          srcSet={tabletSrc}
-        />
-        <source media="(max-width: 649px)" srcSet={mobileSrc} />
-        <img src={desktopSrc} alt={alt} />
-      </Card>
+    <picture className={`${styles.responsiveImg} ${classes ? classes : ""}`}>
+      <source media="(min-width: 961px)" srcSet={desktopSrc} />
+      <source
+        media="(min-width: 650px) and (max-width: 960px)"
+        srcSet={tabletSrc}
+      />
+      <source media="(max-width: 649px)" srcSet={mobileSrc} />
+      <img src={desktopSrc} alt={alt} />
     </picture>
   );
 };

@@ -9,10 +9,16 @@
     grid-template-columns: 1fr;
     grid-template-rows: [categories-start] auto [categories-end products-start] auto [products-end];
     padding: 12rem 0 20rem;
+    @include m.respond(tab-landscape) {
+      padding: 9.6rem 0;
+    }
   }
   &__categories {
     grid-row: categories;
     margin-bottom: 16.8rem;
+    @include m.respond(tab-landscape) {
+      margin-bottom: 9.6rem;
+    }
   }
   &__products {
     grid-row: products;
@@ -20,6 +26,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: [first-start] auto [first-end second-start] auto [second-end third-start] auto [third-end];
     row-gap: 4.8rem;
+    @include m.respond(tab-landscape) {
+      row-gap: 3.2rem;
+    }
   }
   &__firstProduct {
     grid-row: first;
@@ -28,6 +37,12 @@
     grid-template-rows: 56rem;
     background-color: $color-brown;
     overflow: hidden;
+    @include m.respond(tab-landscape) {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content;
+      row-gap: 6.4rem;
+      padding: 5.2rem 0 6.4rem;
+    }
 
     &_box {
       color: $color-white;
@@ -40,9 +55,15 @@
       }
       div {
         margin-bottom: 4rem;
+        @include m.respond(tab-landscape) {
+          text-align: center;
+        }
       }
       a {
         @include m.link__solid($color-black, $color-dark-grey);
+        @include m.respond(tab-landscape) {
+          margin: 0 auto;
+        }
       }
     }
     &_img {
@@ -51,18 +72,28 @@
       justify-self: end;
       margin-right: 4rem;
       margin-bottom: -1.5rem;
+      @include m.respond(tab-landscape) {
+        width: 19.8rem;
+        margin: 0 auto;
+      }
     }
   }
   &__secondProduct {
     grid-row: second;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // margin-bottom: 4.8rem;
     &_box {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       align-self: center;
       padding-left: 9.65rem;
+      @include m.respond(tab-landscape) {
+        padding-left: 6.2rem;
+        h2 {
+          font-size: 2.8rem;
+          letter-spacing: 2px;
+        }
+      }
       h2 {
         margin-bottom: 3.2rem;
       }
@@ -81,6 +112,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
+    @include m.respond(tab-landscape) {
+      column-gap: 1.1rem;
+    }
     &_box {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
@@ -92,6 +126,14 @@
       gap: 3.2rem;
       align-items: flex-start;
       justify-content: center;
+      @include m.respond(tab-landscape) {
+        padding-left: 4.1rem;
+        h2 {
+          font-size: 2.8rem;
+          letter-spacing: 2px;
+        }
+      }
+
       @include m.round;
       a {
         @include m.link__outline;

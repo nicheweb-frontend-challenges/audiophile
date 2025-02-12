@@ -1,3 +1,5 @@
+@use "../../assets/styles/abstracts/mixins" as *;
+
 .otherProducts {
   &__heading {
     text-align: center;
@@ -9,5 +11,8 @@
     gap: 3rem;
     align-items: stretch;
     justify-items: center;
+    @include respond(tab-landscape) {
+      gap: 1.1rem;
+    }
   }
 }

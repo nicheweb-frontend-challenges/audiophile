@@ -1,13 +1,20 @@
 @use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets/styles/abstracts/mixins" as *;
 
 .productPurchase {
   text-align: left;
   margin-bottom: 4.7rem;
+  @include respond(tab-landscape) {
+    margin-bottom: 3.1rem;
+  }
   & > p:first-child {
     margin-bottom: 1.6rem;
   }
   &__heading {
     margin-bottom: 3.2rem;
+    @include respond(tab-landscape) {
+      font-size: 2.8rem;
+    }
   }
   &__desc {
     margin-bottom: 3.2rem;
@@ -16,5 +23,6 @@
   &__price {
     color: $color-black;
     font-weight: bold;
+    font-size: 1.8rem;
   }
 }

@@ -12,11 +12,17 @@
     grid-column: mid;
     & > *:not(:first-child) {
       margin-bottom: 16rem;
+      @include m.respond(tab-landscape) {
+        margin-bottom: 12rem;
+      }
     }
   }
   &__gobackbutton {
     text-transform: capitalize;
     margin-bottom: 5.6rem;
     margin-top: 8rem;
+    @include m.respond(tab-landscape) {
+      margin: 3.3rem 0 2.4rem;
+    }
   }
 }

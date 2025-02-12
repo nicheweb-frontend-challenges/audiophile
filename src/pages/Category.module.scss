@@ -1,3 +1,5 @@
+@use "../assets/styles/abstracts/mixins" as *;
+
 .category {
   &__main {
     grid-row: main;
@@ -7,6 +9,10 @@
     grid-template-rows: [products-start] auto [products-end categories-start] auto [categories-end];
     row-gap: 16rem;
     margin: 16rem 0;
+    @include respond(tab-landscape) {
+      margin: 12rem 0;
+      row-gap: 12rem;
+    }
   }
   &__heading {
     grid-row: nav / back;
@@ -17,6 +23,10 @@
     display: flex;
     flex-direction: column;
     gap: 16rem;
+    @include respond(tab-landscape) {
+      margin: 0 auto;
+      gap: 12rem;
+    }
   }
   &__categories {
     grid-row: categories;
