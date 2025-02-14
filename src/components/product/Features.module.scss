@@ -5,8 +5,11 @@
   p {
     white-space: pre-wrap;
     margin-top: 3.2rem;
+    @include respond(mobile) {
+      margin-top: 2.4rem;
+    }
   }
-  @include respond(tab-landscape) {
+  @include respond(tablet) {
     width: 100%;
   }
 }

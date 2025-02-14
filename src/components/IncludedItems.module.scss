@@ -1,23 +1,29 @@
 @use "../assets/styles/abstracts/mixins" as *;
 
 .includedItems {
-  @include respond(tab-landscape) {
+  @include respond(tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
   }
+  @include respond(mobile) {
+    display: block;
+  }
   &__heading {
     margin-bottom: 3.2rem;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
+    }
+    @include respond(mobile) {
+      margin-bottom: 2.4rem;
     }
   }
   &__list {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       grid-row: 1 / 2;
       grid-column: 2 / 3;
     }

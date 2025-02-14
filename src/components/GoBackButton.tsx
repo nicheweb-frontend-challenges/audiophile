@@ -1,5 +1,6 @@
 import Button from "./Button";
-import { replace, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import * as styles from "./GoBackButton.module.scss";
 
 type GoBackProps = {
   classes?: string;
@@ -17,7 +18,12 @@ const GoBackButton = ({ classes }: GoBackProps) => {
   };
 
   return (
-    <Button type="button" onClick={goBack} btnStyle="text" classes={classes}>
+    <Button
+      type="button"
+      onClick={goBack}
+      btnStyle="text"
+      classes={`${styles.goBackButton} ${classes ? classes : ""}`}
+    >
       go back
     </Button>
   );

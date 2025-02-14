@@ -9,14 +9,18 @@
     grid-template-columns: 1fr;
     grid-template-rows: [categories-start] auto [categories-end products-start] auto [products-end];
     padding: 12rem 0 20rem;
-    @include m.respond(tab-landscape) {
+    @include m.respond(tablet) {
       padding: 9.6rem 0;
+    }
+    @include m.respond(mobile) {
+      padding: 4rem 0 0;
+      margin-bottom: 12rem;
     }
   }
   &__categories {
     grid-row: categories;
     margin-bottom: 16.8rem;
-    @include m.respond(tab-landscape) {
+    @include m.respond(tablet) {
       margin-bottom: 9.6rem;
     }
   }
@@ -26,7 +30,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: [first-start] auto [first-end second-start] auto [second-end third-start] auto [third-end];
     row-gap: 4.8rem;
-    @include m.respond(tab-landscape) {
+    @include m.respond(tablet) {
       row-gap: 3.2rem;
     }
   }
@@ -37,7 +41,7 @@
     grid-template-rows: 56rem;
     background-color: $color-brown;
     overflow: hidden;
-    @include m.respond(tab-landscape) {
+    @include m.respond(tablet) {
       grid-template-columns: 1fr;
       grid-template-rows: min-content min-content;
       row-gap: 6.4rem;
@@ -55,13 +59,13 @@
       }
       div {
         margin-bottom: 4rem;
-        @include m.respond(tab-landscape) {
+        @include m.respond(tablet) {
           text-align: center;
         }
       }
       a {
         @include m.link__solid($color-black, $color-dark-grey);
-        @include m.respond(tab-landscape) {
+        @include m.respond(tablet) {
           margin: 0 auto;
         }
       }
@@ -72,7 +76,7 @@
       justify-self: end;
       margin-right: 4rem;
       margin-bottom: -1.5rem;
-      @include m.respond(tab-landscape) {
+      @include m.respond(tablet) {
         width: 19.8rem;
         margin: 0 auto;
       }
@@ -87,7 +91,7 @@
       grid-row: 1 / 2;
       align-self: center;
       padding-left: 9.65rem;
-      @include m.respond(tab-landscape) {
+      @include m.respond(tablet) {
         padding-left: 6.2rem;
         h2 {
           font-size: 2.8rem;
@@ -112,8 +116,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
-    @include m.respond(tab-landscape) {
+    @include m.respond(tablet) {
       column-gap: 1.1rem;
+    }
+    @include m.respond(mobile) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 2.4rem;
     }
     &_box {
       grid-column: 2 / 3;
@@ -126,12 +135,16 @@
       gap: 3.2rem;
       align-items: flex-start;
       justify-content: center;
-      @include m.respond(tab-landscape) {
+      @include m.respond(tablet) {
         padding-left: 4.1rem;
         h2 {
           font-size: 2.8rem;
           letter-spacing: 2px;
         }
+      }
+      @include m.respond(mobile) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
       }
 
       @include m.round;
@@ -142,6 +155,10 @@
     &_img {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      @include m.respond(mobile) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
     }
   }
 }

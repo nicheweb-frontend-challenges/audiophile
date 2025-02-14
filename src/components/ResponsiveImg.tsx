@@ -16,10 +16,10 @@ const ResponsiveImg = ({ image, classes, alt }: ImageProps) => {
     <picture className={`${styles.responsiveImg} ${classes ? classes : ""}`}>
       <source media="(min-width: 961px)" srcSet={desktopSrc} />
       <source
-        media="(min-width: 650px) and (max-width: 960px)"
+        media="(min-width: 661px) and (max-width: 960px)"
         srcSet={tabletSrc}
       />
-      <source media="(max-width: 649px)" srcSet={mobileSrc} />
+      <source media="(max-width: 660px)" srcSet={mobileSrc} />
       <img src={desktopSrc} alt={alt} />
     </picture>
   );

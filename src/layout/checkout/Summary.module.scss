@@ -1,8 +1,8 @@
 @use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets/styles/abstracts/mixins" as *;
 
 .summary {
   padding: 3.2rem;
-  // width: 100%;
   background-color: $color-white;
   display: grid;
   grid-template-columns: 100%;
@@ -10,6 +10,9 @@
     [header-start] min-content [header-end items-start] min-content
     [items-end footer-start] min-content [footer-end];
   row-gap: 3.2rem;
+  @include respond(mobile) {
+    padding: 3.2rem 2.4rem;
+  }
   &__header {
     grid-column: 1 / 2;
     grid-row: header;
@@ -29,7 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 2.4rem;
+    gap: 3.2rem;
     &_button,
     &_button:hover {
       width: 100%;

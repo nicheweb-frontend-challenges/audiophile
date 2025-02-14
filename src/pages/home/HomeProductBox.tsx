@@ -8,6 +8,7 @@ export type HomeProductBoxProps = {
   classes?: string;
   isNew?: boolean;
   isFirstLevel?: boolean;
+  name?: string;
 };
 
 const HomeProductBox = ({
@@ -16,6 +17,7 @@ const HomeProductBox = ({
   classes,
   isNew,
   isFirstLevel,
+  name,
 }: HomeProductBoxProps) => {
   let header = isFirstLevel ? "h1" : "h2";
 
@@ -23,7 +25,7 @@ const HomeProductBox = ({
     <div className={classes}>
       <div>
         {isNew && <p className="overline">{product.new && "New product"}</p>}
-        {createElement(header, null, product.name)}
+        {createElement(header, null, name ?? product.name)}
         {description && <p>{description || product.description}</p>}
       </div>
       <Link to={`/${product.category}/${product.slug}`}>See product</Link>

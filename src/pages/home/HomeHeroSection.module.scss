@@ -7,17 +7,15 @@
     grid-row: nav-start / back-end;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    // position: relative;
     height: 75rem;
     overflow: hidden;
     width: 100%;
     z-index: -100;
     display: block;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       height: auto;
     }
     img {
-      // position: absolute;
       z-index: -100;
       width: 100%;
       height: 100%;
@@ -31,18 +29,22 @@
     max-width: 40rem;
     align-self: center;
     color: $color-white;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       text-align: center;
       justify-self: center;
     }
 
     p:first-child {
       color: $color-grey;
+      font-size: 1.4rem;
     }
     h1 ~ p {
       width: 35rem;
-      @include respond(tab-landscape) {
+      @include respond(tablet) {
         margin: 0 auto;
+      }
+      @include respond(mobile) {
+        width: 32.8rem;
       }
     }
     div {
@@ -53,7 +55,7 @@
     }
     a {
       @include link__solid($color-brown, $color-light-brown);
-      @include respond(tab-landscape) {
+      @include respond(tablet) {
         margin: 0 auto;
       }
     }

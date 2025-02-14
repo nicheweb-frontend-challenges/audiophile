@@ -77,6 +77,7 @@ const HomePage = () => {
               <HomeProductBox
                 product={thirdProduct}
                 classes={styles.home__thirdProduct_box}
+                name="yx1 earphones"
               />
               <ResponsiveImg
                 image={thirdImage}

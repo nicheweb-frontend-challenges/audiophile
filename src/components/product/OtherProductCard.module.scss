@@ -7,6 +7,9 @@
   align-items: center;
   &__name {
     margin: 4rem 0 3.2rem;
+    @include m.respond(mobile) {
+      margin-top: 3.2rem;
+    }
   }
   a {
     @include m.link__solid($color-brown, $color-light-brown);

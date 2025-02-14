@@ -4,12 +4,16 @@
 .productBox {
   max-width: 44.5rem;
   align-self: center;
-  @include m.respond(tab-landscape) {
+  @include m.respond(tablet) {
     margin-top: 5.2rem;
+    max-width: 57.2rem;
+  }
+  @include m.respond(mobile) {
+    margin-top: 0;
   }
   a {
     @include m.link__solid($color-brown, $color-light-brown);
-    @include m.respond(tab-landscape) {
+    @include m.respond(tablet) {
       margin: 0 auto;
     }
   }

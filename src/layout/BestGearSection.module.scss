@@ -9,7 +9,7 @@
   grid-template-rows: auto;
   column-gap: 2.5rem;
   margin-bottom: 20rem;
-  @include respond(tab-landscape) {
+  @include respond(tablet) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, min-content);
     row-gap: 6.3rem;
@@ -18,11 +18,15 @@
       grid-row: 1 / 2;
     }
   }
+  @include respond(mobile) {
+    row-gap: 4rem;
+  }
+
   &__textBox {
     max-width: 44.5rem;
     align-self: center;
     justify-self: left;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       text-align: center;
       max-width: 57.3rem;
       margin: 0 auto;
@@ -32,9 +36,19 @@
       span {
         color: $color-brown;
       }
+      @include respond(mobile) {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+      }
     }
     &_text {
       color: $color-grey;
+    }
+  }
+  &__outHome {
+    margin-bottom: 16rem;
+    @include respond(tablet) {
+      margin-bottom: 12rem;
     }
   }
 }

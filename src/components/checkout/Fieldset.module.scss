@@ -1,14 +1,17 @@
 @use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets/styles/abstracts/mixins" as *;
 
 .customFieldset {
   border: none;
   &__children {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // grid-template-rows: auto;
     grid-auto-rows: min-content;
     column-gap: 1.6rem;
     row-gap: 2.4rem;
+    @include respond(mobile) {
+      grid-template-columns: 1fr;
+    }
   }
   &__legend {
     color: $color-brown;

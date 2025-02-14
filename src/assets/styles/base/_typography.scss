@@ -48,12 +48,26 @@ body {
 h1 {
   @include heading(5.6rem, 1.04, 2px);
   color: $color-white;
+  @include respond(mobile) {
+    font-size: 3.6rem;
+    line-height: 1.1;
+    letter-spacing: 1.29px;
+  }
 }
 h2 {
   @include heading(4rem, 1.1, 1.5px);
+  @include respond(mobile) {
+    font-size: 2.8rem;
+    line-height: auto;
+    letter-spacing: 2px;
+  }
 }
 h3 {
   @include heading(3.2rem, 1.125, 1.15px);
+  @include respond(mobile) {
+    font-size: 2.4rem;
+    letter-spacing: 0.84px;
+  }
 }
 h4 {
   @include heading(2.8rem, 1.36, 2px);
@@ -68,7 +82,7 @@ h6 {
 .overline {
   @include heading(1.4rem, 1.36, 10px, $weight: normal);
   color: $color-brown;
-  @include respond(tab-landscape) {
+  @include respond(tablet) {
     font-size: 1.2rem;
   }
 }

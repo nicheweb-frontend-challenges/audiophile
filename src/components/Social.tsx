@@ -10,17 +10,17 @@ type SocialProps = {
 const Social = ({ classes }: SocialProps) => {
   return (
     <ul className={`${styles.social} ${classes ? classes : ""}`}>
-      <li>
+      <li className={styles.social__item}>
         <a href="https://www.facebook.com/" target="_blank">
           <FacebookIcon />
         </a>
       </li>
-      <li>
+      <li className={styles.social__item}>
         <a href="https://www.instagram.com/" target="_blank">
           <InstagramIcon />
         </a>
       </li>
-      <li>
+      <li className={styles.social__item}>
         <a
           href="https://x.com/?prefetchTimestamp=1737309405972&mx=2"
           target="_blank"

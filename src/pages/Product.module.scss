@@ -12,7 +12,7 @@
     grid-column: mid;
     & > *:not(:first-child) {
       margin-bottom: 16rem;
-      @include m.respond(tab-landscape) {
+      @include m.respond(tablet) {
         margin-bottom: 12rem;
       }
     }
@@ -21,8 +21,11 @@
     text-transform: capitalize;
     margin-bottom: 5.6rem;
     margin-top: 8rem;
-    @include m.respond(tab-landscape) {
+    @include m.respond(tablet) {
       margin: 3.3rem 0 2.4rem;
+    }
+    @include m.respond(mobile) {
+      margin-top: 1.6rem;
     }
   }
 }

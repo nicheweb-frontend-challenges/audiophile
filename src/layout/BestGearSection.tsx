@@ -17,8 +17,9 @@ const BestGearSection = ({ classes }: BestGearProps) => {
 
   return (
     <section
-      style={location.pathname !== "/" ? { marginBottom: "160px" } : {}}
-      className={`${styles.bestGear} ${classes ? classes : ""}`}
+      className={`${styles.bestGear} ${classes ? classes : ""} ${
+        location.pathname !== "/" ? styles.bestGear__outHome : {}
+      }`}
     >
       <div className={styles.bestGear__textBox}>
         <h2 className={styles.bestGear__textBox_heading}>

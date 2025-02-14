@@ -3,7 +3,7 @@
 
 .productInfo {
   text-align: left;
-  @include respond(tab-landscape) {
+  @include respond(tablet) {
     text-align: center;
   }
   p:first-child {

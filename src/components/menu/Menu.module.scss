@@ -3,7 +3,7 @@
 
 .menu {
   display: none;
-  @include respond(tab-landscape) {
+  @include respond(tablet) {
     grid-row: back / footer;
     grid-column: full;
     z-index: 200;
@@ -41,6 +41,17 @@
       z-index: 500;
       width: 68.9rem;
       gap: 1rem;
+    }
+  }
+  @include respond(mobile) {
+    &__main {
+      height: 75rem;
+      img {
+        width: 33rem;
+      }
+    }
+    &__mobileCat {
+      row-gap: 1.5rem;
     }
   }
 }

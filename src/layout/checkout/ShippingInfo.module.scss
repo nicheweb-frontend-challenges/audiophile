@@ -1,7 +1,15 @@
+@use "../../assets/styles/abstracts/mixins" as *;
+
 .shippingInfo {
   margin: 5.3rem 0 6.1rem;
+  @include respond(mobile) {
+    margin: 3.2rem 0;
+  }
   &__address {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+    @include respond(mobile) {
+      grid-column: 1 / 2;
+    }
   }
 }

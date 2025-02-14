@@ -5,7 +5,7 @@
   border: none;
   inset-inline-start: unset;
   border-radius: 8px;
-  padding: 3.2rem;
+  // padding: 3.2rem;
   background: $color-white;
   overflow-y: visible;
 
@@ -15,8 +15,13 @@
   &__position_cart {
     top: 12.8rem;
     right: 16.5rem;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       right: 4rem;
+    }
+    @include respond(mobile) {
+      top: 11.4rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
   &__position_order {

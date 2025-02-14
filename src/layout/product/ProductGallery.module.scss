@@ -1,6 +1,7 @@
+@use "../../assets/styles/abstracts/mixins" as *;
+
 .productGallery {
   width: 100%;
-  // margin-bottom: 16rem;
   display: grid;
   grid-template-columns: repeat(12, minmax(min-content, 6.5rem));
   grid-template-rows: 1fr 1fr;
@@ -9,6 +10,25 @@
   grid-template-areas:
     "img1 img1 img1 img1 img1 img3 img3 img3 img3 img3 img3 img3"
     "img2 img2 img2 img2 img2 img3 img3 img3 img3 img3 img3 img3";
+
+  @include respond(tablet) {
+    column-gap: 1.8rem;
+    row-gap: 2rem;
+  }
+  @include respond(tab-gallery) {
+    column-gap: 1.1rem;
+    row-gap: 1.2rem;
+  }
+  @include respond(mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3";
+    row-gap: 2rem;
+    margin-top: -3.2rem;
+  }
 
   &__img1 {
     grid-area: img1;

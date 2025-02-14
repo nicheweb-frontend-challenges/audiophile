@@ -93,23 +93,19 @@
 }
 
 @mixin respond($breakpoint) {
-  @if $breakpoint == tab-landscape {
-    @media only screen and (max-width: $bp-tab-land) {
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: $bp-tablet) {
       @content;
     }
   }
-  @if $breakpoint == tab-portrait {
-    @media only screen and (max-width: $bp-tab-port) {
+  @if $breakpoint == tab-gallery {
+    @media only screen and (max-width: $bp-tab-gallery) {
       @content;
     }
   }
-  @if $breakpoint == mobile-landscape {
-    @media only screen and (max-width: $bp-mobile-land) {
-      @content;
-    }
-  }
+
   @if $breakpoint == mobile {
-    @media only screen and (max-width: $bp-mobile-port) {
+    @media only screen and (max-width: $bp-mobile) {
       @content;
     }
   }

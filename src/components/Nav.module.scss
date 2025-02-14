@@ -1,13 +1,20 @@
 @use "../assets/styles/abstracts/variables" as *;
+@use "../assets/styles/abstracts/mixins" as *;
 
 .nav {
   color: white;
   display: flex;
   gap: 3.4rem;
+  align-items: center;
   & > * {
     &:hover,
     &:active {
       color: $color-brown;
     }
+  }
+  @include respond(mobile) {
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: center;
   }
 }

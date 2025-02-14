@@ -1,4 +1,5 @@
 @use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets/styles/abstracts/mixins" as *;
 
 .paymentDetails {
   fieldset {
@@ -13,27 +14,42 @@
       font-weight: bold;
       letter-spacing: -0.21px;
       line-height: 1;
+      @include respond(mobile) {
+        position: inherit;
+      }
     }
   }
   &__paymentMethod {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+    @include respond(mobile) {
+      grid-column: 1 / 2;
+    }
     &_emoney {
       grid-row: 1 / 2;
       grid-column: 2 / 3;
       span:first-child::first-letter {
         text-transform: lowercase;
       }
+      @include respond(mobile) {
+        grid-column: 1 / 2;
+      }
     }
     &_cash {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
+      @include respond(mobile) {
+        grid-column: 1 / 2;
+      }
     }
   }
   &__paymentMethod_details {
     margin-top: 0.6rem;
     grid-row: 2 / 3;
     grid-column: 1 / 3;
+    @include respond(mobile) {
+      grid-column: 1 / 2;
+    }
   }
   .radioInput {
     border: 1px solid $color-grey;

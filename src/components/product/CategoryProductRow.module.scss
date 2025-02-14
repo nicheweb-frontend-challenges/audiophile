@@ -16,7 +16,7 @@
     grid-row: 1 / 2;
     justify-self: right;
   }
-  @include m.respond(tab-landscape) {
+  @include m.respond(tablet) {
     max-height: unset;
     grid-template-columns: minmax(32.7rem, 68.9rem);
     grid-template-rows: 35.2rem min-content;
@@ -29,7 +29,10 @@
       grid-column: auto;
       grid-row: auto;
       justify-self: center;
-      max-width: 57.2rem;
     }
+  }
+  @include m.respond(mobile) {
+    grid-template-rows: min-content min-content;
+    row-gap: 3.2rem;
   }
 }

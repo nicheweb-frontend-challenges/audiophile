@@ -1,9 +1,15 @@
 @use "../../assets/styles/abstracts/variables" as *;
+@use "../../assets/styles/abstracts/mixins" as *;
 
 .orderSumm {
   width: 100%;
   display: grid;
   grid-template-columns: 24.6rem 1fr;
+  @include respond(mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+  }
+
   &__grandTotal {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -12,6 +18,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include respond(mobile) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
     &_heading {
       color: $color-grey;
       text-transform: uppercase;

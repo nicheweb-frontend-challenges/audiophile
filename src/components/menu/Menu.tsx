@@ -34,7 +34,9 @@ const Menu = ({ classes }: MenuProps) => {
       }`}
     >
       <main className={styles.menu__main}>
-        <Categories classes={styles.menu__categories} />
+        <Categories
+          classes={`${styles.menu__categories} ${styles.menu__mobileCat}`}
+        />
       </main>
       <footer onClick={handleOuterClick} className={styles.menu__footer}>
         &nbsp;

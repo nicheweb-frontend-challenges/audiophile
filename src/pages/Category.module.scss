@@ -9,9 +9,12 @@
     grid-template-rows: [products-start] auto [products-end categories-start] auto [categories-end];
     row-gap: 16rem;
     margin: 16rem 0;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       margin: 12rem 0;
       row-gap: 12rem;
+    }
+    @include respond(mobile) {
+      margin: 6.4rem 0;
     }
   }
   &__heading {
@@ -23,7 +26,7 @@
     display: flex;
     flex-direction: column;
     gap: 16rem;
-    @include respond(tab-landscape) {
+    @include respond(tablet) {
       margin: 0 auto;
       gap: 12rem;
     }

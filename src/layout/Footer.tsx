@@ -19,7 +19,7 @@ const Footer = ({ classes }: FooterProps) => {
           helping you get the most out of personal audio. Come and visit our
           demo facility - we’re open 7 days a week.
         </p>
-        <Social />
+        <Social classes={styles.footer__social} />
         <div className={styles.footer__copyright}>
           Copyright 2024. All Rights Reserved
         </div>
