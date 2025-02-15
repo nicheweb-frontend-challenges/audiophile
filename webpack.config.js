@@ -42,6 +42,9 @@ module.exports = {
           },
           {
             loader: "css-loader",
+            options: {
+              modules: true, // Enable CSS modules
+            },
           },
           {
             loader: "sass-loader",
