@@ -1,10 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const webpack = require("webpack");
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: "./src/index.tsx", // Entry file
+  mode: "production", // Set the mode to development
   output: {
     // Output file
     publicPath: "/", // Base path
@@ -34,12 +38,6 @@ module.exports = {
           },
           {
             loader: "css-loader",
-            // options: {
-            //   importLoaders: 1,
-            //   modules: {
-            //     mode: "icss",
-            //   },
-            // },
           },
           {
             loader: "sass-loader",
@@ -95,12 +93,28 @@ module.exports = {
     new HtmlWebpackPlugin({
       // Create an HTML file
       template: "./public/index.html", // Use this HTML file as a template
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+      },
     }),
+
     new MiniCssExtractPlugin({
       // Extract CSS to a separate file
       filename: isProd ? "[name].[contenthash].css" : "[name].css",
     }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+    splitChunks: {
+      chunks: "all",
+    },
+    runtimeChunk: "single",
+  },
   // devtool: "source-map", // Optional for easier debugging
   devServer: {
     historyApiFallback: true, // Redirects all 404s to index.html
@@ -111,7 +125,6 @@ module.exports = {
     hot: true, // Enable hot reloading
     compress: true, // Enable gzip compression
   },
-  mode: "development", // Set the mode to development
   stats: {
     // Configure console output
     errorDetails: true, // Enable error details
