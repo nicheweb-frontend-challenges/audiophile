@@ -36,12 +36,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/nicheweb-frontend-challenges/audiophile)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [CLICK HERE](https://github.com/nicheweb-frontend-challenges/audiophile)
+- Live Site URL: [CLICK HERE](https://your-live-site-url.com)
 
 ## My process
 
@@ -52,12 +52,12 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - CSS Modules
-- [Sass](https://sass-lang.com/)CSS Extension Language
+- [Sass](https://sass-lang.com/) - CSS Extension Language
 - [React](https://reactjs.org/) - JS library
 - Custom React Store Hook
 - [React Router](https://reactrouter.com/) - React Library
 - [Typescript](https://www.typescriptlang.org/) - Programming Language Build on top Javascript
-- [Webpack](https://webpack.js.org/) JS Bundler
+- [Webpack](https://webpack.js.org/) - JS Bundler
 
 ### What I learned
 
