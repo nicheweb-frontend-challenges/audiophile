@@ -1,19 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
-const isProd = process.env.NODE_ENV === "production";
+// const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: "./src/index.tsx", // Entry file
   mode: "production", // Set the mode to development
   output: {
     // Output file
+    filename: "js/[name].[contenthash].js",
+    // filename: "[name].js", // Avoid a single 'bundle.js' file for all chunks
+    chunkFilename: "[name].[contenthash].js", // Unique names for async chunks
     publicPath: "/", // Base path
     path: path.resolve(__dirname, "dist"), // Output directory
-    filename: "bundle.js",
+    // filename: "bundle.js",
     clean: true, // Clean the output directory before build
   },
   resolve: {
@@ -34,7 +38,7 @@ module.exports = {
         exclude: /\.module\.scss$/i,
         use: [
           {
-            loader: isProd ? MiniCssExtractPlugin.loader : "style-loader",
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
@@ -49,7 +53,7 @@ module.exports = {
         test: /\.module\.scss$/i,
         use: [
           {
-            loader: isProd ? MiniCssExtractPlugin.loader : "style-loader",
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
@@ -101,7 +105,7 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       // Extract CSS to a separate file
-      filename: isProd ? "[name].[contenthash].css" : "[name].css",
+      filename: "[name].[contenthash].css",
     }),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production"),
