@@ -119,7 +119,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "public", to: "dist" }, // Copies everything from public to dist
+        { from: "public", to: "" }, // Copies everything from public to dist
       ],
     }),
     new CleanWebpackPlugin(),
