@@ -8,9 +8,9 @@ const HomeHeroSection = () => {
   const { products } = useStore(false)[0];
 
   const image = new Image(
-    `${process.env.PUBLIC_URL}/assets/images/home/mobile/image-header.jpg`,
-    `${process.env.PUBLIC_URL}/assets/images/home/tablet/image-header.jpg`,
-    `${process.env.PUBLIC_URL}/assets/images/home/desktop/image-header.jpg`
+    "/assets/images/home/mobile/image-header.jpg",
+    "/assets/images/home/tablet/image-header.jpg",
+    "/assets/images/home/desktop/image-header.jpg"
   );
   const product = products?.find(
     (product) => product.name === "XX99 Mark II Headphones"
