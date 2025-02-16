@@ -1,0 +1,19 @@
+@use "../assets/styles/abstracts/mixins" as *;
+
+.root {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [mid-start]
+    minmax(32.7rem, 111rem)
+    [mid-end] minmax(4rem, 1fr) [full-end];
+  grid-template-rows: [nav-start] 9.6rem [nav-end back-start] min-content [back-end main-start] auto [main-end bestgear-start] auto [bestgear-end footer-start] auto [footer-end];
+  @include respond(tablet) {
+    grid-template-rows: [nav-start] 9rem [nav-end back-start] min-content [back-end main-start] auto [main-end bestgear-start] auto [bestgear-end footer-start] auto [footer-end];
+  }
+  @include respond(mobile) {
+    grid-template-columns:
+      [full-start] minmax(2.4rem, 1fr) [mid-start]
+      minmax(32.7rem, 111rem)
+      [mid-end] minmax(2.4rem, 1fr) [full-end];
+  }
+}
