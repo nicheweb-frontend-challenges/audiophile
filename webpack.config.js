@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 const webpack = require("webpack");
 // const isProd = process.env.NODE_ENV === "production";
 
@@ -115,11 +115,11 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production"),
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: "public", to: "dist" }, // Copies everything from public to dist
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: "public", to: "dist" }, // Copies everything from public to dist
+    //   ],
+    // }),
     new CleanWebpackPlugin(),
   ],
   optimization: {
