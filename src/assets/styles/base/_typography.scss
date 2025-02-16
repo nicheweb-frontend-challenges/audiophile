@@ -80,8 +80,8 @@ h6 {
 }
 
 @mixin overline {
-  @include heading(1.4rem, 1.36, 10px, $weight: normal);
   color: $color-brown;
+  @include heading(1.4rem, 1.36, 10px, $weight: normal);
   @include respond(tablet) {
     font-size: 1.2rem;
   }
