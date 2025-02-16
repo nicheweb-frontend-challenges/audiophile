@@ -100,6 +100,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       // Create an HTML file
       template: "./public/index.html", // Use this HTML file as a template
+      filename: "index.html",
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -112,6 +113,11 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public", to: "dist" }, // Copies everything from public to dist
+      ],
     }),
     new CleanWebpackPlugin(),
   ],
