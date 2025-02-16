@@ -1,6 +1,6 @@
 @use "../../assets/styles/abstracts/variables" as *;
 @use "../../assets/styles/abstracts/mixins" as *;
-@use "../../assets/styles/base/typography" as t;
+@use "../../assets/styles/base/typography" as *;
 
 .productPurchase {
   text-align: left;
@@ -9,8 +9,8 @@
     margin-bottom: 3.1rem;
   }
   &__new {
-    @include t.overline;
     margin-bottom: 1.6rem;
+    @include overline;
     @include respond(tablet) {
       margin-bottom: 1.7rem;
     }
