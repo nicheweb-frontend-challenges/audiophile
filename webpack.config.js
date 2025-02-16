@@ -63,7 +63,9 @@ module.exports = {
             loader: "css-loader",
             options: {
               // importLoaders: 1,
-              modules: true,
+              modules: {
+                localIdentName: "[local]__[hash:base64:5]", // Scoped class names
+              },
             },
           },
           {
@@ -117,7 +119,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "public/assets", to: "assets" }, // Copies everything from public to dist
+        { from: "public", to: "/" }, // Copies everything from public to dist
       ],
     }),
     new CleanWebpackPlugin(),
