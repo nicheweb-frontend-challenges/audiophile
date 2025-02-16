@@ -10,7 +10,6 @@
   }
   &__new {
     margin-bottom: 1.6rem;
-    @include overline;
     @include respond(tablet) {
       margin-bottom: 1.7rem;
     }
