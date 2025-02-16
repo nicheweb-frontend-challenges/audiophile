@@ -1,4 +1,3 @@
-import React from "react";
 import "./assets/styles/main.scss";
 import routes from "./routes/router";
 import { RouterProvider } from "react-router";

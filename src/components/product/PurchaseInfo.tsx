@@ -12,7 +12,9 @@ const PurchaseInfo = ({ product, classes }: PurchaseInfoProps) => {
 
   return (
     <div className={`${styles.productPurchase} ${classes ? classes : ""}`}>
-      {product.new && <p className="overline">new product</p>}
+      {product.new && (
+        <p className={styles.productPurchase__new}>new product</p>
+      )}
       <h2 className={styles.productPurchase__heading}>{product.name}</h2>
       <p className={styles.productPurchase__desc}>{product.description}</p>
       <p className={styles.productPurchase__price}>{price}</p>

@@ -1,5 +1,6 @@
 @use "../../assets/styles/abstracts/variables" as *;
 @use "../../assets/styles/abstracts/mixins" as *;
+@use "../../assets/styles/base/typography" as t;
 
 .productPurchase {
   text-align: left;
@@ -7,7 +8,8 @@
   @include respond(tablet) {
     margin-bottom: 3.1rem;
   }
-  & > p:first-child {
+  &__new {
+    @include t.overline;
     margin-bottom: 1.6rem;
     @include respond(tablet) {
       margin-bottom: 1.7rem;

@@ -24,7 +24,7 @@ const HomeProductBox = ({
   return (
     <div className={classes}>
       <div>
-        {isNew && <p className="overline">{product.new && "New product"}</p>}
+        {isNew && <p>{product.new && "New product"}</p>}
         {createElement(header, null, name ?? product.name)}
         {description && <p>{description || product.description}</p>}
       </div>

@@ -79,7 +79,7 @@ h6 {
   @include heading(1.8rem, 1.33, 1.3px);
 }
 
-.overline {
+@mixin overline {
   @include heading(1.4rem, 1.36, 10px, $weight: normal);
   color: $color-brown;
   @include respond(tablet) {

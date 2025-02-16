@@ -1,5 +1,6 @@
 @use "../../assets/styles/abstracts/variables" as *;
 @use "../../assets/styles/abstracts/mixins" as *;
+@use "../../assets/styles/base/typography" as t;
 
 .homeHeroProduct {
   &__picture {
@@ -35,6 +36,7 @@
     }
 
     p:first-child {
+      @include t.overline;
       color: $color-grey;
       font-size: 1.4rem;
     }
