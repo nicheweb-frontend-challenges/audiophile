@@ -127,11 +127,11 @@ module.exports = {
   devServer: {
     historyApiFallback: true, // Redirects all 404s to index.html
     // Development server configuration
-    static: path.resolve(__dirname, "public"), // Serve content from the public directory
-    port: 3000, // Port for the server
-    open: true, // Automatically open in the browser
-    hot: true, // Enable hot reloading
-    compress: true, // Enable gzip compression
+    // static: path.resolve(__dirname, "public"), // Serve content from the public directory
+    // port: 3000, // Port for the server
+    // open: true, // Automatically open in the browser
+    // hot: true, // Enable hot reloading
+    // compress: true, // Enable gzip compression
   },
   stats: {
     // Configure console output
