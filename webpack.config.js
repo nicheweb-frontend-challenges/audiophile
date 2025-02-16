@@ -117,7 +117,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "public/assets", to: "dist/assets" }, // Copies everything from public to dist
+        { from: "public/assets", to: "assets" }, // Copies everything from public to dist
       ],
     }),
     new CleanWebpackPlugin(),
