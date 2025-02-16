@@ -36,8 +36,8 @@
     }
 
     p:first-child {
+      @include t.overline;
       & {
-        @include t.overline;
         color: $color-grey;
         font-size: 1.4rem;
       }
