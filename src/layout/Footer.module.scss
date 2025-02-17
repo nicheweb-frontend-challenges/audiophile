@@ -59,9 +59,6 @@
     grid-column: full;
     background-color: black;
     z-index: -100;
-    @include respond(mobile) {
-      align-self: center;
-    }
   }
   &__decor {
     grid-row: footer;
@@ -71,6 +68,9 @@
     width: 100px;
     height: 4px;
     z-index: 300;
+    @include respond(mobile) {
+      align-self: center;
+    }
   }
   &__nav {
     justify-self: self-end;
