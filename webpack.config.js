@@ -44,7 +44,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              modules: true, // Enable CSS modules
+              modules: false, // Enable CSS modules
             },
           },
           {
