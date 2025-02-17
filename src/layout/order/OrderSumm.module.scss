@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all 0.2s;
     @include respond(mobile) {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
@@ -34,6 +33,7 @@
       font-weight: bold;
     }
     &__unfolded {
+      transition: all 0.2s;
       justify-content: end;
     }
   }
