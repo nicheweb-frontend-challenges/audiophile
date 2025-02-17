@@ -34,6 +34,7 @@ const OrderCart = ({ cart, classes, onChangeList }: OrderCartProps) => {
         btnStyle="cart"
         type="button"
         onClick={handleToggleList}
+        disabled={cart.length <= 1}
       >
         {isShortList ? `and ${cart.length - 1} other item(s)` : "View less"}
       </Button>
