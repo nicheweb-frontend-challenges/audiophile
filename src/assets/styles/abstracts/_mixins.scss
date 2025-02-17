@@ -15,6 +15,10 @@
   background-color: $color;
   width: 16rem;
   height: 4.8rem;
+  transition: all 2s;
+  &:active {
+    transform: translateY(-1px) scale(0.8);
+  }
 }
 
 @mixin btn__outline {
