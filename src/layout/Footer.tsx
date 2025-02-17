@@ -24,6 +24,7 @@ const Footer = ({ classes }: FooterProps) => {
           Copyright 2024. All Rights Reserved
         </div>
       </footer>
+      <div className={styles.footer__decor}>&nbsp;</div>
       <div className={styles.footer__background}>&nbsp;</div>
     </>
   );

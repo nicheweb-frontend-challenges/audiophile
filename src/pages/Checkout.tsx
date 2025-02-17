@@ -1,6 +1,6 @@
 import Checkout from "../layout/checkout/Checkout";
 import Summary from "../layout/checkout/Summary";
-import { ForwardedRef, useRef } from "react";
+import { useRef } from "react";
 import * as styles from "./Checkout.module.scss";
 import GoBackButton from "../components/GoBackButton";
 

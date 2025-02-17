@@ -60,6 +60,15 @@
     background-color: black;
     z-index: -100;
   }
+  &__decor {
+    grid-row: footer;
+    grid-column: mid;
+    background-color: $color-brown;
+    display: inline-block;
+    width: 100px;
+    height: 4px;
+    z-index: 300;
+  }
   &__nav {
     justify-self: self-end;
     @include respond(tablet) {
