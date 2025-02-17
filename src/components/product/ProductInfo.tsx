@@ -9,7 +9,7 @@ type ProductInfoProps = {
 const ProductInfo = ({ product, classes }: ProductInfoProps) => {
   return (
     <div className={`${styles.productInfo} ${classes ? classes : ""}`}>
-      {product.new && <p className="overline">new product</p>}
+      {product.new && <p className={styles.productInfo__new}>new product</p>}
       <h2>{product.name}</h2>
       <p>{product.description}</p>
     </div>

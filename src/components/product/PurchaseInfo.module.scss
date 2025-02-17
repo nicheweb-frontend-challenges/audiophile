@@ -8,8 +8,14 @@
     margin-bottom: 3.1rem;
   }
   &__new {
+    color: $color-brown;
+    font-size: 1.4rem;
+    line-height: 1.36;
+    letter-spacing: 10px;
+    text-transform: uppercase;
     margin-bottom: 1.6rem;
     @include respond(tablet) {
+      font-size: 1.2rem;
       margin-bottom: 1.7rem;
     }
     @include respond(mobile) {

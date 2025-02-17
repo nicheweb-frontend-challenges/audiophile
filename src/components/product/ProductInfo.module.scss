@@ -6,8 +6,22 @@
   @include respond(tablet) {
     text-align: center;
   }
-  p:first-child {
+
+  &__new {
     margin-bottom: 1.6rem;
+    color: $color-brown;
+    font-size: 1.4rem;
+    line-height: 1.36;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    @include respond(tablet) {
+      font-size: 1.2rem;
+      margin-bottom: 1.7rem;
+    }
+    @include respond(mobile) {
+      margin-bottom: 2.4rem;
+    }
   }
   h2 {
     margin-bottom: 3.2rem;

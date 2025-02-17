@@ -81,7 +81,10 @@ h6 {
 
 .overline {
   color: $color-brown;
-  @include heading(1.4rem, 1.36, 10px, $weight: normal);
+  font-size: 1.4rem;
+  line-height: 1.36;
+  letter-spacing: 10px;
+  text-transform: uppercase;
   @include respond(tablet) {
     font-size: 1.2rem;
   }
