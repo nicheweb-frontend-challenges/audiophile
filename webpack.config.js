@@ -104,6 +104,7 @@ module.exports = {
       // Create an HTML file
       template: "./public/index.html", // Use this HTML file as a template
       filename: "index.html",
+      favicon: "/favicon-32x32.png",
       minify: {
         collapseWhitespace: true,
         removeComments: true,
