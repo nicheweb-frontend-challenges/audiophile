@@ -35,6 +35,10 @@
 @mixin btn__shoptext {
   @include btn__typo;
   color: $color-grey;
+  transition: all 0.2s;
+  &:active {
+    transform: translateY(-1px) scale(0.9);
+  }
 }
 
 @mixin link__solid($color1, $color2) {
