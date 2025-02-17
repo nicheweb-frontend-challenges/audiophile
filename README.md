@@ -41,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [CLICK HERE](https://github.com/nicheweb-frontend-challenges/audiophile)
-- Live Site URL: [CLICK HERE](https://your-live-site-url.com)
+- Live Site URL: [CLICK HERE](https://master--frontend-audiophile.netlify.app/)
 
 ## My process
 
