@@ -53,6 +53,7 @@
     }
     @include m.respond(mobile) {
       row-gap: 3.2rem;
+      padding: 5.5rem 0 5.5rem;
       background-size: 60rem;
       background-position: center -10rem;
     }
