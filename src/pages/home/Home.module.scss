@@ -76,7 +76,7 @@
       justify-self: end;
       margin-right: 4rem;
       margin-bottom: -1.5rem;
-      background-image: url("/assets/images/pattern-circles.svg");
+      background-image: url("../../assets/pattern-circles.svg");
       @include m.respond(tablet) {
         width: 19.8rem;
         margin: 0 auto;
