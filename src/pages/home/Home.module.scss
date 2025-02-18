@@ -39,7 +39,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 56rem;
-    background: linear-gradient($color-brown, $color-brown);
+    background-color: $color-brown;
     overflow: hidden;
     @include m.respond(tablet) {
       grid-template-columns: 1fr;
@@ -76,6 +76,7 @@
       justify-self: end;
       margin-right: 4rem;
       margin-bottom: -1.5rem;
+      background-image: url("/assets/images/pattern-circles.svg");
       @include m.respond(tablet) {
         width: 19.8rem;
         margin: 0 auto;
