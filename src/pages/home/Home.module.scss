@@ -41,6 +41,7 @@
     grid-template-rows: 56rem;
     background-color: $color-brown;
     background-image: url("../../assets/pattern-circles.svg");
+    background-repeat: no-repeat;
     overflow: hidden;
     @include m.respond(tablet) {
       grid-template-columns: 1fr;
