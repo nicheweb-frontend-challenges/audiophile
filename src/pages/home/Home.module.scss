@@ -59,6 +59,7 @@
       justify-self: center;
       @include m.respond(mobile) {
         width: 28rem;
+        white-space-collapse: break-spaces;
       }
       div p:last-child {
         margin-top: 2.4rem;
