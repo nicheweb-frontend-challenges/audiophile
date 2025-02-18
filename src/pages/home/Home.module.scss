@@ -39,7 +39,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 56rem;
-    background: liner-gradient($color-brown, $color-brown);
+    background: linear-gradient($color-brown, $color-brown);
     overflow: hidden;
     @include m.respond(tablet) {
       grid-template-columns: 1fr;
