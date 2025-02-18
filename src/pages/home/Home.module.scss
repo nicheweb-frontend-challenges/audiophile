@@ -60,7 +60,7 @@
       @include m.respond(mobile) {
         width: 28rem;
         h1 {
-          white-space-collapse: break-spaces;
+          width: 25rem;
         }
       }
       div p:last-child {
