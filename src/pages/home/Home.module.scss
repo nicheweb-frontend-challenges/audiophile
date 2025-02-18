@@ -57,7 +57,9 @@
       width: 34.9rem;
       align-self: center;
       justify-self: center;
-
+      @include respond(mobile) {
+        width: 28rem;
+      }
       div p:last-child {
         margin-top: 2.4rem;
       }
