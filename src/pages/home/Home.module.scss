@@ -53,6 +53,7 @@
     }
     @include m.respond(mobile) {
       background-size: 55.8rem;
+      background-position: center -15rem;
     }
 
     &_box {
