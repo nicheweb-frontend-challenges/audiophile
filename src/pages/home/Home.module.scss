@@ -51,6 +51,9 @@
       padding: 5.2rem 0 6.4rem;
       background-position: center -28.8rem;
     }
+    @include m.respond(mobile) {
+      background-size: 55.8rem;
+    }
 
     &_box {
       color: $color-white;
