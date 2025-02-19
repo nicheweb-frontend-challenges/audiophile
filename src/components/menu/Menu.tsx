@@ -33,11 +33,11 @@ const Menu = ({ classes }: MenuProps) => {
         classes ? classes : ""
       }`}
     >
-      <main className={styles.menu__main}>
+      <section className={styles.menu__main}>
         <Categories
           classes={`${styles.menu__categories} ${styles.menu__mobileCat}`}
         />
-      </main>
+      </section>
       <footer onClick={handleOuterClick} className={styles.menu__footer}>
         &nbsp;
       </footer>
