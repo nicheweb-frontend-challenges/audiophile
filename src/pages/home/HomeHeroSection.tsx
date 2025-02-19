@@ -22,6 +22,7 @@ const HomeHeroSection = () => {
         classes={styles.homeHeroProduct__picture}
         alt="home hero image"
         id="Hero Image"
+        aria-label="Hero Image"
       />
 
       {product && (
@@ -32,6 +33,7 @@ const HomeHeroSection = () => {
           isNew
           isFirstLevel
           id="Hero Description"
+          aria-label="Hero Description"
         />
       )}
     </>
