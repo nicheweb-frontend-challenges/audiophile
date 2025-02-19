@@ -22,7 +22,10 @@ const HomeProductBox = ({
   let header = isFirstLevel ? "h1" : "h2";
 
   return (
-    <div className={classes}>
+    <div
+      className={classes}
+      aria-labelledby="Hero Section description and call to action"
+    >
       <div>
         {isNew && <p>{product.new && "New product"}</p>}
         {createElement(header, null, name ?? product.name)}

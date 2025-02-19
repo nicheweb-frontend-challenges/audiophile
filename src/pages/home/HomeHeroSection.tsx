@@ -21,6 +21,7 @@ const HomeHeroSection = () => {
         image={image}
         classes={styles.homeHeroProduct__picture}
         alt="home hero image"
+        aria-labelledby="Hero Section Image"
       />
 
       {product && (

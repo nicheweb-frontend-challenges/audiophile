@@ -20,6 +20,7 @@ const BestGearSection = ({ classes }: BestGearProps) => {
       className={`${styles.bestGear} ${classes ? classes : ""} ${
         location.pathname !== "/" ? styles.bestGear__outHome : {}
       }`}
+      aria-labelledby="audiophile's shop advertising"
     >
       <div className={styles.bestGear__textBox}>
         <h2 className={styles.bestGear__textBox_heading}>
