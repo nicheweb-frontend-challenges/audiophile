@@ -11,12 +11,20 @@ const Social = ({ classes }: SocialProps) => {
   return (
     <ul className={`${styles.social} ${classes ? classes : ""}`}>
       <li className={styles.social__item}>
-        <a href="https://www.facebook.com/" target="_blank">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          aria-label="www.facebook.com"
+        >
           <FacebookIcon />
         </a>
       </li>
       <li className={styles.social__item}>
-        <a href="https://www.instagram.com/" target="_blank">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          aria-label="www.instagram.com"
+        >
           <InstagramIcon />
         </a>
       </li>
@@ -24,6 +32,7 @@ const Social = ({ classes }: SocialProps) => {
         <a
           href="https://x.com/?prefetchTimestamp=1737309405972&mx=2"
           target="_blank"
+          aria-label="x.com"
         >
           <TwitterIcon />
         </a>

@@ -1,7 +1,6 @@
 import HomeHeroSection from "./HomeHeroSection";
 import HomeProductBox from "./HomeProductBox";
 import ResponsiveImg from "../../components/ResponsiveImg";
-import ProductRow from "../../components/product/CategoryProductRow";
 import Image from "../../models/image";
 import Categories from "../../layout/category/Categories";
 import useStore from "../../store/store";
@@ -20,8 +19,6 @@ const HomePage = () => {
     (product) => product.name === "YX1 Wireless Earphones"
   );
 
-  const firstDescription =
-    "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.";
   const firstImage = new Image(
     "/assets/images/home/mobile/image-speaker-zx9.png",
     "/assets/images/home/tablet/image-speaker-zx9.png",
@@ -51,6 +48,7 @@ const HomePage = () => {
               <ResponsiveImg
                 image={firstImage}
                 classes={styles.home__firstProduct_img}
+                alt="Image Speaker ZX9"
               />
               <HomeProductBox
                 product={firstProduct}
@@ -69,6 +67,7 @@ const HomePage = () => {
               <ResponsiveImg
                 image={secondImage}
                 classes={styles.home__secondProduct_img}
+                alt="Image Speaker ZX7"
               />
             </Card>
           )}
@@ -82,6 +81,7 @@ const HomePage = () => {
               <ResponsiveImg
                 image={thirdImage}
                 classes={styles.home__thirdProduct_img}
+                alt="Image YX1 Earphones"
               />
             </div>
           )}

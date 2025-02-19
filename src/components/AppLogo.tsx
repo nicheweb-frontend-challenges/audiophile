@@ -7,7 +7,7 @@ type AppLogoProps = {
 
 const AppLogo = ({ classes }: AppLogoProps) => {
   return (
-    <Link to="/" className={classes ? classes : ""}>
+    <Link to="/" className={classes ? classes : ""} aria-label="Main Logo">
       <Logo />
     </Link>
   );

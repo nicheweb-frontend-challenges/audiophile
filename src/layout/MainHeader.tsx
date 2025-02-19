@@ -41,6 +41,7 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
         classes={styles.mainHeader__hamburger_hidden}
         btnStyle="icon"
         onClick={toggleMenu}
+        aria-label="Menu Hamburger"
       >
         <Hamburger />
       </Button>
@@ -50,6 +51,7 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
         onClick={handleOpenCart}
         btnStyle="icon"
         classes={styles.mainHeader__cart}
+        aria-label="Cart Button"
       >
         {cart?.length ? <span>{cart?.length}</span> : null}
         <CartIcon />
