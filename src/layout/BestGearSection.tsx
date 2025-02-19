@@ -16,7 +16,7 @@ const BestGearSection = ({ classes }: BestGearProps) => {
   );
 
   return (
-    <section
+    <aside
       className={`${styles.bestGear} ${classes ? classes : ""} ${
         location.pathname !== "/" ? styles.bestGear__outHome : {}
       }`}
@@ -40,7 +40,7 @@ const BestGearSection = ({ classes }: BestGearProps) => {
         alt="Best Gear Image"
         classes={styles.bestGear__img}
       />
-    </section>
+    </aside>
   );
 };
 
