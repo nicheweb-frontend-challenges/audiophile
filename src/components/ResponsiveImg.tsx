@@ -1,19 +1,29 @@
 import Image from "../models/image";
-import Card from "./UI/Card";
 import * as styles from "./ResponsiveImg.module.scss";
 
 type ImageProps = {
   image: Image | undefined;
   classes?: string;
   alt?: string;
+  id?: string;
 };
-const ResponsiveImg = ({ image, classes, alt }: ImageProps) => {
+const ResponsiveImg = ({
+  image,
+  classes,
+  alt,
+  id,
+  ...otherProps
+}: ImageProps) => {
   const mobileSrc = image?.mobile;
   const tabletSrc = image?.tablet;
   const desktopSrc = image?.desktop;
 
   return (
-    <picture className={`${styles.responsiveImg} ${classes ? classes : ""}`}>
+    <picture
+      id={id}
+      className={`${styles.responsiveImg} ${classes ? classes : ""}`}
+      {...otherProps}
+    >
       <source media="(min-width: 961px)" srcSet={desktopSrc} />
       <source
         media="(min-width: 661px) and (max-width: 960px)"

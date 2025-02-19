@@ -21,7 +21,7 @@ const HomeHeroSection = () => {
         image={image}
         classes={styles.homeHeroProduct__picture}
         alt="home hero image"
-        aria-labelledby="Hero Section Image"
+        id="Hero Image"
       />
 
       {product && (
@@ -31,6 +31,7 @@ const HomeHeroSection = () => {
           classes={styles.homeHeroProduct__box}
           isNew
           isFirstLevel
+          id="Hero Description"
         />
       )}
     </>

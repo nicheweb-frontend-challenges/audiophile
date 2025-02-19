@@ -9,6 +9,7 @@ export type HomeProductBoxProps = {
   isNew?: boolean;
   isFirstLevel?: boolean;
   name?: string;
+  id?: string;
 };
 
 const HomeProductBox = ({
@@ -18,12 +19,13 @@ const HomeProductBox = ({
   isNew,
   isFirstLevel,
   name,
+  id,
   ...otherProps
 }: HomeProductBoxProps) => {
   let header = isFirstLevel ? "h1" : "h2";
 
   return (
-    <div className={classes} {...otherProps}>
+    <div className={classes} {...otherProps} id={id}>
       <div>
         {isNew && <p>{product.new && "New product"}</p>}
         {createElement(header, null, name ?? product.name)}
