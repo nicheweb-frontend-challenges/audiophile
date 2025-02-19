@@ -18,15 +18,12 @@ const HomeProductBox = ({
   isNew,
   isFirstLevel,
   name,
+  ...otherProps
 }: HomeProductBoxProps) => {
   let header = isFirstLevel ? "h1" : "h2";
 
   return (
-    <div
-      className={classes}
-      aria-labelledby="Hero Section description and call to action"
-      id="hero-section-desc"
-    >
+    <div className={classes} {...otherProps}>
       <div>
         {isNew && <p>{product.new && "New product"}</p>}
         {createElement(header, null, name ?? product.name)}

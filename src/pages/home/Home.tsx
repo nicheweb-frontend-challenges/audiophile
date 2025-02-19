@@ -55,6 +55,7 @@ const HomePage = () => {
                 description="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
                 classes={styles.home__firstProduct_box}
                 isFirstLevel
+                aria-label="First Product"
               />
             </Card>
           )}
@@ -63,6 +64,7 @@ const HomePage = () => {
               <HomeProductBox
                 product={secondProduct}
                 classes={styles.home__secondProduct_box}
+                aria-label="Second Product"
               />
               <ResponsiveImg
                 image={secondImage}
@@ -77,6 +79,7 @@ const HomePage = () => {
                 product={thirdProduct}
                 classes={styles.home__thirdProduct_box}
                 name="yx1 earphones"
+                aria-label="Third Product"
               />
               <ResponsiveImg
                 image={thirdImage}
