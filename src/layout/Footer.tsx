@@ -12,7 +12,7 @@ const Footer = ({ classes }: FooterProps) => {
     <>
       <footer className={`${styles.footer} ${classes ? classes : ""}`}>
         <AppLogo classes={styles.footer__logo} />
-        <Nav classes={styles.footer__nav} />
+        <Nav classes={styles.footer__nav} aria-label="Footer Navigation" />
         <p>
           Audiophile is an all in one stop to fulfill your audio needs. We're a
           small team of music lovers and sound specialists who are devoted to

@@ -25,6 +25,7 @@ const HomeProductBox = ({
     <div
       className={classes}
       aria-labelledby="Hero Section description and call to action"
+      id="hero-section-desc"
     >
       <div>
         {isNew && <p>{product.new && "New product"}</p>}

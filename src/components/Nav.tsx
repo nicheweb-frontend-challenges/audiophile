@@ -5,12 +5,9 @@ type NavProps = {
   classes?: string;
 };
 
-const Nav = ({ classes }: NavProps) => {
+const Nav = ({ classes, ...otherProps }: NavProps) => {
   return (
-    <nav
-      className={`${styles.nav} ${classes ? classes : ""}`}
-      role="navigation"
-    >
+    <nav className={`${styles.nav} ${classes ? classes : ""}`} {...otherProps}>
       <Link to="">Home</Link>
       <Link to="/headphones">headphones</Link>
       <Link to="/speakers">speakers</Link>

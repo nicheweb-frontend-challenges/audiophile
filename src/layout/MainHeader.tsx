@@ -46,7 +46,7 @@ const MainHeader = ({ classes }: MainHeaderProps) => {
         <Hamburger />
       </Button>
       <AppLogo classes={styles.mainHeader__logo} />
-      <Nav classes={styles.mainHeader__nav} />
+      <Nav classes={styles.mainHeader__nav} label-aria="Main Navigation" />
       <Button
         onClick={handleOpenCart}
         btnStyle="icon"
