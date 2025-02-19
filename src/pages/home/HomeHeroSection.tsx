@@ -21,7 +21,7 @@ const HomeHeroSection = () => {
         image={image}
         classes={styles.homeHeroProduct__picture}
         alt="home hero image"
-        id="Hero Image"
+        id="hero-image"
         aria-label="Hero Image"
       />
 
@@ -32,7 +32,7 @@ const HomeHeroSection = () => {
           classes={styles.homeHeroProduct__box}
           isNew
           isFirstLevel
-          id="Hero Description"
+          id="hero-description"
           aria-label="Hero Description"
         />
       )}
