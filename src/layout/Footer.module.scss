@@ -57,7 +57,7 @@
   &__background {
     grid-row: footer;
     grid-column: full;
-    background-color: black;
+    background-color: $color-light-black;
     z-index: -100;
   }
   &__decor {
