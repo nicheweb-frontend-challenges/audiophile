@@ -4,6 +4,7 @@
   width: 54rem;
   padding: 4.8rem;
   @include respond(mobile) {
+    width: auto;
     max-width: 32.7rem;
     padding: 3.2rem;
   }
