@@ -117,8 +117,11 @@
           letter-spacing: 2px;
         }
       }
+      @include m.respond(mobile) {
+        padding-left: 2.4rem;
+      }
       @include m.respond(mobile-small) {
-        padding-left: 3rem;
+        padding-left: 1.5rem;
       }
       h2 {
         margin-bottom: 3.2rem;
