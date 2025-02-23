@@ -65,9 +65,9 @@
       justify-self: center;
       @include m.respond(mobile) {
         width: 28rem;
+        text-align: center;
         h1 {
           width: 25rem;
-          margin: 0 auto;
         }
       }
       @include m.respond(mobile-small) {
