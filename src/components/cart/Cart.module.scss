@@ -13,7 +13,8 @@
     grid-template-columns: 27.1rem;
   }
   @include respond(mobile-small) {
-    grid-template-columns: 100%;
+    padding: 2.4rem;
+    grid-template-columns: 25rem;
   }
   &__header {
     grid-column: 1 / 2;
