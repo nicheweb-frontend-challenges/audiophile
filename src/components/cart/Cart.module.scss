@@ -12,6 +12,9 @@
   @include respond(mobile) {
     grid-template-columns: 27.1rem;
   }
+  @include respond(mobile-small) {
+    grid-template-columns: 100%;
+  }
   &__header {
     grid-column: 1 / 2;
     grid-row: header;
