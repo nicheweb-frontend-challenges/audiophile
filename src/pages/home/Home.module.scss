@@ -65,10 +65,11 @@
       justify-self: center;
       @include m.respond(mobile) {
         width: 28rem;
-        display: inline-block;
-        margin: 0 auto;
+
         h1 {
           width: 25rem;
+          display: inline-block;
+          margin: 0 auto;
         }
       }
       @include m.respond(mobile-small) {
