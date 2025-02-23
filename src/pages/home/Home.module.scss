@@ -63,10 +63,10 @@
       width: 34.9rem;
       align-self: center;
       justify-self: center;
-      justify-content: center;
       @include m.respond(mobile) {
         width: 28rem;
-        // text-align: center;
+        display: inline-block;
+        margin: 0 auto;
         h1 {
           width: 25rem;
         }
