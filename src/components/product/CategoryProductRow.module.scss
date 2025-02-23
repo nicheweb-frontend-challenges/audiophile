@@ -36,6 +36,6 @@
     row-gap: 3.2rem;
   }
   @include m.respond(mobile-small) {
-    grid-template-columns: minmax(1fr, 68.9rem);
+    grid-template-columns: minmax(25rem, 68.9rem);
   }
 }

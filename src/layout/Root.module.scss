@@ -25,7 +25,7 @@
   @include respond(mobile-small) {
     grid-template-columns:
       [full-start] 2.4rem [mid-start]
-      minmax(1fr, 111rem)
+      minmax(25rem, 111rem)
       [mid-end] 2.4rem [full-end];
   }
 }
