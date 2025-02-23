@@ -4,12 +4,12 @@
   width: 54rem;
   padding: 4.8rem;
   @include respond(mobile) {
-    width: 32.7rem;
+    max-width: 32.7rem;
     padding: 3.2rem;
   }
-  @include respond(mobile-small) {
-    width: 100%;
-  }
+  // @include respond(mobile-small) {
+  //   width: 100%;
+  // }
   &__header {
     h3 {
       margin: 3.3rem 0 2.4rem;
