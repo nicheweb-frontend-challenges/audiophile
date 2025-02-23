@@ -69,6 +69,9 @@
           width: 25rem;
         }
       }
+      @include m.respond(mobile-small) {
+        width: 100%;
+      }
       div p:last-child {
         margin-top: 2.4rem;
       }
