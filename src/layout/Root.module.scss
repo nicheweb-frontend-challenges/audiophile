@@ -21,6 +21,11 @@
       [full-start] 2.4rem [mid-start]
       minmax(32.7rem, 111rem)
       [mid-end] 2.4rem [full-end];
-    // place-items: center;
+  }
+  @include respond(mobile-small) {
+    grid-template-columns:
+      [full-start] 2.4rem [mid-start]
+      minmax(1fr, 111rem)
+      [mid-end] 2.4rem [full-end];
   }
 }

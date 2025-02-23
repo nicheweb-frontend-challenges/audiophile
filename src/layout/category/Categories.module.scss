@@ -16,4 +16,7 @@
     width: 32.7rem;
     margin: 0 auto;
   }
+  @include m.respond(mobile-small) {
+    width: 100%;
+  }
 }

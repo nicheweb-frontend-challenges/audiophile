@@ -7,6 +7,9 @@
     width: 32.7rem;
     padding: 3.2rem;
   }
+  @include respond(mobile-small) {
+    width: 100%;
+  }
   &__header {
     h3 {
       margin: 3.3rem 0 2.4rem;

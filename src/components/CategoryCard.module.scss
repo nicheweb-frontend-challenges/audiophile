@@ -52,5 +52,8 @@
       grid-column: 1 / 2;
       width: 32.7rem;
     }
+    @include m.respond(mobile-small) {
+      width: 100%;
+    }
   }
 }
