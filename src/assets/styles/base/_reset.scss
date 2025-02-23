@@ -23,6 +23,11 @@ body,
   border-bottom-right-radius: 8px;
   // overflow: hidden;
 }
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
 
 img,
 picture,
