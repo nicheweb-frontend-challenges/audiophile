@@ -7,6 +7,7 @@ export type HomeProductBoxProps = {
   description?: string;
   classes?: string;
   isNew?: boolean;
+  isFirstLevel?: boolean;
   name?: string;
   id?: string;
 };
@@ -16,15 +17,18 @@ const HomeProductBox = ({
   description,
   classes,
   isNew,
+  isFirstLevel,
   name,
   id,
   ...otherProps
 }: HomeProductBoxProps) => {
+  let header = isFirstLevel ? "h1" : "h2";
+
   return (
     <div className={classes} {...otherProps} id={id}>
       <div>
         {isNew && <p>{product.new && "New product"}</p>}
-        <h2>{name ?? product.name}</h2>
+        {createElement(header, null, name ?? product.name)}
         {description && <p>{description || product.description}</p>}
       </div>
       <Link to={`/${product.category}/${product.slug}`}>See product</Link>
