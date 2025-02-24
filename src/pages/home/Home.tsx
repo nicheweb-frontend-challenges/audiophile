@@ -54,7 +54,6 @@ const HomePage = () => {
                 product={firstProduct}
                 description="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
                 classes={styles.home__firstProduct_box}
-                isFirstLevel
                 aria-label="First Product"
               />
             </Card>

@@ -63,10 +63,21 @@
       width: 34.9rem;
       align-self: center;
       justify-self: center;
+      h2 {
+        font-size: 5.6rem;
+        line-height: 1.04;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-white;
+      }
       @include m.respond(mobile) {
         width: 28rem;
 
-        h1 {
+        h2 {
+          font-size: 3.6rem;
+          line-height: 1.1;
+          letter-spacing: 1.29px;
           width: 25rem;
           display: inline-block;
           margin: 0 auto;
