@@ -16,13 +16,13 @@ const CategoryCard = ({ category, classes }: CategoryProps) => {
     dispatch("CLOSE_MENU");
   };
   return (
-    <li className={styles.categoryCard}>
+    <li className={`${styles.categoryCard} ${classes ? classes : ""}`}>
       <div className={styles.categoryCard__content}>
         <img
           src={`/assets/images/shared/desktop/image-category-thumbnail-${category}.png`}
           alt={`${category} tumbnail image`}
         />
-        <h6>{category}</h6>
+        <p>{category}</p>
         <Link to={`/${category}`} onClick={handleCloseMenu}>
           <span>shop</span>{" "}
           <span>

@@ -29,7 +29,12 @@
         max-width: 57%;
       }
     }
-    h6 {
+    p {
+      font-size: 1.8rem;
+      line-height: 1.33;
+      letter-spacing: 1.3px;
+      font-weight: bold;
+      text-transform: uppercase;
       margin-top: -3rem;
       margin-bottom: 1.5rem;
       @include m.respond(tablet) {
