@@ -127,6 +127,7 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   optimization: {
+    usedExports: true, // Tree shaking
     minimize: true,
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
     splitChunks: {
