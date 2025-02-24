@@ -14,14 +14,14 @@ const Social = ({ classes }: SocialProps) => {
         <a
           href="https://www.facebook.com/"
           target="_blank"
-          aria-label="www.facebook.com"
+          aria-label="www.facebook.com(open in a new window)"
         >
           <FacebookIcon />
         </a>
       </li>
       <li className={styles.social__item}>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/(open in a new window)"
           target="_blank"
           aria-label="www.instagram.com"
         >
@@ -30,7 +30,7 @@ const Social = ({ classes }: SocialProps) => {
       </li>
       <li className={styles.social__item}>
         <a
-          href="https://x.com/?prefetchTimestamp=1737309405972&mx=2"
+          href="https://x.com/?prefetchTimestamp=1737309405972&mx=2(open in a new window)"
           target="_blank"
           aria-label="x.com"
         >
