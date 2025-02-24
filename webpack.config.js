@@ -95,6 +95,18 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|ico|woff|woff2|eot|ttf|otf)$/, // Match images, fonts, etc.
+        use: [
+          {
+            loader: "file-loader",
+          },
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: { progressive: true },
+              optipng: { optimizationLevel: 5 },
+            },
+          },
+        ],
         type: "asset/resource", // Handle other assets
       },
     ],
