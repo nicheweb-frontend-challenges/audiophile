@@ -65,7 +65,7 @@ It was a huge challenging project where I used by first time Typescript in deep.
 
 ### Continued development
 
-I would like to develope this project with NextJS. I think it will make it more pro. Also add authentication and user Session, but before that I must add some backend to this project and this last will be my next step.
+I would like to develope this project with NextJS. I think it will make it more pro. Also add authentication and user Session, but before that I must add some backend to this project and this last will be my next step. Another goal is improve performance for mobile that currently is below 80%, and one of the steps to take can be image compression.
 
 ### Useful resources
 
