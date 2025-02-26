@@ -2,8 +2,6 @@
 
 .errorPage {
   padding-top: 5rem;
-  grid-column: full;
-  grid-row: back / footer;
   &__container {
     display: flex;
     flex-direction: column;
