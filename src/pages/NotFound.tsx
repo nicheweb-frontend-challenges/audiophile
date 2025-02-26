@@ -4,7 +4,6 @@ import * as styles from "./NotFound.module.scss";
 const NotFoundPage = () => {
   return (
     <>
-      <MainHeader classes={styles.errorPage__header} />
       <div className={styles.errorPage__headerBacground}></div>
       <div className={styles.errorPage}>
         <div className={styles.errorPage__container}>
