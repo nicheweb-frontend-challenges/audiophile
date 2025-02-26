@@ -5,7 +5,7 @@ import * as styles from "./NotFound.module.scss";
 const NotFoundPage = () => {
   return (
     <div className={styles.errorPage}>
-      <MainHeader />
+      <MainHeader classes={styles.errorPage__header} />
       <main className={styles.errorPage__main}>
         <div className={styles.errorPage__main__container}>
           <img src="/assets/images/error.png" alt="Error 404 image" />
@@ -13,7 +13,7 @@ const NotFoundPage = () => {
           <p>Could not find this page!</p>
         </div>
       </main>
-      <Footer />
+      <Footer classes={styles.errorPage__footer} />
     </div>
   );
 };

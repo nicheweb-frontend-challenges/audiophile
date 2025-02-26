@@ -6,6 +6,10 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: [header-start] min-content [header-end main-start] 1fr [main-end footer-start] min-content [footer-end];
+  &__header {
+    grid-row: header;
+    background-color: $color-black;
+  }
 
   &__main {
     grid-row: main;
@@ -38,5 +42,8 @@
       grid-row: nav;
       background-color: $color-black;
     }
+  }
+  &__footer {
+    grid-row: footer;
   }
 }
