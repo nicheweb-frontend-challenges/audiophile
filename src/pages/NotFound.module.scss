@@ -9,8 +9,10 @@
     [full-start] minmax(4rem, 1fr) [mid-start]
     minmax(32.7rem, 111rem)
     [mid-end] minmax(4rem, 1fr) [full-end];
-  grid-template-rows: [header-start] min-content [header-end main-start] 1fr [main-end footer-start] min-content [footer-end];
-
+  grid-template-rows: [header-start] 9.6rem [header-end main-start] 1fr [main-end footer-start] min-content [footer-end];
+  @include respond(tablet) {
+    grid-template-rows: [header-start] 9rem [header-end main-start] 1fr [main-end footer-start] min-content [footer-end];
+  }
   @include respond(mobile) {
     grid-template-columns:
       [full-start] 2.4rem [mid-start]
@@ -43,7 +45,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 5rem;
+      gap: 2rem;
     }
     img {
       max-width: 32rem;
