@@ -37,6 +37,7 @@
   &__menu {
     grid-row: main / footer;
     grid-column: full;
+    z-index: 400;
   }
   &__main {
     grid-row: main;
