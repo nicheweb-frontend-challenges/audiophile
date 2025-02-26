@@ -26,7 +26,11 @@
   &__header {
     grid-row: header;
     grid-column: mid;
-    background-color: $color-black;
+    &_background {
+      grid-column: full;
+      grid-row: header;
+      background-color: $color-black;
+    }
   }
 
   &__main {
@@ -55,15 +59,5 @@
     p {
       font-size: 2.5rem;
     }
-
-    // &__headerBacground {
-    //   grid-column: full;
-    //   grid-row: nav;
-    //   background-color: $color-black;
-    // }
   }
-  // &__footer {
-  //   grid-row: footer;
-  //   grid-column: mid;
-  // }
 }
