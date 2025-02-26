@@ -1,11 +1,13 @@
 import MainHeader from "../layout/MainHeader";
 import Footer from "../layout/Footer";
+import Menu from "../components/menu/Menu";
 import * as styles from "./NotFound.module.scss";
 
 const NotFoundPage = () => {
   return (
     <div className={styles.errorPage}>
       <div className={styles.errorPage__header_background}>&nbsp;</div>
+      <Menu />
       <MainHeader classes={styles.errorPage__header} />
       <main className={styles.errorPage__main}>
         <div className={styles.errorPage__main__container}>
