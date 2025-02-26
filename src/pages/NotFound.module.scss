@@ -34,7 +34,10 @@
       background-color: $color-black;
     }
   }
-
+  &__menu {
+    grid-row: main / footer;
+    grid-column: full;
+  }
   &__main {
     grid-row: main;
     grid-column: mid;

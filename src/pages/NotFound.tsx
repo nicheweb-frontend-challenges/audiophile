@@ -7,8 +7,8 @@ const NotFoundPage = () => {
   return (
     <div className={styles.errorPage}>
       <div className={styles.errorPage__header_background}>&nbsp;</div>
-      <Menu />
       <MainHeader classes={styles.errorPage__header} />
+      <Menu classes={styles.errorPage__menu} />
       <main className={styles.errorPage__main}>
         <div className={styles.errorPage__main__container}>
           <img src="/assets/images/error.png" alt="Error 404 image" />
