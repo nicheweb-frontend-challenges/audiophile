@@ -13,7 +13,7 @@ const NotFoundPage = () => {
           <p>Could not find this page!</p>
         </div>
       </main>
-      <Footer classes={styles.errorPage__footer} />
+      <Footer />
     </div>
   );
 };
